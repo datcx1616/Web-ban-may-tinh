@@ -133,6 +133,64 @@
         </div>
     </div>
 
+    <style>
+        /* Tùy chỉnh giao diện cho thanh điều hướng */
+        .nav-tabs {
+            border-bottom: 2px solid #ddd;
+        }
+
+        .nav-tabs .nav-link {
+            color: #333;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .nav-tabs .nav-link.active {
+            background-color: #007bff;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+        }
+
+        .nav-tabs .nav-link:hover {
+            background-color: #0056b3;
+            color: #fff;
+        }
+
+        .nav-tabs .nav-link.disabled {
+            color: #999;
+            cursor: not-allowed;
+        }
+    </style>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center px-xl-5 pb-5">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Sắp xếp theo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Khuyến mãi tốt nhất</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Giá tăng dần</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Giá giảm dần</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sản phẩm mới nhất</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Sản phẩm bán chạy
+                        nhất</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
     <!-- Breadcrumb End -->
     <!-- Shop Start -->
     <div class="container-fluid">
@@ -157,17 +215,20 @@
                     <form>
                         <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                             <input type="checkbox" class="custom-control-input js-input-filter"
-                                {{ $query['price'] == '1' ? 'checked' : '' }} name="price" data-value="1" id="price-1">
+                                {{ $query['price'] == '1' ? 'checked' : '' }} name="price" data-value="1"
+                                id="price-1">
                             <label class="custom-control-label" for="price-1">Dưới 5 triệu</label>
                         </div>
                         <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                             <input type="checkbox" class="custom-control-input js-input-filter"
-                                {{ $query['price'] == '2' ? 'checked' : '' }} name="price" data-value="2" id="price-2">
+                                {{ $query['price'] == '2' ? 'checked' : '' }} name="price" data-value="2"
+                                id="price-2">
                             <label class="custom-control-label" for="price-2">5 triệu - 10 triệu</label>
                         </div>
                         <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                             <input type="checkbox" class="custom-control-input js-input-filter"
-                                {{ $query['price'] == '3' ? 'checked' : '' }} name="price" data-value="3" id="price-3">
+                                {{ $query['price'] == '3' ? 'checked' : '' }} name="price" data-value="3"
+                                id="price-3">
                             <label class="custom-control-label" for="price-3">10 triệu - 15 triệu</label>
                         </div>
                         <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">

@@ -58,11 +58,14 @@
                     <tbody class="align-middle">
                         @foreach ($orderDetail as $product)
                             <tr>
-                                <td class="align-middle"><img src="{{ $product->image }}" alt="" style="width: 50px;"> {{ $product->name }}</td>
+                                <td class="align-middle"><img src="{{ $product->image }}" alt=""
+                                        style="width: 50px;"> {{ $product->name }}</td>
                                 <td class="align-middle">{{ number_format($product->price) }} VND</td>
                                 <td class="align-middle">
                                     <div class="input-group quantity mx-auto" style="width: 100px;">
-                                        <input type="text" class="form-control form-control-sm bg-secondary border-0 text-center" readonly value="{{ $product->quantity }}">
+                                        <input type="text"
+                                            class="form-control form-control-sm bg-secondary border-0 text-center" readonly
+                                            value="{{ $product->quantity }}">
                                     </div>
                                 </td>
                                 <td class="align-middle">{{ number_format($product->price * $product->quantity) }} VND</td>

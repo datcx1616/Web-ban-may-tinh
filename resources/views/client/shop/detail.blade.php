@@ -115,20 +115,24 @@
                             <input type="hidden" name="productID" value="{{ $product->id }}">
                             <div class="input-group quantity mr-3" style="width: 130px;">
                                 <div class="input-group-btn">
-                                    <button class="btn btn-primary btn-minus" type="button">
+                                    <button class="btn btn-primary btn-minus" type="button"
+                                        style="background-color: transparent; border-color: #28a745;">
                                         <i class="fa fa-minus"></i>
                                     </button>
                                 </div>
                                 <input type="text" class="form-control bg-secondary border-0 text-center" name="quantity"
                                     value="1">
                                 <div class="input-group-btn">
-                                    <button class="btn btn-primary btn-plus" type="button">
+                                    <button class="btn btn-primary btn-plus" type="button"
+                                        style="background-color: transparent; border-color: #28a745;">
                                         <i class="fa fa-plus"></i>
                                     </button>
                                 </div>
                             </div>
-                            <button class="btn btn-primary px-3"><i class="fa fa-shopping-cart mr-1"></i>Thêm vào giỏ
-                                hàng</button>
+                            <Button class="btn btn-sm px-4 py-2 rounded-pill border text-success"
+                                style="background-color: transparent; border-color: #28a745;">
+                                <i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng
+                            </Button>
                         </div>
                     </form>
                 </div>
