@@ -65,43 +65,53 @@
                     </div>
                 </form>
             </div>
-            <div class="col-lg-4 col-6 text-center text-lg-right">
-                <div class="d-inline-flex align-items-center">
-                    @auth
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">Chào
-                                {{ Auth::user()->name ?? '' }}</button>
-                            <div class="dropdown-menu dropdown-menu-right" style="z-index:10001; border-radius: 10px;">
-                                @if ($user && $user->role === UserRole::ADMIN)
-                                    <a href="{{ route('admin.home.index') }}" class="dropdown-item">Trang quản trị</a>
-                                @endif
-                                <a href="{{ route('order.index') }}" class="dropdown-item">Quản lý đơn hàng</a>
-                                <a href="{{ route('logout') }}" class="dropdown-item">Đăng xuất</a>
-                            </div>
-                        </div>
-                    @endauth
-                    @guest
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">Tài
-                                khoản</button>
-                            <div class="dropdown-menu dropdown-menu-right" style="z-index:10001; border-radius: 10px;">
-                                <a href="{{ route('login') }}" class="dropdown-item">Đăng nhập</a>
-                                <a href="{{ route('register') }}" class="dropdown-item">Đăng ký</a>
-                            </div>
-                        </div>
-                    @endguest
+            <div class="col-lg-4 col-6  d-flex">
+                <div class="col-6">
+                    <div>
+                        <img src="{{ asset('client/img/Laptop.png') }}" alt="logo"
+                            style="width: 100px;height: 60px;">
+                    </div>
                 </div>
-                <div class="d-inline-flex align-items-center d-block d-lg-none">/-strong/-heart:>:o:-((:-h <a
-                        href="" class="btn px-0 ml-2">
-                        <i class="fas fa-heart text-dark"></i>
-                        <span class="badge text-dark border border-dark rounded-circle"
-                            style="padding-bottom: 2px;">0</span>
-                    </a>
-                    <a href="" class="btn px-0 ml-2">
-                        <i class="fas fa-shopping-cart text-dark"></i>
-                        <span class="badge text-dark border border-dark rounded-circle"
-                            style="padding-bottom: 2px;">0</span>
-                    </a>
+                <div class="col-6 text-center text-lg-right pt-3">
+                    <div class="d-inline-flex align-items-center">
+                        @auth
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-light dropdown-toggle"
+                                    data-toggle="dropdown">Chào
+                                    {{ Auth::user()->name ?? '' }}</button>
+                                <div class="dropdown-menu dropdown-menu-right" style="z-index:10001; border-radius: 10px;">
+                                    @if ($user && $user->role === UserRole::ADMIN)
+                                        <a href="{{ route('admin.home.index') }}" class="dropdown-item">Trang quản trị</a>
+                                    @endif
+                                    <a href="{{ route('order.index') }}" class="dropdown-item">Quản lý đơn hàng</a>
+                                    <a href="{{ route('logout') }}" class="dropdown-item">Đăng xuất</a>
+                                </div>
+                            </div>
+                        @endauth
+                        @guest
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-light dropdown-toggle"
+                                    data-toggle="dropdown">Tài
+                                    khoản</button>
+                                <div class="dropdown-menu dropdown-menu-right" style="z-index:10001; border-radius: 10px;">
+                                    <a href="{{ route('login') }}" class="dropdown-item">Đăng nhập</a>
+                                    <a href="{{ route('register') }}" class="dropdown-item">Đăng ký</a>
+                                </div>
+                            </div>
+                        @endguest
+                    </div>
+                    <div class="d-inline-flex align-items-center d-block d-lg-none">/-strong/-heart:>:o:-((:-h <a
+                            href="" class="btn px-0 ml-2">
+                            <i class="fas fa-heart text-dark"></i>
+                            <span class="badge text-dark border border-dark rounded-circle"
+                                style="padding-bottom: 2px;">0</span>
+                        </a>
+                        <a href="" class="btn px-0 ml-2">
+                            <i class="fas fa-shopping-cart text-dark"></i>
+                            <span class="badge text-dark border border-dark rounded-circle"
+                                style="padding-bottom: 2px;">0</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
