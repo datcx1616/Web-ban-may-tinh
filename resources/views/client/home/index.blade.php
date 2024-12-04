@@ -1,5 +1,125 @@
 @extends('layouts.app')
 @section('content')
+    <style>
+        /* Tạo hiệu ứng chạy qua lại cho mỗi phần tử */
+        @keyframes slide {
+            0% {
+                transform: translateX(100%);
+            }
+
+            50% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        .slide-container {
+            display: flex;
+            flex-wrap: nowrap;
+            /* Đảm bảo các phần tử không xuống hàng */
+            justify-content: flex-start;
+            overflow-x: hidden;
+            /* Ẩn thanh cuộn ngang */
+            white-space: nowrap;
+            /* Ngăn các phần tử xuống hàng */
+        }
+
+        .slide-item {
+            flex: 0 0 auto;
+            /* Không giãn nở và không thu nhỏ */
+            margin-right: 30px;
+            margin-bottom: 20px;
+            /* Thêm margin dưới để tạo khoảng cách khi xuống hàng */
+            animation: slide 20s linear infinite;
+            /* Thay đổi từ 10s thành 20s để làm chậm hiệu ứng */
+        }
+
+        .slide-item:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .slide-item:nth-child(2) {
+            animation-delay: 2s;
+        }
+
+        .slide-item:nth-child(3) {
+            animation-delay: 4s;
+        }
+
+        .slide-item:nth-child(4) {
+            animation-delay: 6s;
+        }
+
+        .slide-item:nth-child(5) {
+            animation-delay: 8s;
+        }
+
+        .slide-item:nth-child(6) {
+            animation-delay: 10s;
+        }
+    </style>
+
+
+
+    <div class="container-fluid pt-3">
+        <div class="row px-xl-5 pb-1 slide-container">
+            <div class="col-lg-2 col-md-6 col-sm-12 pb-1 slide-item">
+                <div class="d-flex align-items-center bg-light mb-4"
+                    style="padding: 30px; border-radius: 10px; height: 100px;">
+                    <img src="{{ asset('client/img/icon1.png') }}" alt="logo" style="width: 50px; height: 40px;">
+                    <h5 class="font-weight-semi-bold m-0 mx-3">Apple</h5>
+                    <img src="{{ asset('client/img/icon1.1.png') }}" alt="logo" style="width: 100px; height: 70px;">
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-12 pb-1 slide-item">
+                <div class="d-flex align-items-center bg-light mb-4"
+                    style="padding: 30px; border-radius: 10px; height: 100px;">
+                    <img src="{{ asset('client/img/icon7.png') }}" alt="logo" style="width: 50px; height: 40px;">
+                    <h5 class="font-weight-semi-bold m-0 mx-3">hp</h5>
+                    <img src="{{ asset('client/img/icon7.7.png') }}" alt="logo" style="width: 100px; height: 70px;">
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-12 pb-1 slide-item">
+                <div class="d-flex align-items-center bg-light mb-4"
+                    style="padding: 30px; border-radius: 10px; height: 100px;">
+                    <img src="{{ asset('client/img/icon3.png') }}" alt="logo" style="width: 50px; height: 40px;">
+                    <h5 class="font-weight-semi-bold m-0 mx-3">Acer</h5>
+                    <img src="{{ asset('client/img/icon3.3.png') }}" alt="logo" style="width: 100px; height: 70px;">
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-12 pb-1 slide-item">
+                <div class="d-flex align-items-center bg-light mb-4"
+                    style="padding: 30px; border-radius: 10px; height: 100px;">
+                    <img src="{{ asset('client/img/icon4.png') }}" alt="logo" style="width: 50px; height: 40px;">
+                    <h5 class="font-weight-semi-bold m-0 mx-3">MSI</h5>
+                    <img src="{{ asset('client/img/icon4.4.png') }}" alt="logo" style="width: 100px; height: 70px;">
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-12 pb-1 slide-item">
+                <div class="d-flex align-items-center bg-light mb-4"
+                    style="padding: 30px; border-radius: 10px; height: 100px;">
+                    <img src="{{ asset('client/img/icon5.png') }}" alt="logo" style="width: 50px; height: 40px;">
+                    <h5 class="font-weight-semi-bold m-0 mx-3">Lenovo</h5>
+                    <img src="{{ asset('client/img/icon5.5.png') }}" alt="logo" style="width: 100px; height: 70px;">
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-12 pb-1 slide-item">
+                <div class="d-flex align-items-center bg-light mb-4"
+                    style="padding: 30px; border-radius: 10px; height: 100px;">
+                    <img src="{{ asset('client/img/icon6.png') }}" alt="logo" style="width: 50px; height: 40px;">
+                    <h5 class="font-weight-semi-bold m-0 mx-3">Dell</h5>
+                    <img src="{{ asset('client/img/icon6.6.png') }}" alt="logo" style="width: 100px; height: 70px;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
     <x-banner-home-component />
 
     <style>
@@ -166,62 +286,44 @@
             </div>
         </div>
         </div>
+
+        <style>
+            .icon-red {
+                color: red;
+                /* Đặt màu đỏ cho các biểu tượng */
+            }
+        </style>
+
         <div class="container-fluid pt-5">
             <div class="row px-xl-5 pb-3">
                 <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
                     <div class="d-flex align-items-center bg-light mb-4" style="padding: 30px; border-radius: 10px;">
-                        <h1 class="fa fa-truck text-black m-0 mr-3"></h1>
-                        <h5 class="font-weight-semi-bold m-0">Chính sách giao hàng</h5>
+                        <h1 class="fas fa-shield-alt icon-red m-0 mr-3"></h1>
+                        <h5 class="font-weight-semi-bold m-0">Thương hiệu đảm bảo</h5>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
                     <div class="d-flex align-items-center bg-light mb-4" style="padding: 30px; border-radius: 10px;">
-                        <h1 class="fa fa-sync-alt text-black m-0 mr-2"></h1>
-                        <h5 class="font-weight-semi-bold m-0">Đổi mới 15 ngày đầu</h5>
+                        <h1 class="fas fa-undo icon-red m-0 mr-2"></h1>
+                        <h5 class="font-weight-semi-bold m-0">Đổi trả dễ dàng</h5>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
                     <div class="d-flex align-items-center bg-light mb-4" style="padding: 30px; border-radius: 10px;">
-                        <h1 class="fas fa-credit-card text-black m-0 mr-3"></h1>
-                        <h5 class="font-weight-semi-bold m-0">Thanh toán tiện lợi</h5>
+                        <h1 class="fas fa-star icon-red m-0 mr-3"></h1>
+                        <h5 class="font-weight-semi-bold m-0">Sản phẩm chất lượng</h5>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
                     <div class="d-flex align-items-center bg-light mb-4" style="padding: 30px; border-radius: 10px;">
-                        <h1 class="fa fa-headset text-black m-0 mr-3"></h1>
-                        <h5 class="font-weight-semi-bold m-0">Hỗ trợ nhiệt tình</h5>
+                        <h1 class="fas fa-truck icon-red m-0 mr-3"></h1>
+                        <h5 class="font-weight-semi-bold m-0">Giao hàng tận nơi</h5>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container-fluid pt-5">
-            <div class="row px-xl-5 pb-3">
-                <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                    <div class="d-flex align-items-center bg-light mb-4" style="padding: 30px; border-radius: 10px;">
-                        <h1 class="fa fa-truck text-black m-0 mr-3"></h1>
-                        <h5 class="font-weight-semi-bold m-0">Chính sách giao hàng</h5>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                    <div class="d-flex align-items-center bg-light mb-4" style="padding: 30px; border-radius: 10px;">
-                        <h1 class="fa fa-sync-alt text-black m-0 mr-2"></h1>
-                        <h5 class="font-weight-semi-bold m-0">Đổi mới 15 ngày đầu</h5>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                    <div class="d-flex align-items-center bg-light mb-4" style="padding: 30px; border-radius: 10px;">
-                        <h1 class="fas fa-credit-card text-black m-0 mr-3"></h1>
-                        <h5 class="font-weight-semi-bold m-0">Thanh toán tiện lợi</h5>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                    <div class="d-flex align-items-center bg-light mb-4" style="padding: 30px; border-radius: 10px;">
-                        <h1 class="fa fa-headset text-black m-0 mr-3"></h1>
-                        <h5 class="font-weight-semi-bold m-0">Hỗ trợ nhiệt tình</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+
 
         <div id="chatbox">
             <div id="chat-header">
@@ -346,40 +448,39 @@
 
 
         <div class="container-fluid pt-5 pb-3">
+
             <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4">
+                <img src="{{ asset('client/img/Icon_Doc_quyen.png') }}" alt="logo"
+                    style="width: 50px; height: 40px;">
                 <span class="bg-secondary pr-3">Ưu đãi thanh toán</span>
             </h2>
             <div class="row px-xl-5">
                 <!-- Khung 1 -->
                 <div class="col-md-3">
                     <div class="product-offer mb-30" style="height: 150px;">
-                        <img class="img-fluid"
-                            src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:90/plain/https://dashboard.cellphones.com.vn/storage/techcom-iphone-16-update-uu-dai-1-6%20(2).jpg"
-                            alt="Image 1" style="height: 100%; width: 100%;">
+                        <img class="img-fluid" src="{{ asset('client/img/ud4.png') }}" alt="logo" alt="Image 2"
+                            style="height: 100%; width: 100%;">
                     </div>
                 </div>
                 <!-- Khung 2 -->
                 <div class="col-md-3">
                     <div class="product-offer mb-30" style="height: 150px;">
-                        <img class="img-fluid"
-                            src="https://fptshop.com.vn/tin-tuc/tin-khuyen-mai/fpt-shop-trien-khai-uu-dai-giam-500000-vnd-khi-thanh-toan-bang-the-tin-dung-ocb-152985"
-                            alt="Image 2" style="height: 100%; width: 100%;">
+                        <img class="img-fluid" src="{{ asset('client/img/ud1.png') }}" alt="logo" alt="Image 2"
+                            style="height: 100%; width: 100%;">
                     </div>
                 </div>
                 <!-- Khung 3 -->
                 <div class="col-md-3">
                     <div class="product-offer mb-30" style="height: 150px;">
-                        <img class="img-fluid"
-                            src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:90/plain/https://dashboard.cellphones.com.vn/storage/hsbc-iphone.png"
-                            alt="Image 3" style="height: 100%; width: 100%;">
+                        <img class="img-fluid" src="{{ asset('client/img/ud2.png') }}" alt="logo" alt="Image 2"
+                            style="height: 100%; width: 100%;">
                     </div>
                 </div>
                 <!-- Khung 4 -->
                 <div class="col-md-3">
                     <div class="product-offer mb-30" style="height: 150px;">
-                        <img class="img-fluid"
-                            src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:90/plain/https://dashboard.cellphones.com.vn/storage/hsbc-iphone.png"
-                            alt="Image 4" style="height: 100%; width: 100%;">
+                        <img class="img-fluid" src="{{ asset('client/img/ud5.png') }}" alt="logo" alt="Image 2"
+                            style="height: 100%; width: 100%;">
                     </div>
                 </div>
             </div>

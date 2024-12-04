@@ -62,7 +62,6 @@
                                 <i class="fa fa-search" style="color: black;"></i>
                             </button>
                         </div>
-
                     </div>
                 </form>
             </div>
