@@ -194,6 +194,34 @@
                 </div>
             </div>
         </div>
+        <div class="container-fluid pt-5">
+            <div class="row px-xl-5 pb-3">
+                <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                    <div class="d-flex align-items-center bg-light mb-4" style="padding: 30px; border-radius: 10px;">
+                        <h1 class="fa fa-truck text-black m-0 mr-3"></h1>
+                        <h5 class="font-weight-semi-bold m-0">Chính sách giao hàng</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                    <div class="d-flex align-items-center bg-light mb-4" style="padding: 30px; border-radius: 10px;">
+                        <h1 class="fa fa-sync-alt text-black m-0 mr-2"></h1>
+                        <h5 class="font-weight-semi-bold m-0">Đổi mới 15 ngày đầu</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                    <div class="d-flex align-items-center bg-light mb-4" style="padding: 30px; border-radius: 10px;">
+                        <h1 class="fas fa-credit-card text-black m-0 mr-3"></h1>
+                        <h5 class="font-weight-semi-bold m-0">Thanh toán tiện lợi</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                    <div class="d-flex align-items-center bg-light mb-4" style="padding: 30px; border-radius: 10px;">
+                        <h1 class="fa fa-headset text-black m-0 mr-3"></h1>
+                        <h5 class="font-weight-semi-bold m-0">Hỗ trợ nhiệt tình</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div id="chatbox">
             <div id="chat-header">
@@ -334,7 +362,7 @@
                 <div class="col-md-3">
                     <div class="product-offer mb-30" style="height: 150px;">
                         <img class="img-fluid"
-                            src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:90/plain/https://dashboard.cellphones.com.vn/storage/uu-dai-thanh-toan-slide-ip16-mb-1-5-update.jpg"
+                            src="https://fptshop.com.vn/tin-tuc/tin-khuyen-mai/fpt-shop-trien-khai-uu-dai-giam-500000-vnd-khi-thanh-toan-bang-the-tin-dung-ocb-152985"
                             alt="Image 2" style="height: 100%; width: 100%;">
                     </div>
                 </div>
