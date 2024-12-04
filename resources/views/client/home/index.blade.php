@@ -70,7 +70,7 @@
                 <div class="d-flex align-items-center bg-light mb-4"
                     style="padding: 30px; border-radius: 10px; height: 100px;">
                     <img src="{{ asset('client/img/icon1.png') }}" alt="logo" style="width: 50px; height: 40px;">
-                    <h5 class="font-weight-semi-bold m-0 mx-3">Apple</h5>
+                    <h5 class="font-weight-semi-bold m-0 mx-3">App</h5>
                     <img src="{{ asset('client/img/icon1.1.png') }}" alt="logo" style="width: 100px; height: 70px;">
                 </div>
             </div>
@@ -102,7 +102,7 @@
                 <div class="d-flex align-items-center bg-light mb-4"
                     style="padding: 30px; border-radius: 10px; height: 100px;">
                     <img src="{{ asset('client/img/icon5.png') }}" alt="logo" style="width: 50px; height: 40px;">
-                    <h5 class="font-weight-semi-bold m-0 mx-3">Lenovo</h5>
+                    <h5 class="font-weight-semi-bold m-0 mx-3">Leno</h5>
                     <img src="{{ asset('client/img/icon5.5.png') }}" alt="logo" style="width: 100px; height: 70px;">
                 </div>
             </div>
