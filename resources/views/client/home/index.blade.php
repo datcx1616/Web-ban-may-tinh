@@ -509,17 +509,15 @@
                 <!-- Khung 3 -->
                 <div class="col-md-3">
                     <div class="product-offer mb-30" style="height: 150px;">
-                        <img class="img-fluid"
-                            src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:90/plain/https://dashboard.cellphones.com.vn/storage/gian-hang-samsung-home.png"
-                            alt="Image 3" style="height: 100%; width: 100%;">
+                        <img class="img-fluid" src="{{ asset('client/img/bn1.png') }}" alt="logo" alt="Image 2"
+                            style="height: 100%; width: 100%;">
                     </div>
                 </div>
                 <!-- Khung 4 -->
                 <div class="col-md-3">
                     <div class="product-offer mb-30" style="height: 150px;">
-                        <img class="img-fluid"
-                            src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:90/plain/https://dashboard.cellphones.com.vn/storage/xiaomi.png"
-                            alt="Image 4" style="height: 100%; width: 100%;">
+                        <img class="img-fluid" src="{{ asset('client/img/bn2.png') }}" alt="logo" alt="Image 2"
+                            style="height: 100%; width: 100%;">
                     </div>
                 </div>
             </div>

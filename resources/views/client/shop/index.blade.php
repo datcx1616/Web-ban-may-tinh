@@ -389,6 +389,7 @@
             <!-- Shop Product End -->
         </div>
     </div>
+    <x-post-new-component />
     <!-- Shop End -->
     <script>
         $(document).ready(function() {
