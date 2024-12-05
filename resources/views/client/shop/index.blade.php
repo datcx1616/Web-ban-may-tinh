@@ -201,12 +201,21 @@
     <div class="container-fluid">
         <div class="row px-xl-5">
             <!-- Shop Sidebar Start -->
-            <div class="col-lg-2 ">
+            <div class="col-lg-2">
                 <!-- Price Start -->
                 <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Lọc theo
                         giá</span>
                 </h5>
                 <style>
+                    .hover-shadow {
+                        transition: box-shadow 0.3s ease, transform 0.3s ease;
+                    }
+
+                    .hover-shadow:hover {
+                        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+                        transform: translateY(-5px);
+                    }
+
                     .product-card {
                         border-radius: 10px;
                         /* Điều chỉnh độ bo tròn (10px là ví dụ) */
@@ -216,7 +225,8 @@
                         /* Thêm chút hiệu ứng shadow (tùy chọn) */
                     }
                 </style>
-                <div class="bg-light p-4 mb-30 product-card" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                <div class="bg-light p-4 mb-30 product-card hover-shadow"
+                    style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
                     <form>
                         <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                             <input type="checkbox" class="custom-control-input js-input-filter"
@@ -256,7 +266,8 @@
                 <!-- Color Start -->
                 <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Ram</span>
                 </h5>
-                <div class="bg-light p-4 mb-30 product-card" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                <div class="bg-light p-4 mb-30 product-card hover-shadow"
+                    style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
                     <form>
                         <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                             <input type="checkbox" class="custom-control-input js-input-filter"
@@ -295,7 +306,8 @@
                 <!-- Size Start -->
                 <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Bộ
                         nhớ</span></h5>
-                <div class="bg-light p-4 mb-30 product-card" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                <div class="bg-light p-4 mb-30 product-card hover-shadow"
+                    style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
                     <form>
                         <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                             <input type="checkbox" class="custom-control-input js-input-filter"
@@ -332,7 +344,8 @@
 
                 <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Kích thước
                         màn hình</span></h5>
-                <div class="bg-light p-4 mb-30 product-card" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                <div class="bg-light p-4 mb-30 product-card hover-shadow"
+                    style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
                     <form>
                         <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                             <input type="checkbox" class="custom-control-input js-input-filter"
