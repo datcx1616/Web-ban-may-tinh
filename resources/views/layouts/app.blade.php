@@ -53,7 +53,7 @@
             </div>
             <div class="col-lg-4">
                 <a href="{{ route('home.index') }}" class="text-decoration-none">
-                    <img src="{{ asset('client/img/logo1.jpg') }}" alt="logo" style="width: 100px;height: 60px;">
+                    <img src="{{ asset('client/img/logonew.png') }}" alt="logo" style="width: 100px;height: 60px;">
                 </a>
             </div>
             <div class="col-lg-4 col-6 text-left">
