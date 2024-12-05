@@ -193,7 +193,7 @@
 
     <!-- Breadcrumb End -->
     <div class=" pt-2">
-        <marquee behavior="" direction="left" style="color:black;font-size: 20px;">
+        <marquee behavior="" direction="left" style="color:black;font-size: 16px;">
             "Hành trình nâng cấp công nghệ bắt đầu từ đây – nơi bạn tìm thấy giải pháp hoàn hảo cho mọi nhu cầu máy tính."
         </marquee>
     </div>

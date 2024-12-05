@@ -44,7 +44,13 @@
     <!-- Topbar Start -->
     <div class="topbar container-fluid">
 
+
         <div class="row align-items-center bg-light py-3 px-xl-5 d-none d-lg-flex">
+            <div class="col-lg-12">
+                <marquee behavior="" direction="left" style="color:black;font-size: 14px;">
+                    "182, Lê Duẩn, Thành Phố Vinh, Nghệ An - liên hệ: 0394212962."
+                </marquee>
+            </div>
             <div class="col-lg-4">
                 <a href="{{ route('home.index') }}" class="text-decoration-none">
                     <img src="{{ asset('client/img/logo1.jpg') }}" alt="logo" style="width: 100px;height: 60px;">
@@ -123,8 +129,9 @@
     <div class="navbar1 container-fluid bg-light ">
         <div class="row px-xl-5 border-top border-bottom border-muted border-1 d-flex align-items-center">
             <div class="col-lg-2 d-none d-lg-block d-flex align-items-center justify-content-between">
-                <a class="btn d-flex align-items-center border border-muted border-1  bg-white " data-toggle="collapse"
-                    href="#navbar-vertical" style="height: 46px; width:80%; padding: 0 10px;border-radius: 10px">
+                <a class="btn d-flex align-items-center border border-muted border-1  bg-white "
+                    data-toggle="collapse" href="#navbar-vertical"
+                    style="height: 46px; width:80%; padding: 0 10px;border-radius: 10px">
                     <h6 class="text-dark  m-0"><i class="fa fa-bars mr-2"></i>Danh mục</h6>
                 </a>
 
