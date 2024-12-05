@@ -48,7 +48,8 @@
         <div class="row align-items-center bg-light py-3 px-xl-5 d-none d-lg-flex">
             <div class="col-lg-12">
                 <marquee behavior="" direction="left" style="color:black;font-size: 14px;">
-                    "182, Lê Duẩn, Thành Phố Vinh, Nghệ An - liên hệ: 0394212962."
+                    "182, Lê Duẩn, Thành Phố Vinh, Nghệ An - Nếu gặp vấn đề liên hệ phòng SH TCT - Phụ trách :
+                    Xuân Đạt - liên hệ: 0394212962."
                 </marquee>
             </div>
             <div class="col-lg-4">
