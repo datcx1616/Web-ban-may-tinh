@@ -192,6 +192,11 @@
     </div>
 
     <!-- Breadcrumb End -->
+    <div class=" pt-2">
+        <marquee behavior="" direction="left" style="color:black;font-size: 20px;">
+            "Hành trình nâng cấp công nghệ bắt đầu từ đây – nơi bạn tìm thấy giải pháp hoàn hảo cho mọi nhu cầu máy tính."
+        </marquee>
+    </div>
     <!-- Shop Start -->
     <div class="container-fluid">
         <div class="row px-xl-5">
@@ -244,15 +249,6 @@
                             <label class="custom-control-label" for="price-5">Trên 20 triệu</label>
                         </div>
                     </form>
-                    {{-- <style>
-                        #customRange4 {
-                            width: 300px;
-                            /* Tăng chiều rộng tùy ý */
-                        }
-                    </style>
-
-                    <input type="range" class="form-range" id="customRange4" min="10" max="90"> --}}
-
                 </div>
                 <!-- Price End -->
 

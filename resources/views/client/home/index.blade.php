@@ -296,34 +296,73 @@
 
         <div class="container-fluid pt-5">
             <div class="row px-xl-5 pb-3">
+                <!-- Block 1 -->
                 <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                    <div class="d-flex align-items-center bg-light mb-4" style="padding: 30px; border-radius: 10px;">
-                        <h1 class="fas fa-shield-alt icon-red m-0 mr-3"></h1>
+                    <div class="d-flex align-items-center bg-light shadow-sm mb-4 p-4 rounded hover-shadow">
+                        <div class="icon-container text-primary mr-3">
+                            <i class="fas fa-shield-alt fa-2x"></i>
+                        </div>
                         <h5 class="font-weight-semi-bold m-0">Thương hiệu đảm bảo</h5>
                     </div>
                 </div>
+                <!-- Block 2 -->
                 <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                    <div class="d-flex align-items-center bg-light mb-4" style="padding: 30px; border-radius: 10px;">
-                        <h1 class="fas fa-undo icon-red m-0 mr-2"></h1>
+                    <div class="d-flex align-items-center bg-light shadow-sm mb-4 p-4 rounded hover-shadow">
+                        <div class="icon-container text-success mr-3">
+                            <i class="fas fa-undo fa-2x"></i>
+                        </div>
                         <h5 class="font-weight-semi-bold m-0">Đổi trả dễ dàng</h5>
                     </div>
                 </div>
+                <!-- Block 3 -->
                 <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                    <div class="d-flex align-items-center bg-light mb-4" style="padding: 30px; border-radius: 10px;">
-                        <h1 class="fas fa-star icon-red m-0 mr-3"></h1>
+                    <div class="d-flex align-items-center bg-light shadow-sm mb-4 p-4 rounded hover-shadow">
+                        <div class="icon-container text-warning mr-3">
+                            <i class="fas fa-star fa-2x"></i>
+                        </div>
                         <h5 class="font-weight-semi-bold m-0">Sản phẩm chất lượng</h5>
                     </div>
                 </div>
+                <!-- Block 4 -->
                 <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                    <div class="d-flex align-items-center bg-light mb-4" style="padding: 30px; border-radius: 10px;">
-                        <h1 class="fas fa-truck icon-red m-0 mr-3"></h1>
+                    <div class="d-flex align-items-center bg-light shadow-sm mb-4 p-4 rounded hover-shadow">
+                        <div class="icon-container text-danger mr-3">
+                            <i class="fas fa-truck fa-2x"></i>
+                        </div>
                         <h5 class="font-weight-semi-bold m-0">Giao hàng tận nơi</h5>
                     </div>
                 </div>
             </div>
         </div>
 
+        <style>
+            .hover-shadow {
+                transition: box-shadow 0.3s ease, transform 0.3s ease;
+            }
 
+            .hover-shadow:hover {
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+                transform: translateY(-5px);
+            }
+
+            .icon-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .bg-light {
+                background: linear-gradient(135deg, #f9f9f9, #ffffff);
+            }
+        </style>
+
+
+        <div class=" pt-2">
+            <marquee behavior="" direction="left" style="color:black;font-size: 20px;">
+                "Hành trình nâng cấp công nghệ bắt đầu từ đây – nơi bạn tìm thấy giải pháp hoàn hảo cho mọi nhu cầu máy
+                tính."
+            </marquee>
+        </div>
 
         <div id="chatbox">
             <div id="chat-header">

@@ -77,8 +77,9 @@
                 ]) }}"
                     class="btn btn-sm px-4 py-2 rounded-pill border text-success"
                     style="background-color: transparent; border-color: #28a745;">
-                    <i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng
+                    <i class="fa fa-eye"></i> Xem chi tiết
                 </a>
+
             </div>
         </div>
 
