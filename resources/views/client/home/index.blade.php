@@ -68,12 +68,15 @@
         <div class="row px-xl-5 pb-1 slide-container">
             <div class="col-lg-2 col-md-6 col-sm-12 pb-1 slide-item">
                 <div class="d-flex align-items-center bg-light mb-4"
-                    style="padding: 30px; border-radius: 10px; height: 100px;">
-                    <img src="{{ asset('client/img/icon1.png') }}" alt="logo" style="width: 50px; height: 40px;">
-                    <h5 class="font-weight-semi-bold m-0 mx-3">App</h5>
-                    <img src="{{ asset('client/img/icon1.1.png') }}" alt="logo" style="width: 100px; height: 70px;">
+                    style="padding: 20px; border-radius: 10px; height: 100px;">
+                    <img src="{{ asset('client/img/icon1.png') }}" alt="logo"
+                        style="width: 50px; height: 40px; margin-right: 10px;">
+                    <h5 class="font-weight-semi-bold m-0 text-nowrap" style="margin-left: 0;">Apple</h5>
+                    <img src="{{ asset('client/img/icon1.1.png') }}" alt="logo"
+                        style="width: 100px; height: 70px; margin-left: auto;">
                 </div>
             </div>
+
             <div class="col-lg-2 col-md-6 col-sm-12 pb-1 slide-item">
                 <div class="d-flex align-items-center bg-light mb-4"
                     style="padding: 30px; border-radius: 10px; height: 100px;">
