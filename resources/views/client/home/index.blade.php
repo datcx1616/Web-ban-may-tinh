@@ -5,7 +5,7 @@
             <span class="close-btn" onclick="closePopup()">&times;</span>
             <h2>ĐĂNG KÝ NHẬN TIN KHUYẾN MÃI</h2>
             <p>Nhận Ngay Voucher 10%</p>
-            <form action="#">
+            <form action="#" style=" text-align: left;">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
 
