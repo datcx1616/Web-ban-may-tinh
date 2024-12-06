@@ -8,7 +8,7 @@
         <div class="col">
             <div class="owl-carousel related-carousel">
                 @foreach ($products as $product)
-                    <div class="product-card">
+                    <div class="">
                         <x-product-card :product="$product" :lg="12" />
                     </div>
                 @endforeach
