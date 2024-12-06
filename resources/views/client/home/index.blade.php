@@ -193,11 +193,6 @@
                 alt="TikTok">
             <!-- Đường dẫn mới cho logo TikTok -->
         </a>
-
-
-
-
-
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -263,318 +258,315 @@
         }
     </style>
 
-    <body>
-        <div class="button-container">
-            <!-- Nút "Máy Cũ Giá Tốt" -->
-            <div class="custom-btn">
-                <div>
-                    <!-- Icon SVG cho Máy Cũ Giá Tốt -->
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M11 1.5v13H9v-13h2zM5 2v13H3V2h2z" />
-                    </svg>
-                    <br>Máy Cũ <br>Giá Tốt
-                </div>
-            </div>
-
-            <!-- Nút "Thu Cũ Giá Cao" -->
-            <div class="custom-btn">
-                <div>
-                    <!-- Icon SVG cho Thu Cũ Giá Cao -->
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M8 3.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zM2 8a6 6 0 1 1 12 0A6 6 0 0 1 2 8z" />
-                    </svg>
-                    <br>Thu Cũ <br>Giá Cao
-                </div>
-            </div>
-
-            <!-- Nút Zalo "Tư Vấn Ngay" -->
-            <div class="zalo-btn">
-                <!-- Icon SVG cho Zalo -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#0078FF"
-                    class="bi bi-telephone-fill" viewBox="0 0 16 16">
-                    <path
-                        d="M3.654 1.328a.678.678 0 0 1 .696-.245l2.646.623c.286.067.45.297.408.516l-.591 3.17a.678.678 0 0 1-.356.511l-1.201.7a11.462 11.462 0 0 0 4.516 4.516l.7-1.201a.678.678 0 0 1 .511-.356l3.17-.591a.678.678 0 0 1 .516.408l.623 2.646a.678.678 0 0 1-.245.696l-2.102 1.22a1.745 1.745 0 0 1-1.77.112 13.468 13.468 0 0 1-6.397-6.397 1.745 1.745 0 0 1 .112-1.77l1.22-2.102z" />
+    <div class="button-container">
+        <!-- Nút "Máy Cũ Giá Tốt" -->
+        <div class="custom-btn">
+            <div>
+                <!-- Icon SVG cho Máy Cũ Giá Tốt -->
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M11 1.5v13H9v-13h2zM5 2v13H3V2h2z" />
                 </svg>
-                Tư Vấn Ngay
-            </div>
-        </div>
-        </div>
-
-        <style>
-            .icon-red {
-                color: red;
-            }
-        </style>
-
-        <div class="container-fluid pt-5">
-            <div class="row px-xl-5 pb-3">
-                <!-- Block 1 -->
-                <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                    <div class="d-flex align-items-center bg-light shadow-sm mb-4 p-4 rounded hover-shadow">
-                        <div class="icon-container text-primary mr-3">
-                            <i class="fas fa-shield-alt fa-2x"></i>
-                        </div>
-                        <h5 class="font-weight-semi-bold m-0">Thương hiệu đảm bảo</h5>
-                    </div>
-                </div>
-                <!-- Block 2 -->
-                <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                    <div class="d-flex align-items-center bg-light shadow-sm mb-4 p-4 rounded hover-shadow">
-                        <div class="icon-container text-success mr-3">
-                            <i class="fas fa-undo fa-2x"></i>
-                        </div>
-                        <h5 class="font-weight-semi-bold m-0">Đổi trả dễ dàng</h5>
-                    </div>
-                </div>
-                <!-- Block 3 -->
-                <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                    <div class="d-flex align-items-center bg-light shadow-sm mb-4 p-4 rounded hover-shadow">
-                        <div class="icon-container text-warning mr-3">
-                            <i class="fas fa-star fa-2x"></i>
-                        </div>
-                        <h5 class="font-weight-semi-bold m-0">Sản phẩm chất lượng</h5>
-                    </div>
-                </div>
-                <!-- Block 4 -->
-                <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                    <div class="d-flex align-items-center bg-light shadow-sm mb-4 p-4 rounded hover-shadow">
-                        <div class="icon-container text-danger mr-3">
-                            <i class="fas fa-truck fa-2x"></i>
-                        </div>
-                        <h5 class="font-weight-semi-bold m-0">Giao hàng tận nơi</h5>
-                    </div>
-                </div>
+                <br>Máy Cũ <br>Giá Tốt
             </div>
         </div>
 
-        <style>
-            .hover-shadow {
-                transition: box-shadow 0.3s ease, transform 0.3s ease;
-            }
-
-            .hover-shadow:hover {
-                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-                transform: translateY(-5px);
-            }
-
-            .icon-container {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .bg-light {
-                background: linear-gradient(135deg, #f9f9f9, #ffffff);
-            }
-        </style>
-
-
-        <div class=" pt-2">
-            <marquee behavior="" direction="left" style="color:black;font-size: 16px;">
-                "Hành trình nâng cấp công nghệ bắt đầu từ đây – nơi bạn tìm thấy giải pháp hoàn hảo cho mọi nhu cầu máy
-                tính."
-            </marquee>
-        </div>
-
-        <div id="chatbox">
-            <div id="chat-header">
-                Chat với chúng tôi
-                <span id="close-chat">✖</span> <!-- Icon đóng hộp thoại -->
-            </div>
-            <div id="chat-body">
-                <div class="message">Chào bạn! Bạn cần giúp đỡ gì hôm nay?</div>
-            </div>
-            <input type="text" id="user-input" placeholder="Nhập tin nhắn của bạn...">
-            <button id="send-button">Gửi</button>
-        </div>
-
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-            }
-
-            #chatbox {
-                z-index: 1000;
-                position: fixed;
-                bottom: 20px;
-                right: 20px;
-                width: 300px;
-                border: 1px solid #ccc;
-                border-radius: 8px;
-                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-                background-color: white;
-                transition: width 0.3s ease, height 0.3s ease;
-                /* Hiệu ứng cho cả chiều rộng và chiều cao */
-            }
-
-            #chatbox.collapsed {
-                width: 50px;
-                /* Kích thước khi thu nhỏ ngang */
-                height: 40px;
-                /* Chiều cao khi thu nhỏ ngang */
-                overflow: hidden;
-                /* Ẩn nội dung khi thu nhỏ */
-            }
-
-            #chat-header {
-                background-color: #007bff;
-                color: white;
-                padding: 10px;
-                border-radius: 8px 8px 0 0;
-                text-align: center;
-                position: relative;
-            }
-
-            #close-chat {
-                position: absolute;
-                right: 10px;
-                top: 5px;
-                cursor: pointer;
-                font-size: 16px;
-                color: white;
-            }
-
-            #chat-body {
-                max-height: 400px;
-                overflow-y: auto;
-                padding: 10px;
-            }
-
-            .message {
-                margin: 5px 0;
-            }
-
-            #user-input {
-                width: calc(100% - 80px);
-                padding: 10px;
-                border: 1px solid #ccc;
-                border-radius: 4px;
-            }
-
-            #send-button {
-                padding: 10px;
-                background-color: #007bff;
-                color: white;
-                border: none;
-                border-radius: 4px;
-                cursor: pointer;
-            }
-
-            #send-button:hover {
-                background-color: #0056b3;
-            }
-        </style>
-
-
-        <script>
-            const chatbox = document.getElementById('chatbox');
-            const closeButton = document.getElementById('close-chat');
-
-            closeButton.addEventListener('click', function() {
-                chatbox.classList.toggle('collapsed'); // Chuyển đổi giữa trạng thái thu nhỏ và bình thường
-            });
-
-            document.getElementById('send-button').addEventListener('click', function() {
-                const userInput = document.getElementById('user-input');
-                const message = userInput.value;
-
-                if (message) {
-                    const chatBody = document.getElementById('chat-body');
-                    const newMessage = document.createElement('div');
-                    newMessage.className = 'message';
-                    newMessage.textContent = message;
-                    chatBody.appendChild(newMessage);
-
-                    userInput.value = '';
-                    chatBody.scrollTop = chatBody.scrollHeight;
-                }
-            });
-        </script>
-
-
-
-
-        <x-feature-product />
-
-
-
-        <div class="container-fluid pt-5 pb-3">
-
-            <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4">
-                <img src="{{ asset('client/img/Icon_Doc_quyen.png') }}" alt="logo"
-                    style="width: 50px; height: 40px;">
-                <span class="bg-secondary pr-3">Ưu đãi thanh toán</span>
-            </h2>
-            <div class="row px-xl-5">
-                <!-- Khung 1 -->
-                <div class="col-md-3">
-                    <div class="product-offer mb-30" style="height: 150px;">
-                        <img class="img-fluid" src="{{ asset('client/img/ud4.png') }}" alt="logo" alt="Image 2"
-                            style="height: 100%; width: 100%;">
-                    </div>
-                </div>
-                <!-- Khung 2 -->
-                <div class="col-md-3">
-                    <div class="product-offer mb-30" style="height: 150px;">
-                        <img class="img-fluid" src="{{ asset('client/img/ud1.png') }}" alt="logo" alt="Image 2"
-                            style="height: 100%; width: 100%;">
-                    </div>
-                </div>
-                <!-- Khung 3 -->
-                <div class="col-md-3">
-                    <div class="product-offer mb-30" style="height: 150px;">
-                        <img class="img-fluid" src="{{ asset('client/img/ud2.png') }}" alt="logo" alt="Image 2"
-                            style="height: 100%; width: 100%;">
-                    </div>
-                </div>
-                <!-- Khung 4 -->
-                <div class="col-md-3">
-                    <div class="product-offer mb-30" style="height: 150px;">
-                        <img class="img-fluid" src="{{ asset('client/img/ud5.png') }}" alt="logo" alt="Image 2"
-                            style="height: 100%; width: 100%;">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid pt-5 pb-3">
-            <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4">
-                <span class="bg-secondary pr-3">Chuyên trang thương hiệu</span>
-            </h2>
-            <div class="row px-xl-5">
-                <!-- Khung 1 -->
-                <div class="col-md-3">
-                    <div class="product-offer mb-30" style="height: 150px;">
-                        <img class="img-fluid"
-                            src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:90/plain/https://dashboard.cellphones.com.vn/storage/apple-chinh-hang-home.jpg"
-                            alt="Image 1" style="height: 100%; width: 100%;">
-                    </div>
-                </div>
-                <!-- Khung 2 -->
-                <div class="col-md-3">
-                    <div class="product-offer mb-30" style="height: 150px;">
-                        <img class="img-fluid"
-                            src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:90/plain/https://dashboard.cellphones.com.vn/storage/SIS%20asus.png"
-                            alt="Image 2" style="height: 100%; width: 100%;">
-                    </div>
-                </div>
-                <!-- Khung 3 -->
-                <div class="col-md-3">
-                    <div class="product-offer mb-30" style="height: 150px;">
-                        <img class="img-fluid" src="{{ asset('client/img/bn1.png') }}" alt="logo" alt="Image 2"
-                            style="height: 100%; width: 100%;">
-                    </div>
-                </div>
-                <!-- Khung 4 -->
-                <div class="col-md-3">
-                    <div class="product-offer mb-30" style="height: 150px;">
-                        <img class="img-fluid" src="{{ asset('client/img/bn2.png') }}" alt="logo" alt="Image 2"
-                            style="height: 100%; width: 100%;">
-                    </div>
-                </div>
+        <!-- Nút "Thu Cũ Giá Cao" -->
+        <div class="custom-btn">
+            <div>
+                <!-- Icon SVG cho Thu Cũ Giá Cao -->
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 3.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zM2 8a6 6 0 1 1 12 0A6 6 0 0 1 2 8z" />
+                </svg>
+                <br>Thu Cũ <br>Giá Cao
             </div>
         </div>
 
-        <x-post-new-component />
+        <!-- Nút Zalo "Tư Vấn Ngay" -->
+        <div class="zalo-btn">
+            <!-- Icon SVG cho Zalo -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#0078FF"
+                class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                <path
+                    d="M3.654 1.328a.678.678 0 0 1 .696-.245l2.646.623c.286.067.45.297.408.516l-.591 3.17a.678.678 0 0 1-.356.511l-1.201.7a11.462 11.462 0 0 0 4.516 4.516l.7-1.201a.678.678 0 0 1 .511-.356l3.17-.591a.678.678 0 0 1 .516.408l.623 2.646a.678.678 0 0 1-.245.696l-2.102 1.22a1.745 1.745 0 0 1-1.77.112 13.468 13.468 0 0 1-6.397-6.397 1.745 1.745 0 0 1 .112-1.77l1.22-2.102z" />
+            </svg>
+            Tư Vấn Ngay
+        </div>
+    </div>
 
-        <x-product-related />
-    @endsection
+    <style>
+        .icon-red {
+            color: red;
+        }
+    </style>
+
+    <div class="container-fluid pt-5">
+        <div class="row px-xl-5 pb-3">
+            <!-- Block 1 -->
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                <div class="d-flex align-items-center bg-light shadow-sm mb-4 p-4 rounded hover-shadow">
+                    <div class="icon-container text-primary mr-3">
+                        <i class="fas fa-shield-alt fa-2x"></i>
+                    </div>
+                    <h5 class="font-weight-semi-bold m-0">Thương hiệu đảm bảo</h5>
+                </div>
+            </div>
+            <!-- Block 2 -->
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                <div class="d-flex align-items-center bg-light shadow-sm mb-4 p-4 rounded hover-shadow">
+                    <div class="icon-container text-success mr-3">
+                        <i class="fas fa-undo fa-2x"></i>
+                    </div>
+                    <h5 class="font-weight-semi-bold m-0">Đổi trả dễ dàng</h5>
+                </div>
+            </div>
+            <!-- Block 3 -->
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                <div class="d-flex align-items-center bg-light shadow-sm mb-4 p-4 rounded hover-shadow">
+                    <div class="icon-container text-warning mr-3">
+                        <i class="fas fa-star fa-2x"></i>
+                    </div>
+                    <h5 class="font-weight-semi-bold m-0">Sản phẩm chất lượng</h5>
+                </div>
+            </div>
+            <!-- Block 4 -->
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                <div class="d-flex align-items-center bg-light shadow-sm mb-4 p-4 rounded hover-shadow">
+                    <div class="icon-container text-danger mr-3">
+                        <i class="fas fa-truck fa-2x"></i>
+                    </div>
+                    <h5 class="font-weight-semi-bold m-0">Giao hàng tận nơi</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .hover-shadow {
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .hover-shadow:hover {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bg-light {
+            background: linear-gradient(135deg, #f9f9f9, #ffffff);
+        }
+    </style>
+
+
+    <div class=" pt-2">
+        <marquee behavior="" direction="left" style="color:black;font-size: 16px;">
+            "Hành trình nâng cấp công nghệ bắt đầu từ đây – nơi bạn tìm thấy giải pháp hoàn hảo cho mọi nhu cầu máy
+            tính."
+        </marquee>
+    </div>
+
+    <div id="chatbox">
+        <div id="chat-header">
+            Chat với chúng tôi
+            <span id="close-chat">✖</span> <!-- Icon đóng hộp thoại -->
+        </div>
+        <div id="chat-body">
+            <div class="message">Chào bạn! Bạn cần giúp đỡ gì hôm nay?</div>
+        </div>
+        <input type="text" id="user-input" placeholder="Nhập tin nhắn của bạn...">
+        <button id="send-button">Gửi</button>
+    </div>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #chatbox {
+            z-index: 1000;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            transition: width 0.3s ease, height 0.3s ease;
+            /* Hiệu ứng cho cả chiều rộng và chiều cao */
+        }
+
+        #chatbox.collapsed {
+            width: 50px;
+            /* Kích thước khi thu nhỏ ngang */
+            height: 40px;
+            /* Chiều cao khi thu nhỏ ngang */
+            overflow: hidden;
+            /* Ẩn nội dung khi thu nhỏ */
+        }
+
+        #chat-header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border-radius: 8px 8px 0 0;
+            text-align: center;
+            position: relative;
+        }
+
+        #close-chat {
+            position: absolute;
+            right: 10px;
+            top: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            color: white;
+        }
+
+        #chat-body {
+            max-height: 400px;
+            overflow-y: auto;
+            padding: 10px;
+        }
+
+        .message {
+            margin: 5px 0;
+        }
+
+        #user-input {
+            width: calc(100% - 80px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #send-button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #send-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+
+    <script>
+        const chatbox = document.getElementById('chatbox');
+        const closeButton = document.getElementById('close-chat');
+
+        closeButton.addEventListener('click', function() {
+            chatbox.classList.toggle('collapsed'); // Chuyển đổi giữa trạng thái thu nhỏ và bình thường
+        });
+
+        document.getElementById('send-button').addEventListener('click', function() {
+            const userInput = document.getElementById('user-input');
+            const message = userInput.value;
+
+            if (message) {
+                const chatBody = document.getElementById('chat-body');
+                const newMessage = document.createElement('div');
+                newMessage.className = 'message';
+                newMessage.textContent = message;
+                chatBody.appendChild(newMessage);
+
+                userInput.value = '';
+                chatBody.scrollTop = chatBody.scrollHeight;
+            }
+        });
+    </script>
+
+
+
+
+    <x-feature-product />
+
+
+
+    <div class="container-fluid pt-5 pb-3">
+
+        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4">
+            <img src="{{ asset('client/img/Icon_Doc_quyen.png') }}" alt="logo" style="width: 50px; height: 40px;">
+            <span class="bg-secondary pr-3">Ưu đãi thanh toán</span>
+        </h2>
+        <div class="row px-xl-5">
+            <!-- Khung 1 -->
+            <div class="col-md-3">
+                <div class="product-offer mb-30" style="height: 150px;">
+                    <img class="img-fluid" src="{{ asset('client/img/ud4.png') }}" alt="logo" alt="Image 2"
+                        style="height: 100%; width: 100%;">
+                </div>
+            </div>
+            <!-- Khung 2 -->
+            <div class="col-md-3">
+                <div class="product-offer mb-30" style="height: 150px;">
+                    <img class="img-fluid" src="{{ asset('client/img/ud1.png') }}" alt="logo" alt="Image 2"
+                        style="height: 100%; width: 100%;">
+                </div>
+            </div>
+            <!-- Khung 3 -->
+            <div class="col-md-3">
+                <div class="product-offer mb-30" style="height: 150px;">
+                    <img class="img-fluid" src="{{ asset('client/img/ud2.png') }}" alt="logo" alt="Image 2"
+                        style="height: 100%; width: 100%;">
+                </div>
+            </div>
+            <!-- Khung 4 -->
+            <div class="col-md-3">
+                <div class="product-offer mb-30" style="height: 150px;">
+                    <img class="img-fluid" src="{{ asset('client/img/ud5.png') }}" alt="logo" alt="Image 2"
+                        style="height: 100%; width: 100%;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid pt-5 pb-3">
+        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4">
+            <span class="bg-secondary pr-3">Chuyên trang thương hiệu</span>
+        </h2>
+        <div class="row px-xl-5">
+            <!-- Khung 1 -->
+            <div class="col-md-3">
+                <div class="product-offer mb-30" style="height: 150px;">
+                    <img class="img-fluid"
+                        src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:90/plain/https://dashboard.cellphones.com.vn/storage/apple-chinh-hang-home.jpg"
+                        alt="Image 1" style="height: 100%; width: 100%;">
+                </div>
+            </div>
+            <!-- Khung 2 -->
+            <div class="col-md-3">
+                <div class="product-offer mb-30" style="height: 150px;">
+                    <img class="img-fluid"
+                        src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:90/plain/https://dashboard.cellphones.com.vn/storage/SIS%20asus.png"
+                        alt="Image 2" style="height: 100%; width: 100%;">
+                </div>
+            </div>
+            <!-- Khung 3 -->
+            <div class="col-md-3">
+                <div class="product-offer mb-30" style="height: 150px;">
+                    <img class="img-fluid" src="{{ asset('client/img/bn1.png') }}" alt="logo" alt="Image 2"
+                        style="height: 100%; width: 100%;">
+                </div>
+            </div>
+            <!-- Khung 4 -->
+            <div class="col-md-3">
+                <div class="product-offer mb-30" style="height: 150px;">
+                    <img class="img-fluid" src="{{ asset('client/img/bn2.png') }}" alt="logo" alt="Image 2"
+                        style="height: 100%; width: 100%;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <x-post-new-component />
+
+    <x-product-related />
+@endsection
