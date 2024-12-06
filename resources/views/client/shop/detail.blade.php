@@ -318,7 +318,7 @@
                 VÀ
                 NHẬN XÉT</span></h2>
         <div class="row px-xl-5">
-            <div class="col-lg-7 mb-5">
+            <div class="col-lg-6 mb-5">
                 <div class="contact-form bg-light p-30">
                     <form method="post" action="{{ route('contact.store') }}">
                         @csrf
