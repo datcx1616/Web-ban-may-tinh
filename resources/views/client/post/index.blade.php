@@ -21,8 +21,13 @@
                     <div class="product-offer mb-30" style="border-radius: 10px; height: 300px;">
                         <img class="img-fluid" src="{{ $post->image }}" alt="">
                         <div class="offer-text">
-                            <h3 class="text-white mb-3" style="text-align: center; width: 70%;">{{ $post->title }}</h3>
-                            <a href="{{ route('post.detail', ['id' => $post->id]) }}" class="btn btn-primary">Xem thêm</a>
+                            <!-- Thêm liên kết vào tiêu đề -->
+                            <h3 class="text-white mb-3" style="text-align: center; width: 70%;">
+                                <a href="{{ route('post.detail', ['id' => $post->id]) }}"
+                                    style="color: inherit; text-decoration: none;">
+                                    {{ $post->title }}
+                                </a>
+                            </h3>
                         </div>
                     </div>
                 </div>
@@ -37,8 +42,13 @@
                     <div class="product-offer mb-30" style="border-radius: 10px; height: 300px;">
                         <img class="img-fluid" src="{{ $post->image }}" alt="">
                         <div class="offer-text">
-                            <h3 class="text-white mb-3" style="text-align: center; width: 70%;">{{ $post->title }}</h3>
-                            <a href="{{ route('post.detail', ['id' => $post->id]) }}" class="btn btn-primary">Xem thêm</a>
+                            <!-- Thêm liên kết vào tiêu đề -->
+                            <h3 class="text-white mb-3" style="text-align: center; width: 70%;">
+                                <a href="{{ route('post.detail', ['id' => $post->id]) }}"
+                                    style="color: inherit; text-decoration: none;">
+                                    {{ $post->title }}
+                                </a>
+                            </h3>
                         </div>
                     </div>
                 </div>
@@ -53,8 +63,13 @@
                     <div class="product-offer mb-30" style="border-radius: 10px; height: 300px;">
                         <img class="img-fluid" src="{{ $post->image }}" alt="">
                         <div class="offer-text">
-                            <h3 class="text-white mb-3" style="text-align: center; width: 70%;">{{ $post->title }}</h3>
-                            <a href="{{ route('post.detail', ['id' => $post->id]) }}" class="btn btn-primary">Xem thêm</a>
+                            <!-- Thêm liên kết vào tiêu đề -->
+                            <h3 class="text-white mb-3" style="text-align: center; width: 70%;">
+                                <a href="{{ route('post.detail', ['id' => $post->id]) }}"
+                                    style="color: inherit; text-decoration: none;">
+                                    {{ $post->title }}
+                                </a>
+                            </h3>
                         </div>
                     </div>
                 </div>
