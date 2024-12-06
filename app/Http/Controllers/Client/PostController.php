@@ -13,13 +13,30 @@ class PostController extends Controller
      *
      * @return \Illuminate\Contracts\View\View
      */
+    // public function index() {
+    //     $posts = Post::get();
+
+    //     return view('client.post.index', [
+    //         'posts' => $posts
+    //     ]);
+    // }
     public function index() {
-        $posts = Post::get();
+        // Lấy 2 bài viết đầu tiên
+        $postsFirst = Post::take(2)->get();
+
+        // Lấy 3 bài viết tiếp theo
+        $postsSecond = Post::skip(2)->take(3)->get();
+
+        // Lấy 6 bài viết tiếp theo
+        $postsThird = Post::skip(5)->take(6)->get();
 
         return view('client.post.index', [
-            'posts' => $posts
+            'postsFirst' => $postsFirst,
+            'postsSecond' => $postsSecond,
+            'postsThird' => $postsThird,
         ]);
     }
+
 
     /**
      * Show detail post
