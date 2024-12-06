@@ -289,6 +289,11 @@
                                 style="background-color: transparent; border-color: #28a745;">
                                 <i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng
                             </Button>
+                            <a href="{{ route('shop.index') }}"
+                                class="btn btn-sm px-4 py-2 rounded-pill border text-success ml-3"
+                                style="background-color: transparent; border-color: #28a745;">
+                                Quay lại cửa hàng
+                            </a>
                         </div>
                     </form>
                 </div>
