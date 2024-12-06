@@ -1,5 +1,149 @@
 @extends('layouts.app')
 @section('content')
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h2>ĐĂNG KÝ NHẬN TIN KHUYẾN MÃI</h2>
+            <p>Nhận Ngay Voucher 10%</p>
+            <form action="#">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Số điện thoại:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label>
+                    <input type="checkbox" required> Tôi đồng ý với điều khoản
+                </label>
+
+                <button type="submit">ĐĂNG KÝ NGAY</button>
+            </form>
+            <a href="#" onclick="closePopup()">Bữa khác nha</a>
+        </div>
+    </div>
+    <style>
+        /* Đảm bảo popup nằm trên các phần tử khác */
+        /* Đảm bảo popup nằm trên các phần tử khác */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Nền tối */
+            justify-content: center;
+            align-items: center;
+            /* Căn giữa popup theo chiều dọc */
+            z-index: 9999;
+            /* Đảm bảo popup luôn ở trên */
+        }
+
+        .popup-content {
+            background-color: #fff;
+            padding: 40px;
+            /* Tăng khoảng cách bên trong */
+            border-radius: 10px;
+            width: 500px;
+            /* Tăng chiều rộng */
+            height: auto;
+            /* Chiều cao tự động (hoặc bạn có thể đặt cố định, ví dụ: 400px) */
+            text-align: center;
+            transform: scale(0.8);
+            /* Ban đầu popup sẽ nhỏ hơn một chút */
+            animation: scaleIn 0.5s forwards;
+            /* Hiệu ứng mở rộng */
+        }
+
+        .popup h2 {
+            font-size: 28px;
+            /* Tăng kích thước tiêu đề */
+            margin-bottom: 20px;
+        }
+
+        .popup p {
+            font-size: 20px;
+            color: #e60000;
+            margin-bottom: 20px;
+        }
+
+        input[type="email"],
+        input[type="tel"],
+        button {
+            width: 90%;
+            /* Giảm chiều rộng để có khoảng cách với viền form */
+            padding: 15px;
+            /* Tăng kích thước nút và ô nhập liệu */
+            margin: 10px 0;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #e60000;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #c50000;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        /* Animation for the popup to scale in */
+        @keyframes scaleIn {
+            from {
+                transform: scale(0.8);
+                /* Ban đầu nhỏ hơn một chút */
+                opacity: 0;
+                /* Ban đầu mờ */
+            }
+
+            to {
+                transform: scale(1);
+                /* Kích thước bình thường */
+                opacity: 1;
+                /* Hiển thị rõ ràng */
+            }
+        }
+    </style>
+    <script>
+        // Hiển thị popup khi trang tải
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('popup').style.display = 'flex';
+            }, 1000); // Hiển thị sau 1 giây
+        };
+
+        // Đóng popup
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+
+        // Xử lý khi người dùng nhấn "ĐĂNG KÝ NGAY"
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Ngăn chặn hành vi gửi form mặc định (tải lại trang)
+
+            // Hiển thị thông báo (tùy chọn)
+            alert('Đăng ký thành công!');
+
+            // Tắt popup
+            closePopup();
+        });
+    </script>
+
+
+
     <style>
         /* Tạo hiệu ứng chạy qua lại cho mỗi phần tử */
         @keyframes slide {

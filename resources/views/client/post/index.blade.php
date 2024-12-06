@@ -76,4 +76,5 @@
             @endforeach
         </div>
     </div>
+    <x-product-related />
 @endsection
