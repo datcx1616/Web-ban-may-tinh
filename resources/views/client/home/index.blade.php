@@ -522,8 +522,10 @@
         <div id="chat-body">
             <div class="message">Chào bạn! Bạn cần giúp đỡ gì hôm nay?</div>
         </div>
-        <input type="text" id="user-input" placeholder="Nhập tin nhắn của bạn..." class="ml-3">
-        <button id="send-button" class="ml-3">Gửi</button>
+        <input type="text" id="user-input" placeholder="Nhập tin nhắn của bạn..." class="ml-3"
+            style="width: 90%;">
+        <button id="send-button" class="ml-3 mt-2 mb-2" style="width: 90%;">Gửi</button>
+
     </div>
 
     <style>

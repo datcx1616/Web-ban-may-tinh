@@ -1,13 +1,13 @@
-<div class="iq-sidebar  sidebar-default ">
+<div class="iq-sidebar sidebar-default ">
     <div class="iq-sidebar-logo d-flex align-items-center">
         <a href="{{ route('home.index') }}" class="text-decoration-none">
             <img src="{{ asset('client/img/logonew.png') }}" alt="logo"
                 style="width: 100px; height: 60px; margin-left: 50px;">
         </a>
 
-        <div class="iq-menu-bt-sidebar ml-0">
+        {{-- <div class="iq-menu-bt-sidebar ml-0">
             <i class="las la-bars wrapper-menu"></i>
-        </div>
+        </div> --}}
     </div>
     <div class="data-scrollbar" data-scroll="1">
         <nav class="iq-sidebar-menu">

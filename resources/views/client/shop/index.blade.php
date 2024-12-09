@@ -80,7 +80,7 @@
 
 
 
-    <div class="container-fluid pt-3">
+    <div class="container-fluid pt-1">
         <div class="row px-xl-5 pb-1 slide-container">
             <div class="col-lg-2 col-md-6 col-sm-12 pb-1 slide-item">
                 <div class="d-flex align-items-center bg-light mb-4"

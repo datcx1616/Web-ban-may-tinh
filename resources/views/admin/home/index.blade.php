@@ -68,8 +68,8 @@
                             <p class="mb-0">Tổng bài viết </p>
                             <span class="text-success">35%</span>
                         </div>
-                        <div class="iq-progress-bar bg-success-light mt-2">
-                            <span class="bg-success iq-progress progress-1" data-percent="35"
+                        <div class="iq-progress-bar bg-info-light mt-2">
+                            <span class="bg-info iq-progress progress-1" data-percent="35"
                                 style="transition: width 2s ease 0s; width: 85%;"></span>
                         </div>
                     </div>
@@ -87,8 +87,8 @@
                             <p class="mb-0">Tổng số sản phẩm</p>
                             <span class="text-success">25%</span>
                         </div>
-                        <div class="iq-progress-bar bg-success-light mt-2">
-                            <span class="bg-success iq-progress progress-1" data-percent="25"
+                        <div class="iq-progress-bar bg-danger-light mt-2">
+                            <span class="bg-danger iq-progress progress-1" data-percent="25"
                                 style="transition: width 2s ease 0s; width: 85%;"></span>
                         </div>
                     </div>
@@ -103,11 +103,11 @@
                         <h3><span class="counter" style="visibility: visible;">{{ number_format($totalCancel) }}</span>
                         </h3>
                         <div class="d-flex align-items-center justify-content-between mt-1">
-                            <p class="mb-0">Tổng số sản phẩm</p>
+                            <p class="mb-0">Tổng số đơn hàng đã hủy</p>
                             <span class="text-success">25%</span>
                         </div>
-                        <div class="iq-progress-bar bg-success-light mt-2">
-                            <span class="bg-success iq-progress progress-1" data-percent="25"
+                        <div class="iq-progress-bar bg-primary-light mt-2">
+                            <span class="bg-primary iq-progress progress-1" data-percent="25"
                                 style="transition: width 2s ease 0s; width: 85%;"></span>
                         </div>
                     </div>
