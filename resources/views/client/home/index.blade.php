@@ -5,24 +5,23 @@
             <span class="close-btn" onclick="closePopup()">&times;</span>
             <h2>ĐĂNG KÝ NHẬN TIN KHUYẾN MÃI</h2>
             <p>Nhận Ngay Voucher 10%</p>
-            <form action="#" style=" text-align: left;">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+            <form action="#" style=" text-align: left;" class="form2">
+                <label for="email" class="ml-4">Email:</label>
+                <input type="email" id="email" name="email" required class="ml-4">
 
-                <label for="phone">Số điện thoại:</label>
-                <input type="tel" id="phone" name="phone" required>
+                <label for="phone" class="ml-4">Số điện thoại:</label>
+                <input type="tel" id="phone" name="phone" required class="ml-4">
 
                 <label>
-                    <input type="checkbox" required> Tôi đồng ý với điều khoản
+                    <input type="checkbox" required class="ml-4"> Tôi đồng ý với điều khoản
                 </label>
 
-                <button type="submit">ĐĂNG KÝ NGAY</button>
+                <button class="button1" type="submit" class="ml-4">ĐĂNG KÝ NGAY</button>
             </form>
             <a href="#" onclick="closePopup()">Bữa khác nha</a>
         </div>
     </div>
     <style>
-        /* Đảm bảo popup nằm trên các phần tử khác */
         /* Đảm bảo popup nằm trên các phần tử khác */
         .popup {
             display: none;
@@ -70,25 +69,27 @@
 
         input[type="email"],
         input[type="tel"],
-        button {
+        .button1 {
             width: 90%;
             /* Giảm chiều rộng để có khoảng cách với viền form */
             padding: 15px;
             /* Tăng kích thước nút và ô nhập liệu */
             margin: 10px 0;
+
             border-radius: 6px;
             border: 1px solid #ddd;
             font-size: 16px;
         }
 
-        button {
+        .button1 {
             background-color: #e60000;
             color: white;
+            margin-left: 25px;
             font-size: 18px;
             cursor: pointer;
         }
 
-        button:hover {
+        .button1:hover {
             background-color: #c50000;
         }
 
@@ -102,7 +103,7 @@
 
         /* Animation for the popup to scale in */
         @keyframes scaleIn {
-            from {
+            .form2 {
                 transform: scale(0.8);
                 /* Ban đầu nhỏ hơn một chút */
                 opacity: 0;
@@ -131,7 +132,7 @@
         }
 
         // Xử lý khi người dùng nhấn "ĐĂNG KÝ NGAY"
-        document.querySelector('form').addEventListener('submit', function(e) {
+        document.querySelector('form2').addEventListener('submit', function(e) {
             e.preventDefault(); // Ngăn chặn hành vi gửi form mặc định (tải lại trang)
 
             // Hiển thị thông báo (tùy chọn)
@@ -521,8 +522,8 @@
         <div id="chat-body">
             <div class="message">Chào bạn! Bạn cần giúp đỡ gì hôm nay?</div>
         </div>
-        <input type="text" id="user-input" placeholder="Nhập tin nhắn của bạn...">
-        <button id="send-button">Gửi</button>
+        <input type="text" id="user-input" placeholder="Nhập tin nhắn của bạn..." class="ml-3">
+        <button id="send-button" class="ml-3">Gửi</button>
     </div>
 
     <style>

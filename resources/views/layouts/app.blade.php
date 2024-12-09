@@ -67,14 +67,12 @@
                                 style="background-color:#eef2f6; border-top-left-radius: 10px;border-bottom-left-radius: 10px;"
                                 name="search" value="{{ request()->input('search', '') }}"
                                 placeholder="Tìm kiếm sản phẩm">
-                            <div class="input-group-append" style="cursor: pointer; position: relative;">
+                            <div class="input-group-append" style="cursor: pointer;">
                                 <button class="input-group-text bg-muted text-primary"
-                                    style="border-top-right-radius: 10px; border-bottom-right-radius: 10px; height: 38px; padding: 10px; position: relative; top: -10px;">
+                                    style="border-top-right-radius: 10px; border-bottom-right-radius: 10px;">
                                     <i class="fa fa-search" style="color: black;"></i>
                                 </button>
                             </div>
-
-
                         </div>
                     </form>
                 </div>
