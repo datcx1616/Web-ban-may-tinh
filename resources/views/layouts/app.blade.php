@@ -156,14 +156,26 @@
                             <x-MenuComponent />
 
                             <div class="navbar-nav ml-auto py-0 d-none d-lg-block">
-                                <a href="tel:+1234567890" class="btn px-0 mr-5">
-                                    <i class="fas fa-phone-alt" style="color: black;"></i>
-                                </a>
-                                <a href="{{ route('cart.index') }}" class="btn px-0 ml-3">
-                                    <i class="fas fa-shopping-cart" style="color: black;"></i>
-                                </a>
-
+                                <div class="navbar-nav d-flex align-items-center justify-content-between"
+                                    style="gap: 10px;">
+                                    <a href="tel:+1234567890"
+                                        class="btn d-flex align-items-center border border-muted border-1 bg-white"
+                                        style="flex: 1; border-radius: 10px; margin-right: 40px; white-space: nowrap;">
+                                        <h6 class="text-dark m-0 d-flex align-items-center">
+                                            <i class="fas fa-phone-alt mr-2" style="color: black;"></i>Liên hệ
+                                        </h6>
+                                    </a>
+                                    <a href="{{ route('cart.index') }}"
+                                        class="btn d-flex align-items-center border border-muted border-1 bg-white"
+                                        style="flex: 1; border-radius: 10px; white-space: nowrap;">
+                                        <h6 class="text-dark m-0 d-flex align-items-center">
+                                            <i class="fas fa-shopping-cart mr-2" style="color: black;"></i>Giỏ hàng
+                                        </h6>
+                                    </a>
+                                </div>
                             </div>
+
+
 
                         </div>
                     </nav>
@@ -172,7 +184,9 @@
         </div>
         <!-- Nav
     <!-- Navbar End -->
-
+        <style>
+            ms. {}
+        </style>
         @yield('content')
 
         <!-- Footer Start -->
