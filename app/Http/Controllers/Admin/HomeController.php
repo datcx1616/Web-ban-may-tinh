@@ -24,6 +24,7 @@ class HomeController extends Controller
         $totalPost = Post::count();
         $totalProduct = Product::count();
         $totalOrder = Order::where('status', OrderStatus::ORDER_SUCCESS)->count();
+        $totalCancel = Order::where('status', OrderStatus::CANCEL_ORDER)->count();
         $totalRevenue = Order::where('status', OrderStatus::ORDER_SUCCESS)->sum('total');
 
         $datetime = Carbon::now()->subMonth();
@@ -46,6 +47,7 @@ class HomeController extends Controller
         return view('admin.home.index', [
             'totalUser' => $totalUser,
             'totalOrder' => $totalOrder,
+            'totalCancel' => $totalCancel,
             'totalPost' => $totalPost,
             'totalProduct' => $totalProduct,
             'totalRevenue' => $totalRevenue,

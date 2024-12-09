@@ -94,6 +94,25 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-12 col-lg-4">
+                <div class="card card-block card-stretch card-height">
+                    <div class="card-body">
+                        <div class="top-block d-flex align-items-center justify-content-between">
+                            <h5>Tổng số đơn hàng đã hủy</h5>
+                        </div>
+                        <h3><span class="counter" style="visibility: visible;">{{ number_format($totalCancel) }}</span>
+                        </h3>
+                        <div class="d-flex align-items-center justify-content-between mt-1">
+                            <p class="mb-0">Tổng số sản phẩm</p>
+                            <span class="text-success">25%</span>
+                        </div>
+                        <div class="iq-progress-bar bg-success-light mt-2">
+                            <span class="bg-success iq-progress progress-1" data-percent="25"
+                                style="transition: width 2s ease 0s; width: 85%;"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="col-12">
                 <div class="card">
                     <div class="card-header d-flex justify-content-between">
