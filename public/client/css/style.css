@@ -10220,3 +10220,39 @@ h6 {
 .product-action .btn.btn-outline-dark.btn-square {
     transform: scale(2.5);
 }
+.snow-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px; /* Xuất hiện từ trên cùng */
+    color: white;
+    z-index: 999999;
+
+    font-size: 1em; /* Kích thước mặc định */
+    opacity: 0.8;
+    animation: fall linear infinite, sway ease-in-out infinite;
+}
+
+@keyframes fall {
+    0% {
+        top: -10px;
+    }
+    100% {
+        top: 100%;
+    }
+}
+
+/* Tạo hiệu ứng lắc lư khi rơi */
+@keyframes sway {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+}
