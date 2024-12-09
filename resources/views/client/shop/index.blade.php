@@ -179,7 +179,7 @@
     </style>
 
     <div class="container-fluid">
-        <div class="row justify-content-center px-xl-5 pb-5">
+        <div class="row justify-content-center px-xl-5 pb-3">
             <ul class="nav nav-tabs">
                 <li class="nav-item">
                     <a class="nav-link active" href="#">Sắp xếp theo</a>
@@ -205,14 +205,21 @@
     </div>
 
     <!-- Breadcrumb End -->
-    <div class=" pt-2">
+    <div class="pt-2">
         <marquee behavior="" direction="left" style="color:black;font-size: 16px;">
             "Hành trình nâng cấp công nghệ bắt đầu từ đây – nơi bạn tìm thấy giải pháp hoàn hảo cho mọi nhu cầu máy tính."
         </marquee>
     </div>
+
+    <div class="container-fluid mt-2 mb-3">
+        <div class="px-xl-5">
+            <img src="{{ asset('client/img/H2.png') }}" alt="logo"
+                class="first-slide w-100"style=" border-radius: 10px;">
+        </div>
+    </div>
     <!-- Shop Start -->
     <div class="container-fluid">
-        <div class="row px-xl-5">
+        <div class="row px-xl-5 ">
             <!-- Shop Sidebar Start -->
             <div class="col-lg-2">
                 <!-- Price Start -->
