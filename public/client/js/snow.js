@@ -6,7 +6,7 @@ function createSnowflake() {
     snowflake.src = "/client/img/hoadao1.png"; // Đường dẫn tới ảnh hoa đào
     snowflake.style.left = Math.random() * 100 + "vw"; // Vị trí ngang ngẫu nhiên
     snowflake.style.animationDuration = Math.random() * 20 + 15 + "s"; // Thời gian rơi (15-35 giây)
-    snowflake.style.width = Math.random() * 30 + 15 + "px"; // Kích thước ngẫu nhiên
+    snowflake.style.width = Math.random() * 15 + 5 + "px"; // Kích thước ngẫu nhiên (5px - 20px)
 
     snowContainer.appendChild(snowflake);
 
