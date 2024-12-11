@@ -76,39 +76,40 @@
             @endforeach
         </div>
     </div>
-    <div class="container-fluid pt-5 pb-5">
+    <div class="container-fluid pt-5 pb-3">
         <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4">
             <span class="bg-secondary pr-3">Video về một số sản phẩm</span>
         </h2>
-        <div class="row col mx-xl-5">
-            <div class="ml-3" style=" border-radius: 10px; ">
+        <div class="row mx-xl-5">
+            <div class="col-md-3 d-flex justify-content-center align-items-center" style="padding: 20px;">
                 <iframe src="https://www.youtube.com/embed/l0op-_MDO4o?si=gDhFgAiJe1OvQiQu" title="YouTube video player"
-                    frameborder="0"
+                    frameborder="0" style="border-radius: 10px; width: 100%; height: 200px;"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
 
-            <div class="ml-5" style=" border-radius: 10px;">
+            <div class="col-md-3 d-flex justify-content-center align-items-center" style="padding: 20px;">
                 <iframe src="https://www.youtube.com/embed/jxZ_YLi5E74?si=1L1O9PjaTZA-4lUM" title="YouTube video player"
-                    frameborder="0"
+                    frameborder="0" style="border-radius: 10px; width: 100%; height: 200px;"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
 
-            <div class="ml-5" style=" border-radius: 10px;">
+            <div class="col-md-3 d-flex justify-content-center align-items-center" style="padding: 20px;">
                 <iframe src="https://www.youtube.com/embed/CUl8JaglXNQ?si=UDBywT-YwEbkrsZK" title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <div class="ml-5" style=" border-radius: 10px;">
-                <iframe src="https://www.youtube.com/embed/RYJWIvKoQJs?si=NHQPK9GePtzIIZfH" title="YouTube video player"
-                    frameborder="0"
+                    frameborder="0" style="border-radius: 10px; width: 100%; height: 200px;"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
 
+            <div class="col-md-3 d-flex justify-content-center align-items-center" style="padding: 20px;">
+                <iframe src="https://www.youtube.com/embed/RYJWIvKoQJs?si=NHQPK9GePtzIIZfH" title="YouTube video player"
+                    frameborder="0" style="border-radius: 10px; width: 100%; height: 200px;"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
         </div>
+
     </div>
     <x-product-related />
 @endsection
