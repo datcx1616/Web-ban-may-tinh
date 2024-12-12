@@ -69,7 +69,7 @@
             <div class="d-flex justify-content-center">
                 <a href="tel:0123456789" class="btn btn-sm px-4 py-2 rounded-pill border text-warning mr-2"
                     style="background-color: transparent; border-color: #ffc107;">
-                    <i class="fa fa-phone"></i> Liên hệ
+                    Liên hệ
                 </a>
                 <a href="{{ route('shop.detail', [
                     'slug' => $product->getSlug(),
@@ -77,9 +77,10 @@
                 ]) }}"
                     class="btn btn-sm px-4 py-2 rounded-pill border text-success"
                     style="background-color: transparent; border-color: #28a745;">
-                    <i class="fa fa-eye"></i> Xem chi tiết
+                    Xem chi tiết
                 </a>
-
+                {{-- <i class="fa fa-eye">xem chi tiết</i> --}}
+                {{-- <i class="fa fa-phone"> liên hệ</i>  --}}
             </div>
         </div>
 

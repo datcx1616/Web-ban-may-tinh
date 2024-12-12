@@ -172,7 +172,7 @@
     </div>
     <!-- Breadcrumb End -->
     <div class="row px-xl-5" style="justify-content: center;">
-        <div class="col-6">
+        <div class="col-8">
             <div class="bg-light p-30" style="text-align: center;">
                 <div class="tab-content">
                     <div class="tab-pane fade show active" id="tab-pane-1">

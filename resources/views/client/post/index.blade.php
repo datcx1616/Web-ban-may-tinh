@@ -59,7 +59,7 @@
     <div class="container-fluid pb-3">
         <div class="row px-xl-5">
             @foreach ($postsThird as $post)
-                <div class="col-md-2">
+                <div class="col-md-3">
                     <div class="product-offer mb-30" style="border-radius: 10px; height: 300px;">
                         <img class="img-fluid" src="{{ $post->image }}" alt="">
                         <div class="offer-text">
@@ -78,7 +78,7 @@
     </div>
     <div class="container-fluid pt-5 pb-3">
         <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4">
-            <span class="bg-secondary pr-3">Video về một số sản phẩm</span>
+            <span class="bg-secondary pr-3">Video Hot</span>
         </h2>
         <div class="row mx-xl-5">
             <div class="col-md-3 d-flex justify-content-center align-items-center" style="padding: 20px;">

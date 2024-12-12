@@ -28,7 +28,7 @@ class PostController extends Controller
         $postsSecond = Post::skip(2)->take(3)->get();
 
         // Lấy 6 bài viết tiếp theo
-        $postsThird = Post::skip(5)->take(6)->get();
+        $postsThird = Post::skip(5)->take(4)->get();
 
         return view('client.post.index', [
             'postsFirst' => $postsFirst,

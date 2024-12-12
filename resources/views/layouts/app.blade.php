@@ -40,14 +40,19 @@
 </head>
 
 <body>
+    <style>
+        .main-container {
+            width: 1400px;
+            margin: 0 auto;
+        }
+    </style>
+
     <div class="snow-container">
         <div id="loader"></div>
         <!-- Popup form -->
 
         <!-- Topbar Start -->
         <div class="topbar container-fluid">
-
-
             <div class="row align-items-center bg-light py-3 px-xl-5 d-none d-lg-flex">
                 <div class="col-lg-12">
                     <marquee behavior="" direction="left" style="color:black;font-size: 14px;">
@@ -172,9 +177,6 @@
                                     </a>
                                 </div>
                             </div>
-
-
-
                         </div>
                     </nav>
                 </div>
@@ -182,10 +184,14 @@
         </div>
         <!-- Nav
     <!-- Navbar End -->
-        <style>
-            ms. {}
-        </style>
-        @yield('content')
+
+        <div class="main-container">
+            <style>
+                ms. {}
+            </style>
+            @yield('content')
+        </div>
+
 
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-secondary">

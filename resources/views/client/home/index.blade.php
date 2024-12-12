@@ -205,15 +205,30 @@
         .slide-item:nth-child(6) {
             animation-delay: 10s;
         }
+
+        /* Hiệu ứng khi đưa chuột vào */
+        .bode:hover {
+            border: 1px solid red;
+            /* Viền màu đỏ */
+            transition: all 0.3s ease;
+            /* Hiệu ứng mượt */
+
+        }
+
+        /* Bỏ viền mặc định để tránh xung đột */
+        .slide-item {
+            border: none;
+            /* Không có viền ban đầu */
+        }
     </style>
 
 
 
-    <div class="container-fluid pt-3">
-        <div class="row px-xl-5 pb-1 slide-container">
+    <div class="container-fluid pt-2">
+        <div class="row px-xl-5 slide-container">
             <div class="col-lg-2 col-md-6 col-sm-12 pb-1 slide-item">
-                <div class="d-flex align-items-center bg-light mb-4"
-                    style="padding: 20px; border-radius: 10px; height: 100px;">
+                <div class="d-flex align-items-center bg-light mb-4 bode"
+                    style="padding: 20px; border-radius: 10px; height: 80px; width: 120%;">
                     <img src="{{ asset('client/img/icon1.png') }}" alt="logo"
                         style="width: 50px; height: 40px; margin-right: 10px;">
                     <h5 class="font-weight-semi-bold m-0 text-nowrap" style="margin-left: 0;">Apple</h5>
@@ -223,8 +238,8 @@
             </div>
 
             <div class="col-lg-2 col-md-6 col-sm-12 pb-1 slide-item">
-                <div class="d-flex align-items-center bg-light mb-4"
-                    style="padding: 20px; border-radius: 10px; height: 100px;">
+                <div class="d-flex align-items-center bg-light mb-4 bode"
+                    style="padding: 20px; border-radius: 10px; height: 80px; width: 120%;">
                     <img src="{{ asset('client/img/icon7.png') }}" alt="logo"
                         style="width: 50px; height: 40px; margin-right: 10px;">
                     <h5 class="font-weight-semi-bold m-0 text-nowrap" style="margin-left: 0;">hp</h5>
@@ -233,8 +248,8 @@
                 </div>
             </div>
             <div class="col-lg-2 col-md-6 col-sm-12 pb-1 slide-item">
-                <div class="d-flex align-items-center bg-light mb-4"
-                    style="padding: 20px; border-radius: 10px; height: 100px;">
+                <div class="d-flex align-items-center bg-light mb-4  bode"
+                    style="padding: 20px; border-radius: 10px; height: 80px; width: 120%;">
                     <img src="{{ asset('client/img/icon3.png') }}" alt="logo"
                         style="width: 50px; height: 40px; margin-right: 10px;">
                     <h5 class="font-weight-semi-bold m-0 text-nowrap" style="margin-left: 0;">Acer</h5>
@@ -243,8 +258,8 @@
                 </div>
             </div>
             <div class="col-lg-2 col-md-6 col-sm-12 pb-1 slide-item">
-                <div class="d-flex align-items-center bg-light mb-4"
-                    style="padding: 20px; border-radius: 10px; height: 100px;">
+                <div class="d-flex align-items-center bg-light mb-4 bode"
+                    style="padding: 20px; border-radius: 10px; height: 80px; width: 120%;">
                     <img src="{{ asset('client/img/icon4.png') }}" alt="logo"
                         style="width: 50px; height: 40px; margin-right: 10px;">
                     <h5 class="font-weight-semi-bold m-0 text-nowrap" style="margin-left: 0;">MIS</h5>
@@ -253,18 +268,18 @@
                 </div>
             </div>
             <div class="col-lg-2 col-md-6 col-sm-12 pb-1 slide-item">
-                <div class="d-flex align-items-center bg-light mb-4"
-                    style="padding: 20px; border-radius: 10px; height: 100px;">
+                <div class="d-flex align-items-center bg-light mb-4 bode"
+                    style="padding: 20px; border-radius: 10px; height: 80px; width: 120%;">
                     <img src="{{ asset('client/img/icon5.png') }}" alt="logo"
-                        style="width: 50px; height: 40px; margin-right: 10px;">
+                        style="width: 50px; height: 40px; margin-left: outo;">
                     <h5 class="font-weight-semi-bold m-0 text-nowrap" style="margin-left: 0;">Lenovo</h5>
                     <img src="{{ asset('client/img/icon5.5.png') }}" alt="logo"
                         style="width: 100px; height: 70px; margin-left: auto;">
                 </div>
             </div>
             <div class="col-lg-2 col-md-6 col-sm-12 pb-1 slide-item">
-                <div class="d-flex align-items-center bg-light mb-4"
-                    style="padding: 20px; border-radius: 10px; height: 100px;">
+                <div class="d-flex align-items-center bg-light mb-4 bode"
+                    style="padding: 20px; border-radius: 10px; height: 80px; width: 120%;">
                     <img src="{{ asset('client/img/icon6.png') }}" alt="logo"
                         style="width: 50px; height: 40px; margin-right: 10px;">
                     <h5 class="font-weight-semi-bold m-0 text-nowrap" style="margin-left: 0;">Dell</h5>

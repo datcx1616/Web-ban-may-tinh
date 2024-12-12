@@ -1,5 +1,5 @@
  <div class="container-fluid ">
-     <div class="row pt-3 pb-3 " style="padding-left:50px; padding-right:50px">
+     <div class="row pb-1 " style="padding-left:50px; padding-right:50px">
          <section id="carouselExampleControls" class="container-fluid carousel slide" data-ride="carousel"
              data-interval="2000">
              <ol class="carousel-indicators">
