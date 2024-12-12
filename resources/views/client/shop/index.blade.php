@@ -223,68 +223,79 @@
             <!-- Shop Sidebar Start -->
             <div class="col-lg-2">
                 <!-- Price Start -->
-                <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Lọc theo
-                        giá</span>
-                </h5>
-                <style>
-                    .hover-shadow {
-                        transition: box-shadow 0.3s ease, transform 0.3s ease;
-                    }
+                <div class="card pb-2" style="border-radius: 10px">
+                    <div class="card-heading bg-light pt-2 pl-4"
+                        style="border-radius: 10px; font-weight:700; font-size: 20px;">
+                        <a class="text-dark fw-bold" data-toggle="collapse" href="#multiCollapseExample1" role="button"
+                            aria-expanded="false" aria-controls="multiCollapseExample1">
+                            Lọc theo giá
+                            <i class="fas fa-chevron-down ml-2"></i> <!-- Icon mũi tên đi xuống -->
+                        </a>
+                    </div>
+                    <style>
+                        .hover-shadow {
+                            transition: box-shadow 0.3s ease, transform 0.3s ease;
+                        }
 
-                    .hover-shadow:hover {
-                        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-                        transform: translateY(-5px);
-                    }
+                        .hover-shadow:hover {
+                            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+                            transform: translateY(-5px);
+                        }
 
-                    .product-card {
-                        border-radius: 10px;
-                        /* Điều chỉnh độ bo tròn (10px là ví dụ) */
-                        overflow: hidden;
-                        /* Đảm bảo nội dung không tràn ra ngoài */
-                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                        /* Thêm chút hiệu ứng shadow (tùy chọn) */
-                    }
-                </style>
-                <div class="bg-light p-4 mb-30 product-card hover-shadow"
-                    style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-                    <form>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input js-input-filter"
-                                {{ $query['price'] == '1' ? 'checked' : '' }} name="price" data-value="1"
-                                id="price-1">
-                            <label class="custom-control-label" for="price-1">Dưới 5 triệu</label>
-                        </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input js-input-filter"
-                                {{ $query['price'] == '2' ? 'checked' : '' }} name="price" data-value="2"
-                                id="price-2">
-                            <label class="custom-control-label" for="price-2">5 triệu - 10 triệu</label>
-                        </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input js-input-filter"
-                                {{ $query['price'] == '3' ? 'checked' : '' }} name="price" data-value="3"
-                                id="price-3">
-                            <label class="custom-control-label" for="price-3">10 triệu - 15 triệu</label>
-                        </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input js-input-filter"
-                                {{ $query['price'] == '4' ? 'checked' : '' }} name="price" data-value="4"
-                                id="price-4">
-                            <label class="custom-control-label" for="price-4">15 triệu - 20 triệu</label>
-                        </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between">
-                            <input type="checkbox" class="custom-control-input js-input-filter"
-                                {{ $query['price'] == '5' ? 'checked' : '' }} name="price" data-value="5"
-                                id="price-5">
-                            <label class="custom-control-label" for="price-5">Trên 20 triệu</label>
-                        </div>
-                    </form>
+                        .product-card {
+                            border-radius: 10px;
+                            /* Điều chỉnh độ bo tròn (10px là ví dụ) */
+                            overflow: hidden;
+                            /* Đảm bảo nội dung không tràn ra ngoài */
+                            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                            /* Thêm chút hiệu ứng shadow (tùy chọn) */
+                        }
+                    </style>
+                    <div class="p-3" style="border-radius: 10px" id="multiCollapseExample1">
+                        <form>
+                            <div
+                                class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                                <input type="checkbox" class="custom-control-input js-input-filter"
+                                    {{ $query['price'] == '1' ? 'checked' : '' }} name="price" data-value="1"
+                                    id="price-1">
+                                <label class="custom-control-label" for="price-1">Dưới 5 triệu</label>
+                            </div>
+                            <div
+                                class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                                <input type="checkbox" class="custom-control-input js-input-filter"
+                                    {{ $query['price'] == '2' ? 'checked' : '' }} name="price" data-value="2"
+                                    id="price-2">
+                                <label class="custom-control-label" for="price-2">5 triệu - 10 triệu</label>
+                            </div>
+                            <div
+                                class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                                <input type="checkbox" class="custom-control-input js-input-filter"
+                                    {{ $query['price'] == '3' ? 'checked' : '' }} name="price" data-value="3"
+                                    id="price-3">
+                                <label class="custom-control-label" for="price-3">10 triệu - 15 triệu</label>
+                            </div>
+                            <div
+                                class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                                <input type="checkbox" class="custom-control-input js-input-filter"
+                                    {{ $query['price'] == '4' ? 'checked' : '' }} name="price" data-value="4"
+                                    id="price-4">
+                                <label class="custom-control-label" for="price-4">15 triệu - 20 triệu</label>
+                            </div>
+                            <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between">
+                                <input type="checkbox" class="custom-control-input js-input-filter"
+                                    {{ $query['price'] == '5' ? 'checked' : '' }} name="price" data-value="5"
+                                    id="price-5">
+                                <label class="custom-control-label" for="price-5">Trên 20 triệu</label>
+                            </div>
+                        </form>
+                    </div>
                 </div>
                 <!-- Price End -->
 
 
                 <!-- Color Start -->
-                <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Ram</span>
+                <h5 class="section-title position-relative text-uppercase mb-3 pt-4"><span
+                        class="bg-secondary pr-3">Ram</span>
                 </h5>
                 <div class="bg-light p-4 mb-30 product-card hover-shadow"
                     style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
@@ -362,38 +373,50 @@
                     </form>
                 </div>
 
-                <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Kích thước
-                        màn hình</span></h5>
-                <div class="bg-light p-4 mb-30 product-card hover-shadow"
-                    style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-                    <form>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input js-input-filter"
-                                {{ $query['memory'] == '128' ? 'checked' : '' }} name="memory" data-value="128"
-                                id="size-1">
-                            <label class="custom-control-label" for="size-1">Tất cả</label>
-                        </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input js-input-filter"
-                                {{ $query['memory'] == '256' ? 'checked' : '' }} name="memory" data-value="256"
-                                id="size-2">
-                            <label class="custom-control-label" for="size-2">Dưới 14 inch</label>
-                        </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input js-input-filter"
-                                {{ $query['memory'] == '512' ? 'checked' : '' }} name="memory" data-value="512"
-                                id="size-3">
-                            <label class="custom-control-label" for="size-3">Từ 14 - 15 inch</label>
-                        </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input js-input-filter"
-                                {{ $query['memory'] == '1024' ? 'checked' : '' }} name="memory" data-value="1024"
-                                id="size-4">
-                            <label class="custom-control-label" for="size-4">Từ 15 - 17 inch</label>
-                        </div>
+                <div class="card" style="border-radius: 10px">
+                    <div class="card-heading bg-light pt-2 pl-4"
+                        style="border-radius: 10px; font-weight:700; font-size: 20px;">
+                        <a class="text-dark fw-bold" data-toggle="collapse" href="#multiCollapseExample1" role="button"
+                            aria-expanded="false" aria-controls="multiCollapseExample1">
+                            Kích thước màn hình
+                            <i class="fas fa-chevron-down ml-2"></i> <!-- Icon mũi tên đi xuống -->
+                        </a>
+                    </div>
 
-                    </form>
+                    <div class="p-3" style="border-radius: 10px" id="multiCollapseExample1">
+                        <form>
+                            <div
+                                class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-2">
+                                <input type="checkbox" class="custom-control-input js-input-filter"
+                                    {{ $query['memory'] == '128' ? 'checked' : '' }} name="memory" data-value="128"
+                                    id="size-1">
+                                <label class="custom-control-label fw-bold" for="size-1">Tất cả</label>
+                            </div>
+                            <div
+                                class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-2">
+                                <input type="checkbox" class="custom-control-input js-input-filter"
+                                    {{ $query['memory'] == '256' ? 'checked' : '' }} name="memory" data-value="256"
+                                    id="size-2">
+                                <label class="custom-control-label fw-bold" for="size-2">Dưới 14 inch</label>
+                            </div>
+                            <div
+                                class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-2">
+                                <input type="checkbox" class="custom-control-input js-input-filter"
+                                    {{ $query['memory'] == '512' ? 'checked' : '' }} name="memory" data-value="512"
+                                    id="size-3">
+                                <label class="custom-control-label fw-bold" for="size-3">Từ 14 - 15 inch</label>
+                            </div>
+                            <div
+                                class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-2">
+                                <input type="checkbox" class="custom-control-input js-input-filter"
+                                    {{ $query['memory'] == '1024' ? 'checked' : '' }} name="memory" data-value="1024"
+                                    id="size-4">
+                                <label class="custom-control-label fw-bold" for="size-4">Từ 15 - 17 inch</label>
+                            </div>
+                        </form>
+                    </div>
                 </div>
+
                 <!-- Size End -->
             </div>
             <!-- Shop Sidebar End -->
