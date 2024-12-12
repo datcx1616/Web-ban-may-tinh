@@ -61,10 +61,11 @@
                 </div>
                 <div class="col-lg-4">
                     <a href="{{ route('home.index') }}" class="text-decoration-none">
-                        <img src="{{ asset('client/img/logonew.png') }}" alt="logo"
-                            style="width: 100px;height: 60px;">
+                        <img src="{{ asset('client/img/aa4.png') }}" alt="logo"
+                            style="width: 200px; height: 110px; object-fit: contain; margin-left: 40%; image-rendering: pixelated;">
                     </a>
                 </div>
+
                 <div class="col-lg-4 col-6 text-left">
                     <form action="{{ route('shop.index') }}" method="GET">
                         <div class="input-group rounded-2">
