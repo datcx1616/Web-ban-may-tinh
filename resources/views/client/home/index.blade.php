@@ -65,10 +65,12 @@
 
 
     <div class="container-fluid mt-2 mb-3">
-        <div class="px-xl-5">
-            <img src="{{ asset('client/img/tt.png') }}" alt="logo"
-                class="first-slide w-100"style=" border-radius: 10px;">
-        </div>
+        <a href="{{ route('shop.index') }}">
+            <div class="px-xl-5">
+                <img src="{{ asset('client/img/tt.png') }}" alt="logo"
+                    class="first-slide w-100"style=" border-radius: 10px;">
+            </div>
+        </a>
     </div>
 
     <div class="container-fluid pt-5 pb-3">
@@ -79,31 +81,39 @@
         <div class="row px-xl-5">
             <!-- Khung 1 -->
             <div class="col-md-3">
-                <div class="product-offer mb-30" style="height: 150px;">
-                    <img class="img-fluid" src="{{ asset('client/img/ud4.png') }}" alt="logo" alt="Image 2"
-                        style="height: 100%; width: 100%;">
-                </div>
+                <a href="{{ route('shop.index') }}">
+                    <div class="product-offer mb-30" style="height: 150px;">
+                        <img class="img-fluid" src="{{ asset('client/img/ud4.png') }}" alt="logo" alt="Image 2"
+                            style="height: 100%; width: 100%;">
+                    </div>
+                </a>
             </div>
             <!-- Khung 2 -->
             <div class="col-md-3">
-                <div class="product-offer mb-30" style="height: 150px;">
-                    <img class="img-fluid" src="{{ asset('client/img/ud1.png') }}" alt="logo" alt="Image 2"
-                        style="height: 100%; width: 100%;">
-                </div>
+                <a href="{{ route('shop.index') }}">
+                    <div class="product-offer mb-30" style="height: 150px;">
+                        <img class="img-fluid" src="{{ asset('client/img/ud1.png') }}" alt="logo" alt="Image 2"
+                            style="height: 100%; width: 100%;">
+                    </div>
+                </a>
             </div>
             <!-- Khung 3 -->
             <div class="col-md-3">
-                <div class="product-offer mb-30" style="height: 150px;">
-                    <img class="img-fluid" src="{{ asset('client/img/ud2.png') }}" alt="logo" alt="Image 2"
-                        style="height: 100%; width: 100%;">
-                </div>
+                <a href="{{ route('shop.index') }}">
+                    <div class="product-offer mb-30" style="height: 150px;">
+                        <img class="img-fluid" src="{{ asset('client/img/ud2.png') }}" alt="logo" alt="Image 2"
+                            style="height: 100%; width: 100%;">
+                    </div>
+                </a>
             </div>
             <!-- Khung 4 -->
             <div class="col-md-3">
-                <div class="product-offer mb-30" style="height: 150px;">
-                    <img class="img-fluid" src="{{ asset('client/img/ud5.png') }}" alt="logo" alt="Image 2"
-                        style="height: 100%; width: 100%;">
-                </div>
+                <a href="{{ route('shop.index') }}">
+                    <div class="product-offer mb-30" style="height: 150px;">
+                        <img class="img-fluid" src="{{ asset('client/img/ud5.png') }}" alt="logo" alt="Image 2"
+                            style="height: 100%; width: 100%;">
+                    </div>
+                </a>
             </div>
         </div>
     </div>

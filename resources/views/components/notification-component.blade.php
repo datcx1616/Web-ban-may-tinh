@@ -1,9 +1,9 @@
-<div id="popup" class="popup">
-    <div class="popup-content">
+<div id="popup" class="popup" style="display: none;">
+    <div class="popup-content" onclick="event.stopPropagation()">
         <span class="close-btn" onclick="closePopup()">&times;</span>
         <h2>ĐĂNG KÝ NHẬN TIN KHUYẾN MÃI</h2>
         <p>Nhận Ngay Voucher 10%</p>
-        <form action="#" style=" text-align: left;" class="form2">
+        <form id="form2" action="#" style="text-align: left;" class="form2">
             <label for="email" class="ml-4">Email:</label>
             <input type="email" id="email" name="email" required class="ml-4">
 
@@ -14,29 +14,27 @@
                 <input type="checkbox" required class="ml-4"> Tôi đồng ý với điều khoản
             </label>
 
-            <button class="button1" type="submit" class="ml-4">ĐĂNG KÝ NGAY</button>
+            <button class="button1 ml-4" type="submit">ĐĂNG KÝ NGAY</button>
         </form>
         <a href="#" onclick="closePopup()">Bữa khác nha</a>
     </div>
 </div>
+
 <style>
     /* Animation for the popup to scale in */
     @keyframes scaleIn {
-        .form2 {
+        from {
             transform: scale(0.8);
-            /* Ban đầu nhỏ hơn một chút */
             opacity: 0;
-            /* Ban đầu mờ */
         }
 
         to {
             transform: scale(1);
-            /* Kích thước bình thường */
             opacity: 1;
-            /* Hiển thị rõ ràng */
         }
     }
 </style>
+
 <script>
     // Hiển thị popup khi trang tải
     window.onload = function() {
@@ -49,10 +47,17 @@
     function closePopup() {
         document.getElementById('popup').style.display = 'none';
     }
+    document.getElementById('popup').addEventListener('click', function() {
+        closePopup();
+    });
+    // Ngăn chặn đóng popup khi nhấp vào nội dung bên trong
+    document.querySelector('.popup-content').addEventListener('click', function(event) {
+        event.stopPropagation();
+    });
 
     // Xử lý khi người dùng nhấn "ĐĂNG KÝ NGAY"
-    document.querySelector('form2').addEventListener('submit', function(e) {
-        e.preventDefault(); // Ngăn chặn hành vi gửi form mặc định (tải lại trang)
+    document.getElementById('form2').addEventListener('submit', function(e) {
+        e.preventDefault(); // Ngăn chặn hành vi gửi form mặc định
 
         // Hiển thị thông báo (tùy chọn)
         alert('Đăng ký thành công!');
