@@ -428,7 +428,12 @@
                 </div>
             </div>
 
-
+            <div class="container-fluid mt-2 mb-3">
+                <div class="px-xl-2">
+                    <img src="{{ asset('client/img/tt.png') }}" alt="logo"
+                        class="first-slide w-100"style=" border-radius: 10px;">
+                </div>
+            </div>
 
             <div class="container-fluid">
                 <div class="row px-xl-1 pb-1 d-flex justify-content-between">

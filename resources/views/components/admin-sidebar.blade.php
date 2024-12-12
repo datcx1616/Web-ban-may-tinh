@@ -1,8 +1,8 @@
 <div class="iq-sidebar sidebar-default ">
     <div class="iq-sidebar-logo d-flex align-items-center">
         <a href="{{ route('home.index') }}" class="text-decoration-none">
-            <img src="{{ asset('client/img/logonew.png') }}" alt="logo"
-                style="width: 100px; height: 60px; margin-left: 50px;">
+            <img src="{{ asset('client/img/aa4.png') }}" alt="logo"
+                style="width: 200px; height: 110px; object-fit: contain; image-rendering: pixelated;">
         </a>
 
         {{-- <div class="iq-menu-bt-sidebar ml-0">

@@ -652,7 +652,12 @@
     <x-feature-product />
 
 
-
+    <div class="container-fluid mt-2 mb-3">
+        <div class="px-xl-5">
+            <img src="{{ asset('client/img/tt.png') }}" alt="logo"
+                class="first-slide w-100"style=" border-radius: 10px;">
+        </div>
+    </div>
     <div class="container-fluid pt-5 pb-3">
 
         <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4">
@@ -690,43 +695,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid pt-5 pb-3">
-        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4">
-            <span class="bg-secondary pr-3">Chuyên trang thương hiệu</span>
-        </h2>
-        <div class="row px-xl-5">
-            <!-- Khung 1 -->
-            <div class="col-md-3">
-                <div class="product-offer mb-30" style="height: 150px;">
-                    <img class="img-fluid"
-                        src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:90/plain/https://dashboard.cellphones.com.vn/storage/apple-chinh-hang-home.jpg"
-                        alt="Image 1" style="height: 100%; width: 100%;">
-                </div>
-            </div>
-            <!-- Khung 2 -->
-            <div class="col-md-3">
-                <div class="product-offer mb-30" style="height: 150px;">
-                    <img class="img-fluid"
-                        src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:90/plain/https://dashboard.cellphones.com.vn/storage/SIS%20asus.png"
-                        alt="Image 2" style="height: 100%; width: 100%;">
-                </div>
-            </div>
-            <!-- Khung 3 -->
-            <div class="col-md-3">
-                <div class="product-offer mb-30" style="height: 150px;">
-                    <img class="img-fluid" src="{{ asset('client/img/bn1.png') }}" alt="logo" alt="Image 2"
-                        style="height: 100%; width: 100%;">
-                </div>
-            </div>
-            <!-- Khung 4 -->
-            <div class="col-md-3">
-                <div class="product-offer mb-30" style="height: 150px;">
-                    <img class="img-fluid" src="{{ asset('client/img/bn2.png') }}" alt="logo" alt="Image 2"
-                        style="height: 100%; width: 100%;">
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <x-post-new-component />
 
