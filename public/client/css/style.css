@@ -10256,3 +10256,177 @@ h6 {
         transform: translateX(20px);
     }
 }
+
+.social-sidebar {
+    position: fixed;
+    top: 50%;
+    left: 70px;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+.social-sidebar .icon {
+    display: block;
+    margin: 10px 0;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid #ddd;
+}
+
+.social-sidebar .icon img {
+    max-width: 60%;
+    height: auto;
+}
+
+.social-sidebar .facebook {
+    border-color: #3b5998;
+}
+
+.social-sidebar .youtube {
+    border-color: #ff0000;
+}
+
+.social-sidebar .instagram {
+    border-color: #c13584;
+}
+
+.social-sidebar .tiktok {
+    border-color: #000000;
+}
+
+.button-container {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.custom-btn {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(to bottom, #ff7e31, #ff3b00);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.custom-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.zalo-btn {
+    background: white;
+    border: 2px solid #0078ff;
+    color: #0078ff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.zalo-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.zalo-btn img,
+.icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 5px;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+#chatbox {
+    z-index: 1000;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    transition: width 0.3s ease, height 0.3s ease;
+    /* Hiệu ứng cho cả chiều rộng và chiều cao */
+}
+
+#chatbox.collapsed {
+    width: 50px;
+    /* Kích thước khi thu nhỏ ngang */
+    height: 40px;
+    /* Chiều cao khi thu nhỏ ngang */
+    overflow: hidden;
+    /* Ẩn nội dung khi thu nhỏ */
+}
+
+#chat-header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+    text-align: center;
+    position: relative;
+}
+
+#close-chat {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+}
+
+#chat-body {
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.message {
+    margin: 5px 0;
+}
+
+#user-input {
+    width: calc(100% - 80px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#send-button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#send-button:hover {
+    background-color: #0056b3;
+}
