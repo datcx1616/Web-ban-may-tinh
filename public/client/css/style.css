@@ -10521,3 +10521,158 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transform: translateY(-3px);
 }
+
+
+.hover-shadow {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-light {
+    background: linear-gradient(135deg, #f9f9f9, #ffffff);
+}
+
+
+    /* Đảm bảo popup nằm trên các phần tử khác */
+    .popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Nền tối */
+        justify-content: center;
+        align-items: center;
+        /* Căn giữa popup theo chiều dọc */
+        z-index: 9999;
+        /* Đảm bảo popup luôn ở trên */
+    }
+
+    .popup-content {
+        background-color: #fff;
+        padding: 40px;
+        /* Tăng khoảng cách bên trong */
+        border-radius: 10px;
+        width: 500px;
+        /* Tăng chiều rộng */
+        height: auto;
+        /* Chiều cao tự động (hoặc bạn có thể đặt cố định, ví dụ: 400px) */
+        text-align: center;
+        transform: scale(0.8);
+        /* Ban đầu popup sẽ nhỏ hơn một chút */
+        animation: scaleIn 0.5s forwards;
+        /* Hiệu ứng mở rộng */
+    }
+
+    .popup h2 {
+        font-size: 28px;
+        /* Tăng kích thước tiêu đề */
+        margin-bottom: 20px;
+    }
+
+    .popup p {
+        font-size: 20px;
+        color: #e60000;
+        margin-bottom: 20px;
+    }
+.input2{
+    width: 100%;
+}
+    input[type="email"],
+    input[type="tel"],
+    .button1 {
+        width: 90%;
+        /* Giảm chiều rộng để có khoảng cách với viền form */
+        padding: 15px;
+        /* Tăng kích thước nút và ô nhập liệu */
+        margin: 10px 0;
+
+        border-radius: 6px;
+        border: 1px solid #ddd;
+        font-size: 16px;
+    }
+
+    .button1 {
+        background-color: #e60000;
+        color: white;
+        margin-left: 25px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    .button1:hover {
+        background-color: #c50000;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+        /* Tùy chỉnh giao diện cho thanh điều hướng */
+        .nav-tabs {
+            border-bottom: 2px solid #ddd;
+        }
+
+        .nav-tabs .nav-link {
+            color: #333;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .nav-tabs .nav-link.active {
+            background-color: #007bff;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+        }
+
+        .nav-tabs .nav-link:hover {
+            background-color: #0056b3;
+            color: #fff;
+        }
+
+        .nav-tabs .nav-link.disabled {
+            color: #999;
+            cursor: not-allowed;
+        }
+
+        .product-card {
+            border-radius: 10px;
+            /* Điều chỉnh độ bo tròn (10px là ví dụ) */
+            overflow: hidden;
+            /* Đảm bảo nội dung không tràn ra ngoài */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* Thêm chút hiệu ứng shadow (tùy chọn) */
+        }
+
+        /* Xoay icon khi collapse mở */
+        .toggle-icon[aria-expanded="true"] i {
+            transform: rotate(180deg);
+            /* Xoay 180 độ */
+            transition: transform 0.3s ease;
+            /* Hiệu ứng mượt */
+        }
+
+        /* Trạng thái ban đầu của icon */
+        .toggle-icon i {
+            transition: transform 0.3s ease;
+            /* Hiệu ứng mượt */
+        }

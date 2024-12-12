@@ -33,8 +33,8 @@
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">
-                            <input type="email" class="form-control" name="email" requiredid="email" placeholder="Email"
-                                required="required">
+                            <input type="email" class="form-control input2" name="email" required id="email"
+                                style="width:100%" placeholder="Email" required="required">
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">

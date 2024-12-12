@@ -19,39 +19,6 @@
 
     <x-product-category />
 
-
-    <style>
-        /* Tùy chỉnh giao diện cho thanh điều hướng */
-        .nav-tabs {
-            border-bottom: 2px solid #ddd;
-        }
-
-        .nav-tabs .nav-link {
-            color: #333;
-            font-weight: 500;
-            padding: 10px 20px;
-            border-radius: 5px;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .nav-tabs .nav-link.active {
-            background-color: #007bff;
-            color: #fff;
-            font-weight: bold;
-            border: none;
-        }
-
-        .nav-tabs .nav-link:hover {
-            background-color: #0056b3;
-            color: #fff;
-        }
-
-        .nav-tabs .nav-link.disabled {
-            color: #999;
-            cursor: not-allowed;
-        }
-    </style>
-
     <div class="container-fluid">
         <div class="row justify-content-center px-xl-5 pb-3">
             <ul class="nav nav-tabs">
@@ -91,15 +58,9 @@
                 class="first-slide w-100"style=" border-radius: 10px;">
         </div>
     </div>
-    <!-- Shop Start -->
+
     <div class="container-fluid">
         <div class="row px-xl-5 ">
-            <!-- Shop Sidebar Start -->
-
-            <!-- Shop Sidebar End -->
-
-
-            <!-- Shop Product Start -->
             <div class="col-lg-12">
                 <div class="row pb-3">
                     @forelse ($products as $product)
@@ -140,39 +101,7 @@
                                     <i class="fas fa-chevron-down ml-2"></i> <!-- Icon mũi tên đi xuống -->
                                 </a>
                             </div>
-                            <style>
-                                .hover-shadow {
-                                    transition: box-shadow 0.3s ease, transform 0.3s ease;
-                                }
 
-                                .hover-shadow:hover {
-                                    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-                                    transform: translateY(-5px);
-                                }
-
-                                .product-card {
-                                    border-radius: 10px;
-                                    /* Điều chỉnh độ bo tròn (10px là ví dụ) */
-                                    overflow: hidden;
-                                    /* Đảm bảo nội dung không tràn ra ngoài */
-                                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                                    /* Thêm chút hiệu ứng shadow (tùy chọn) */
-                                }
-
-                                /* Xoay icon khi collapse mở */
-                                .toggle-icon[aria-expanded="true"] i {
-                                    transform: rotate(180deg);
-                                    /* Xoay 180 độ */
-                                    transition: transform 0.3s ease;
-                                    /* Hiệu ứng mượt */
-                                }
-
-                                /* Trạng thái ban đầu của icon */
-                                .toggle-icon i {
-                                    transition: transform 0.3s ease;
-                                    /* Hiệu ứng mượt */
-                                }
-                            </style>
                             <div class="p-3 collapse" style="border-radius: 10px" id="multiCollapseExample1">
                                 <form>
                                     <div
@@ -423,6 +352,7 @@
             <!-- Shop Product End -->
         </div>
     </div>
+
     <x-post-new-component />
     <!-- Shop End -->
     <script>

@@ -143,7 +143,7 @@
             </div>
         </div>
         <div class="row px-xl-5">
-            <div class="col-6">
+            <div class="col-12">
                 <div class="bg-light p-30">
                     <div class="nav nav-tabs mb-4">
                         <a class="nav-item nav-link text-dark active" data-toggle="tab" href="#tab-pane-1">Mô tả</a>
