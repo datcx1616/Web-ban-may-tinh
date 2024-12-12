@@ -17,160 +17,7 @@
 
     <x-logo-component />
 
-    <style>
-        /* Tạo hiệu ứng chạy qua lại cho mỗi phần tử */
-        @keyframes slide {
-            0% {
-                transform: translateX(100%);
-            }
-
-            50% {
-                transform: translateX(-100%);
-            }
-
-            100% {
-                transform: translateX(100%);
-            }
-        }
-
-        .slide-container {
-            display: flex;
-            flex-wrap: nowrap;
-            /* Đảm bảo các phần tử không xuống hàng */
-            justify-content: flex-start;
-            overflow-x: hidden;
-            /* Ẩn thanh cuộn ngang */
-            white-space: nowrap;
-            /* Ngăn các phần tử xuống hàng */
-        }
-
-        .slide-item {
-            flex: 0 0 auto;
-            /* Không giãn nở và không thu nhỏ */
-            margin-right: 30px;
-            margin-bottom: 20px;
-            /* Thêm margin dưới để tạo khoảng cách khi xuống hàng */
-            animation: slide 20s linear infinite;
-            /* Thay đổi từ 10s thành 20s để làm chậm hiệu ứng */
-        }
-
-        .slide-item:nth-child(1) {
-            animation-delay: 0s;
-        }
-
-        .slide-item:nth-child(2) {
-            animation-delay: 2s;
-        }
-
-        .slide-item:nth-child(3) {
-            animation-delay: 4s;
-        }
-
-        .slide-item:nth-child(4) {
-            animation-delay: 6s;
-        }
-
-        .slide-item:nth-child(5) {
-            animation-delay: 8s;
-        }
-
-        .slide-item:nth-child(6) {
-            animation-delay: 10s;
-        }
-
-        /* Hiệu ứng khi đưa chuột vào */
-        .bode:hover {
-            border: 1px solid red;
-            /* Viền màu đỏ */
-            transition: all 0.3s ease;
-            /* Hiệu ứng mượt */
-
-        }
-
-        .boder:hover {
-            border: 1px solid red;
-            /* Viền màu đỏ */
-            /* transition: all 0.3s ease; */
-            /* Hiệu ứng mượt */
-            transition: box-shadow 0.3s ease, transform 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            transform: translateY(-3px);
-        }
-
-        /* Bỏ viền mặc định để tránh xung đột */
-        .slide-item {
-            border: none;
-            /* Không có viền ban đầu */
-        }
-    </style>
-
-
-
-    <div class="container-fluid pt-2">
-        <div class="row px-xl-5 slide-container">
-            <div class="col-lg-2 col-md-6 col-sm-12 pb-1 slide-item">
-                <div class="d-flex align-items-center bg-light mb-4 bode"
-                    style="padding: 20px; border-radius: 10px; height: 80px; width: 120%;">
-                    <img src="{{ asset('client/img/icon1.png') }}" alt="logo"
-                        style="width: 50px; height: 40px; margin-right: 10px;">
-                    <h5 class="font-weight-semi-bold m-0 text-nowrap" style="margin-left: 0;">Apple</h5>
-                    <img src="{{ asset('client/img/icon1.1.png') }}" alt="logo"
-                        style="width: 100px; height: 70px; margin-left: auto;">
-                </div>
-            </div>
-
-            <div class="col-lg-2 col-md-6 col-sm-12 pb-1 slide-item">
-                <div class="d-flex align-items-center bg-light mb-4 bode"
-                    style="padding: 20px; border-radius: 10px; height: 80px; width: 120%;">
-                    <img src="{{ asset('client/img/icon7.png') }}" alt="logo"
-                        style="width: 50px; height: 40px; margin-right: 10px;">
-                    <h5 class="font-weight-semi-bold m-0 text-nowrap" style="margin-left: 0;">hp</h5>
-                    <img src="{{ asset('client/img/icon7.7.png') }}" alt="logo"
-                        style="width: 100px; height: 70px; margin-left: auto;">
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-6 col-sm-12 pb-1 slide-item">
-                <div class="d-flex align-items-center bg-light mb-4  bode"
-                    style="padding: 20px; border-radius: 10px; height: 80px; width: 120%;">
-                    <img src="{{ asset('client/img/icon3.png') }}" alt="logo"
-                        style="width: 50px; height: 40px; margin-right: 10px;">
-                    <h5 class="font-weight-semi-bold m-0 text-nowrap" style="margin-left: 0;">Acer</h5>
-                    <img src="{{ asset('client/img/icon3.3.png') }}" alt="logo"
-                        style="width: 100px; height: 70px; margin-left: auto;">
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-6 col-sm-12 pb-1 slide-item">
-                <div class="d-flex align-items-center bg-light mb-4 bode"
-                    style="padding: 20px; border-radius: 10px; height: 80px; width: 120%;">
-                    <img src="{{ asset('client/img/icon4.png') }}" alt="logo"
-                        style="width: 50px; height: 40px; margin-right: 10px;">
-                    <h5 class="font-weight-semi-bold m-0 text-nowrap" style="margin-left: 0;">MIS</h5>
-                    <img src="{{ asset('client/img/icon4.4.png') }}" alt="logo"
-                        style="width: 100px; height: 70px; margin-left: auto;">
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-6 col-sm-12 pb-1 slide-item">
-                <div class="d-flex align-items-center bg-light mb-4 bode"
-                    style="padding: 20px; border-radius: 10px; height: 80px; width: 120%;">
-                    <img src="{{ asset('client/img/icon5.png') }}" alt="logo"
-                        style="width: 50px; height: 40px; margin-left: outo;">
-                    <h5 class="font-weight-semi-bold m-0 text-nowrap" style="margin-left: 0;">Lenovo</h5>
-                    <img src="{{ asset('client/img/icon5.5.png') }}" alt="logo"
-                        style="width: 100px; height: 70px; margin-left: auto;">
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-6 col-sm-12 pb-1 slide-item">
-                <div class="d-flex align-items-center bg-light mb-4 bode"
-                    style="padding: 20px; border-radius: 10px; height: 80px; width: 120%;">
-                    <img src="{{ asset('client/img/icon6.png') }}" alt="logo"
-                        style="width: 50px; height: 40px; margin-right: 10px;">
-                    <h5 class="font-weight-semi-bold m-0 text-nowrap" style="margin-left: 0;">Dell</h5>
-                    <img src="{{ asset('client/img/icon6.6.png') }}" alt="logo"
-                        style="width: 100px; height: 70px; margin-left: auto;">
-                </div>
-            </div>
-        </div>
-    </div>
+    <x-product-category />
 
 
     <style>
@@ -276,52 +123,7 @@
                 </div>
             </div>
 
-            <div class="container-fluid">
-                <div class="row px-xl-1 pb-1 d-flex justify-content-between">
-                    <div class="col pb-1">
-                        <div class="d-flex align-items-center bg-light mb-4 boder"
-                            style="padding: 20px; border-radius: 10px; height: 80px; width: 100%;">
-                            <img src="{{ asset('client/img/icon10.png') }}" alt="logo"
-                                style="width: 60px; height: 60px; margin-right: 10px;">
-                            <h5 class="font-weight-semi-bold m-0 text-nowrap">Al</h5>
-                        </div>
-                    </div>
-
-                    <div class="col pb-1">
-                        <div class="d-flex align-items-center bg-light mb-4 boder"
-                            style="padding: 20px; border-radius: 10px; height: 80px; width: 100%;">
-                            <img src="{{ asset('client/img/icon11.png') }}" alt="logo"
-                                style="width: 60px; height: 60px; margin-right: 10px;">
-                            <h5 class="font-weight-semi-bold m-0 text-nowrap">Gaming- đồ họa</h5>
-                        </div>
-                    </div>
-                    <div class="col pb-1">
-                        <div class="d-flex align-items-center bg-light mb-4 boder"
-                            style="padding: 20px; border-radius: 10px; height: 80px; width: 100%;">
-                            <img src="{{ asset('client/img/icon12.png') }}" alt="logo"
-                                style="width: 60px; height: 60px; margin-right: 10px;">
-                            <h5 class="font-weight-semi-bold m-0 text-nowrap">Sinh viên - văn
-                                phòng</h5>
-                        </div>
-                    </div>
-                    <div class="col pb-1">
-                        <div class="d-flex align-items-center bg-light mb-4 boder"
-                            style="padding: 20px; border-radius: 10px; height: 80px; width: 100%;">
-                            <img src="{{ asset('client/img/icon13.png') }}" alt="logo"
-                                style="width: 60px; height: 60px; margin-right: 10px;">
-                            <h5 class="font-weight-semi-bold m-0 text-nowrap">Mỏng nhẹ</h5>
-                        </div>
-                    </div>
-                    <div class="col pb-1">
-                        <div class="d-flex align-items-center bg-light mb-4 boder"
-                            style="padding: 20px; border-radius: 10px; height: 80px; width: 100%;">
-                            <img src="{{ asset('client/img/icon14.png') }}" alt="logo"
-                                style="width: 60px; height: 60px; margin-left: outo;">
-                            <h5 class="font-weight-semi-bold m-0 text-nowrap">Doanh nhân</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <x-category-product />
 
             <div class="container-fluid">
                 <div class="row px-xl-1 ">
@@ -530,21 +332,24 @@
                                         <input type="checkbox" class="custom-control-input js-input-filter"
                                             {{ $query['memory'] == '256' ? 'checked' : '' }} name="memory"
                                             data-value="256" id="size-2">
-                                        <label class="custom-control-label fw-bold" for="size-2">Dưới 14 inch</label>
+                                        <label class="custom-control-label fw-bold" for="size-2">Dưới 14
+                                            inch</label>
                                     </div>
                                     <div
                                         class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-2">
                                         <input type="checkbox" class="custom-control-input js-input-filter"
                                             {{ $query['memory'] == '512' ? 'checked' : '' }} name="memory"
                                             data-value="512" id="size-3">
-                                        <label class="custom-control-label fw-bold" for="size-3">Từ 14 - 15 inch</label>
+                                        <label class="custom-control-label fw-bold" for="size-3">Từ 14 - 15
+                                            inch</label>
                                     </div>
                                     <div
                                         class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-2">
                                         <input type="checkbox" class="custom-control-input js-input-filter"
                                             {{ $query['memory'] == '1024' ? 'checked' : '' }} name="memory"
                                             data-value="1024" id="size-4">
-                                        <label class="custom-control-label fw-bold" for="size-4">Từ 15 - 17 inch</label>
+                                        <label class="custom-control-label fw-bold" for="size-4">Từ 15 - 17
+                                            inch</label>
                                     </div>
                                 </form>
                             </div>

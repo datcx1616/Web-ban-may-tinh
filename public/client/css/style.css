@@ -10331,6 +10331,12 @@ h6 {
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
 }
 
+
+
+/* css mới */
+
+
+
 .zalo-btn {
     background: white;
     border: 2px solid #0078ff;
@@ -10429,4 +10435,89 @@ body {
 
 #send-button:hover {
     background-color: #0056b3;
+}
+
+  /* Tạo hiệu ứng chạy qua lại cho mỗi phần tử */
+  @keyframes slide {
+    0% {
+        transform: translateX(100%);
+    }
+
+    50% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.slide-container {
+    display: flex;
+    flex-wrap: nowrap;
+    /* Đảm bảo các phần tử không xuống hàng */
+    justify-content: flex-start;
+    overflow-x: hidden;
+    /* Ẩn thanh cuộn ngang */
+    white-space: nowrap;
+    /* Ngăn các phần tử xuống hàng */
+}
+
+.slide-item {
+    flex: 0 0 auto;
+    /* Không giãn nở và không thu nhỏ */
+    margin-right: 30px;
+    margin-bottom: 20px;
+    /* Thêm margin dưới để tạo khoảng cách khi xuống hàng */
+    animation: slide 20s linear infinite;
+    /* Thay đổi từ 10s thành 20s để làm chậm hiệu ứng */
+}
+
+.slide-item:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.slide-item:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.slide-item:nth-child(3) {
+    animation-delay: 4s;
+}
+
+.slide-item:nth-child(4) {
+    animation-delay: 6s;
+}
+
+.slide-item:nth-child(5) {
+    animation-delay: 8s;
+}
+
+.slide-item:nth-child(6) {
+    animation-delay: 10s;
+}
+
+/* Hiệu ứng khi đưa chuột vào */
+.bode:hover {
+    border: 1px solid red;
+    /* Viền màu đỏ */
+    transition: all 0.3s ease;
+    /* Hiệu ứng mượt */
+
+}
+
+/* Bỏ viền mặc định để tránh xung đột */
+.slide-item {
+    border: none;
+    /* Không có viền ban đầu */
+}
+
+.boder:hover {
+    border: 1px solid red;
+    /* Viền màu đỏ */
+    /* transition: all 0.3s ease; */
+    /* Hiệu ứng mượt */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
 }
