@@ -30,7 +30,7 @@
                             <span class="badge bg-warning-light text-warning">35%</span>
                         </div>
                         <h3 class="mt-3 fw-bold text-dark">{{ number_format($totalUser) }}</h3>
-                        <p class="text-muted small">Tổng người dùng</p>
+                        <p class="text-muted small">Xem chi tiết</p>
                         <div class="progress mt-3" style="height: 8px;">
                             <div class="progress-bar bg-warning" role="progressbar" style="width: 35%;" aria-valuenow="35"
                                 aria-valuemin="0" aria-valuemax="100"></div>
@@ -47,7 +47,7 @@
                             <span class="badge bg-success-light text-success">45%</span>
                         </div>
                         <h3 class="mt-3 fw-bold text-dark">{{ number_format($totalOrder) }}</h3>
-                        <p class="text-muted small">Tổng đơn hàng</p>
+                        <p class="text-muted small">Xem chi tiết</p>
                         <div class="progress mt-3" style="height: 8px;">
                             <div class="progress-bar bg-success" role="progressbar" style="width: 45%;" aria-valuenow="45"
                                 aria-valuemin="0" aria-valuemax="100"></div>
@@ -64,7 +64,7 @@
                             <span class="badge bg-info-light text-info">35%</span>
                         </div>
                         <h3 class="mt-3 fw-bold text-dark">{{ number_format($totalPost) }}</h3>
-                        <p class="text-muted small">Tổng bài viết</p>
+                        <p class="text-muted small">Xem chi tiết</p>
                         <div class="progress mt-3" style="height: 8px;">
                             <div class="progress-bar bg-info" role="progressbar" style="width: 35%;" aria-valuenow="35"
                                 aria-valuemin="0" aria-valuemax="100"></div>
@@ -81,7 +81,7 @@
                             <span class="badge bg-danger-light text-danger">25%</span>
                         </div>
                         <h3 class="mt-3 fw-bold text-dark">{{ number_format($totalProduct) }}</h3>
-                        <p class="text-muted small">Tổng số sản phẩm</p>
+                        <p class="text-muted small">Xem chi tiết</p>
                         <div class="progress mt-3" style="height: 8px;">
                             <div class="progress-bar bg-danger" role="progressbar" style="width: 25%;" aria-valuenow="25"
                                 aria-valuemin="0" aria-valuemax="100"></div>
@@ -98,7 +98,7 @@
                             <span class="badge bg-secondary-light text-secondary">25%</span>
                         </div>
                         <h3 class="mt-3 fw-bold text-dark">{{ number_format($totalCancel) }}</h3>
-                        <p class="text-muted small">Tổng số đơn hàng đã hủy</p>
+                        <p class="text-muted small">Xem chi tiết</p>
                         <div class="progress mt-3" style="height: 8px;">
                             <div class="progress-bar bg-secondary" role="progressbar" style="width: 25%;" aria-valuenow="25"
                                 aria-valuemin="0" aria-valuemax="100"></div>

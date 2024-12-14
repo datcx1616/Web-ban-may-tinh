@@ -26,7 +26,7 @@
                     <div class="card-body">
                         <h5 class="card-title text-uppercase text-dark fw-bold mb-4">Giỏ hàng của bạn</h5>
                         <table class="table table-hover align-middle text-center">
-                            <thead style="background-color: #345b7e; color: #ffffff;">
+                            <thead>
                                 <tr>
                                     <th>Sản phẩm</th>
                                     <th>Giá</th>

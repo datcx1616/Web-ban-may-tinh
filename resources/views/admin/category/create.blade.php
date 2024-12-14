@@ -25,24 +25,21 @@
                                 </div>
                                 <div class="col-md-12 mb-3">
                                     <label for="validationDefault01">Hình ảnh</label>
-                                    <div class="custom-file ">
-                                        <input type="file" class="custom-file-input" id="customFile" name="img">
-                                        <label class="custom-file-label" for="customFile"></label>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="customFileimg" name="img">
+                                        <label class="custom-file-label" for="customFileImg"></label>
                                     </div>
-                                    <div class="custom-control custom-checkbox custom-control-inline">
-                                        <input type="checkbox" class="custom-control-input" name="changeImage"
-                                            id="change-image">
-                                        <label class="custom-control-label" for="change-image">Thay đổi hình ảnh</label>
-                                    </div>
+
                                 </div>
                                 <div class="col-md-12 mb-3">
-                                    <label for="validationDefault01">Icon</label>
-                                    <div class="custom-file ">
-                                        <input type="file" class="custom-file-input" id="customFile" name="icon">
-                                        <label class="custom-file-label" for="customFile"></label>
+                                    <label for="validationDefault02">Icon</label>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="customFileicon" name="icon">
+                                        <label class="custom-file-label" for="customFileIcon"></label>
                                     </div>
                                 </div>
-                                <div class="form-group">
+
+                                <div class="col-md-12 mb-3">
                                     <label for="is_show">Trạng thái</label>
                                     <select name="is_show" id="is_show" class="form-control">
                                         <option value="0">Ẩn

@@ -16,6 +16,7 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::get();
+        // dd($categories);
         return view('admin.category.index',
         ["listCategories" => $categories]);
     }
@@ -80,11 +81,11 @@ class CategoryController extends Controller
         ]);
         if ($request->changeImage) {
             $imgPath = $this->uploadFile($request->file('img'), 'category');
-            $img = $this->uploadFile($request->file('icon'), 'Category');
             $category->img = $imgPath;
+            $img = $this->uploadFile($request->file('icon'), 'category');
             $category->icon = $img;
-        }
 
+        }
 
         $category->save();
 

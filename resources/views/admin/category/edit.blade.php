@@ -25,9 +25,9 @@
                             </div>
                             <div class="form-group">
                                 <label for="validationDefault01">Hình ảnh</label>
-                                <div class="custom-file ">
-                                    <input type="file" class="custom-file-input" id="customFile" name="img">
-                                    <label class="custom-file-label" for="customFile"></label>
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="customFileImg" name="img">
+                                    <label class="custom-file-label" for="customFileImg"></label>
                                 </div>
                                 <div class="custom-control custom-checkbox custom-control-inline">
                                     <input type="checkbox" class="custom-control-input" name="changeImage"
@@ -36,10 +36,10 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="validationDefault01">Icon</label>
-                                <div class="custom-file ">
-                                    <input type="file" class="custom-file-input" id="customFile" name="icon">
-                                    <label class="custom-file-label" for="customFile"></label>
+                                <label for="validationDefault02">Icon</label>
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="customFileIcon" name="icon">
+                                    <label class="custom-file-label" for="customFileIcon"></label>
                                 </div>
                             </div>
                             <div class="form-group">

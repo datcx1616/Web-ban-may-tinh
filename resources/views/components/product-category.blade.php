@@ -12,7 +12,7 @@
                         style="padding: 10px; border-radius: 10px; height: 80px; justify-content: space-between;">
 
                         <!-- Hình ảnh bên trái -->
-                        <img src="{{ asset('client/img/icon1.png') }}" alt="logo" style="width: 40px; height: 35px;">
+                        <img src="{{ $itemCategory->icon }}" alt="logo" style="width: 40px; height: 35px;">
                         <!-- Giảm khoảng cách giữa ảnh và tên -->
 
                         <!-- Thẻ chứa tên category và ảnh bên phải -->

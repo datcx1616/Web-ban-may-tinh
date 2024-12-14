@@ -57,3 +57,7 @@ Thao tác với database
 tên file là
 Tạo bảng: create_users_table
 Thêm cột vô bảng: add_name_column_to_users_table
+
+trong bảng category thêm một cột là is_show_home_page, mặc định là 0, những danh mục nào có giá trị là 1 thì sẽ hiển thị ở home, những danh mục nào nào có giá trị là 2 hiển thị ở Shop.
+trong trang Admin chỉnh sửa category thêm một nút chọn trạng thái nhưng nút này lưu giá trị của biến is_show_home_page vào database
+chỉnh sửa ở chỗ View Home category lấy thêm điều kiện is_home_page = 1 thì hiển thị ở home còn is_show_home_page = 2 thì hiển thị ở  view-Shop

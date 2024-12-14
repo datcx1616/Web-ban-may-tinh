@@ -15,6 +15,7 @@ class Category extends Model
         "name",
         "describe",
         "img",
+        "icon",
         "is_show"
     ];
 }
