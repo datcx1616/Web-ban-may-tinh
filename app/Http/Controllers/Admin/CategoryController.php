@@ -38,10 +38,16 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        Category::create([
-            "name" => $request->name,
-            "describe" => $request->describe
-        ]);
+        $imgPath = $this->uploadFile($request->file('img'), 'Category');
+        $img = $this->uploadFile($request->file('icon'), 'Category');
+        $data = [
+        "name" => $request->name,
+        "describe" => $request->describe,
+        "img" => $imgPath,
+        "icon" => $img,
+        "is_show" => $request->is_show
+        ];
+        Category::create($data);
         return redirect()->route('admin.category.index');
     }
 
@@ -69,7 +75,16 @@ class CategoryController extends Controller
     {
         $category = Category::findOrFail($request->id);
         $category->name = $request->name;
-        $category->describe = $request->describe;
+        $category->update([
+            'is_show' => $request->input('is_show', 0),
+        ]);
+        if ($request->changeImage) {
+            $imgPath = $this->uploadFile($request->file('img'), 'category');
+            $img = $this->uploadFile($request->file('icon'), 'Category');
+            $category->img = $imgPath;
+            $category->icon = $img;
+        }
+
 
         $category->save();
 
@@ -86,7 +101,6 @@ class CategoryController extends Controller
     {
         $category = Category::findOrFail($id);
         $category->delete();
-
         return redirect()->route('admin.category.index');
     }
 }

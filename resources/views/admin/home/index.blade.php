@@ -1,119 +1,115 @@
 @extends('layouts.admin')
 @section('content')
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12 col-lg-4">
-                <div class="card card-block card-stretch card-height">
-                    <div class="card-body">
-                        <div class="top-block d-flex align-items-center justify-content-between">
-                            <h5>Doanh thu</h5>
+    <div class="container-fluid py-4">
+        <div class="row g-4">
+            <!-- Card Template -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card shadow border-0 rounded-4 h-100">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h5 class="text-primary">Doanh thu</h5>
+                            <span class="badge bg-primary-light text-primary">85%</span>
                         </div>
-                        <h3><span class="counter" style="visibility: visible;">{{ number_format($totalRevenue) }} VND</span>
-                        </h3>
-                        <div class="d-flex align-items-center justify-content-between mt-1">
-                            <p class="mb-0">Tổng doanh thu</p>
-                            <span class="text-primary">85%</span>
-                        </div>
-                        <div class="iq-progress-bar bg-primary-light mt-2">
-                            <span class="bg-primary iq-progress progress-1" data-percent="85"
-                                style="transition: width 2s ease 0s; width: 85%;"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12 col-lg-4">
-                <div class="card card-block card-stretch card-height">
-                    <div class="card-body">
-                        <div class="top-block d-flex align-items-center justify-content-between">
-                            <h5>Tổng người dùng</h5>
-                        </div>
-                        <h3><span class="counter" style="visibility: visible;">{{ number_format($totalUser) }}</span></h3>
-                        <div class="d-flex align-items-center justify-content-between mt-1">
-                            <p class="mb-0">Tổng người dùng</p>
-                            <span class="text-warning">35%</span>
-                        </div>
-                        <div class="iq-progress-bar bg-warning-light mt-2">
-                            <span class="bg-warning iq-progress progress-1" data-percent="35"
-                                style="transition: width 2s ease 0s; width: 35%;"></span>
+                        <h3 class="mt-3 fw-bold text-dark">{{ number_format($totalRevenue) }} VND</h3>
+                        <a href="{{ route('admin.home.index2') }}" class="text-decoration-none text-muted small">Xem chi
+                            tiết</a>
+                        <div class="progress mt-3" style="height: 8px;">
+                            <div class="progress-bar bg-primary" role="progressbar" style="width: 85%;" aria-valuenow="85"
+                                aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-12 col-lg-4">
-                <div class="card card-block card-stretch card-height">
-                    <div class="card-body">
-                        <div class="top-block d-flex align-items-center justify-content-between">
-                            <h5>Tổng đơn hàng</h5>
+
+            <!-- Repeat the Card Template for each item -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card shadow border-0 rounded-4 h-100">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h5 class="text-warning">Tổng người dùng</h5>
+                            <span class="badge bg-warning-light text-warning">35%</span>
                         </div>
-                        <h3><span class="counter" style="visibility: visible;">{{ number_format($totalOrder) }}</span></h3>
-                        <div class="d-flex align-items-center justify-content-between mt-1">
-                            <p class="mb-0">Tổng đơn hàng</p>
-                            <span class="text-success">45%</span>
-                        </div>
-                        <div class="iq-progress-bar bg-success-light mt-2">
-                            <span class="bg-success iq-progress progress-1" data-percent="45"
-                                style="transition: width 2s ease 0s; width: 85%;"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12 col-lg-4">
-                <div class="card card-block card-stretch card-height">
-                    <div class="card-body">
-                        <div class="top-block d-flex align-items-center justify-content-between">
-                            <h5>Tổng bài viết</h5>
-                        </div>
-                        <h3><span class="counter" style="visibility: visible;">{{ number_format($totalPost) }}</span></h3>
-                        <div class="d-flex align-items-center justify-content-between mt-1">
-                            <p class="mb-0">Tổng bài viết </p>
-                            <span class="text-success">35%</span>
-                        </div>
-                        <div class="iq-progress-bar bg-info-light mt-2">
-                            <span class="bg-info iq-progress progress-1" data-percent="35"
-                                style="transition: width 2s ease 0s; width: 85%;"></span>
+                        <h3 class="mt-3 fw-bold text-dark">{{ number_format($totalUser) }}</h3>
+                        <p class="text-muted small">Tổng người dùng</p>
+                        <div class="progress mt-3" style="height: 8px;">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 35%;" aria-valuenow="35"
+                                aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-12 col-lg-4">
-                <div class="card card-block card-stretch card-height">
-                    <div class="card-body">
-                        <div class="top-block d-flex align-items-center justify-content-between">
-                            <h5>Tổng số sản phẩm</h5>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card shadow border-0 rounded-4 h-100">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h5 class="text-success">Tổng đơn hàng</h5>
+                            <span class="badge bg-success-light text-success">45%</span>
                         </div>
-                        <h3><span class="counter" style="visibility: visible;">{{ number_format($totalProduct) }}</span>
-                        </h3>
-                        <div class="d-flex align-items-center justify-content-between mt-1">
-                            <p class="mb-0">Tổng số sản phẩm</p>
-                            <span class="text-success">25%</span>
-                        </div>
-                        <div class="iq-progress-bar bg-danger-light mt-2">
-                            <span class="bg-danger iq-progress progress-1" data-percent="25"
-                                style="transition: width 2s ease 0s; width: 85%;"></span>
+                        <h3 class="mt-3 fw-bold text-dark">{{ number_format($totalOrder) }}</h3>
+                        <p class="text-muted small">Tổng đơn hàng</p>
+                        <div class="progress mt-3" style="height: 8px;">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 45%;" aria-valuenow="45"
+                                aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-12 col-lg-4">
-                <div class="card card-block card-stretch card-height">
-                    <div class="card-body">
-                        <div class="top-block d-flex align-items-center justify-content-between">
-                            <h5>Tổng số đơn hàng đã hủy</h5>
+
+            <div class="col-md-6 col-lg-4 mt-3">
+                <div class="card shadow border-0 rounded-4 h-100">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h5 class="text-info">Tổng bài viết</h5>
+                            <span class="badge bg-info-light text-info">35%</span>
                         </div>
-                        <h3><span class="counter" style="visibility: visible;">{{ number_format($totalCancel) }}</span>
-                        </h3>
-                        <div class="d-flex align-items-center justify-content-between mt-1">
-                            <p class="mb-0">Tổng số đơn hàng đã hủy</p>
-                            <span class="text-success">25%</span>
-                        </div>
-                        <div class="iq-progress-bar bg-primary-light mt-2">
-                            <span class="bg-primary iq-progress progress-1" data-percent="25"
-                                style="transition: width 2s ease 0s; width: 85%;"></span>
+                        <h3 class="mt-3 fw-bold text-dark">{{ number_format($totalPost) }}</h3>
+                        <p class="text-muted small">Tổng bài viết</p>
+                        <div class="progress mt-3" style="height: 8px;">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 35%;" aria-valuenow="35"
+                                aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-12">
+
+            <div class="col-md-6 col-lg-4 mt-3">
+                <div class="card shadow border-0 rounded-4 h-100">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h5 class="text-danger">Tổng số sản phẩm</h5>
+                            <span class="badge bg-danger-light text-danger">25%</span>
+                        </div>
+                        <h3 class="mt-3 fw-bold text-dark">{{ number_format($totalProduct) }}</h3>
+                        <p class="text-muted small">Tổng số sản phẩm</p>
+                        <div class="progress mt-3" style="height: 8px;">
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: 25%;" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mt-3">
+                <div class="card shadow border-0 rounded-4 h-100">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h5 class="text-secondary">Tổng số đơn hàng đã hủy</h5>
+                            <span class="badge bg-secondary-light text-secondary">25%</span>
+                        </div>
+                        <h3 class="mt-3 fw-bold text-dark">{{ number_format($totalCancel) }}</h3>
+                        <p class="text-muted small">Tổng số đơn hàng đã hủy</p>
+                        <div class="progress mt-3" style="height: 8px;">
+                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 25%;" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{-- <div class="col-12">
                 <div class="card">
                     <div class="card-header d-flex justify-content-between">
                         <div class="header-title">
@@ -124,10 +120,9 @@
                         <div id="chart-revenue-month"></div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <script>
+            </div> --}}
+
+    {{-- <script>
         @php
             $dayStr = '';
             $totalStr = '';
@@ -213,5 +208,5 @@
                 }
             }
         });
-    </script>
+    </script> --}}
 @endsection

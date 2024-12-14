@@ -2,7 +2,9 @@
 @section('content')
     <x-notification-component />
 
+    <!-- Gọi component ProductCategory -->
     <x-product-category />
+
 
     <x-logo-component />
 
@@ -18,7 +20,7 @@
                     <div class="icon-container text-primary mr-3">
                         <i class="fas fa-shield-alt fa-2x"></i>
                     </div>
-                    <h5 class="font-weight-semi-bold m-0">Thương hiệu đảm bảo</h5>
+                    <h5 class="font-weight-semi-bold m-0">Thương hiệu mới</h5>
                 </div>
             </div>
             <!-- Block 2 -->

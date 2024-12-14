@@ -39,6 +39,7 @@ Route::get('/logout', function () {
 
 Route::prefix('admin')->middleware('auth.admin')->group(function () {
     Route::get('/index', [AdminHomeController::class, 'index'])->name('admin.home.index');
+    Route::get('/index2', [AdminHomeController::class, 'index2'])->name('admin.home.index2');
     Route::prefix('/menu')->group(function () {
         Route::get('/index', [MenuController::class, 'index'])->name('admin.menu.index');
         Route::get('/create', [MenuController::class, 'create'])->name('admin.menu.create');

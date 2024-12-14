@@ -5,7 +5,7 @@ namespace App\View\Components;
 use App\Models\Category;
 use Illuminate\View\Component;
 
-class CategoryComponent extends Component
+class ProductCategory extends Component
 {
     public $listCategory;
 
@@ -15,17 +15,17 @@ class CategoryComponent extends Component
     public function __construct()
     {
         // Lấy danh sách danh mục từ database
-        $this->listCategory = Category::where('is_show', 1)->get();
+        $this->listCategory = Category::get();
     }
 
     /**
      * Get the view / contents that represent the component.
      */
-    public function render()
+    public function  render()
     {
         // Truyền biến $listCategory sang view
-        return view('components.category-component', [
-            'listCategory' => $this->listCategory
+        return view('components.product-category', [
+            'listCategory' => $this->listCategory,
         ]);
     }
 }

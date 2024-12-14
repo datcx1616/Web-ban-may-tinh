@@ -12,31 +12,48 @@
                     <div class="card-body">
                         <div class="table-responsive">
                             <div id="datatable_wrapper" class="dataTables_wrapper">
-                                <a class="btn btn-primary mb-3" href="{{ route('admin.category.create') }}">Thêm danh mục</a>
-                                <table id="datatable" class="table data-table table-striped dataTable" role="grid" aria-describedby="datatable_info">
+                                <a class="btn btn-primary mb-3" href="{{ route('admin.category.create') }}">Thêm danh
+                                    mục</a>
+                                <table id="datatable" class="table data-table table-striped dataTable" role="grid"
+                                    aria-describedby="datatable_info">
                                     <thead>
                                         <tr class="ligth" role="row">
                                             <th class="sorting_asc" tabindex="0" aria-controls="datatable" rowspan="1"
-                                                colspan="1" aria-sort="ascending"
-                                                style="width: 158.094px;">Id</th>
+                                                colspan="1" aria-sort="ascending" style="width: 158.094px;">Id</th>
                                             <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1"
                                                 colspan="1" style="width: 247.594px;">Tên danh mục</th>
                                             <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1"
                                                 colspan="1" style="width: 118.938px;">Mô tả</th>
                                             <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1"
+                                                colspan="1" style="width: 118.938px;">ảnh</th>
+                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1"
+                                                colspan="1" style="width: 118.938px;">icon</th>
+                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1"
+                                                colspan="1" style="width: 118.938px;">Trạng thái</th>
+
+                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1"
                                                 colspan="1" style="width: 39.7031px;">Chức năng</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($listCategories as $itemCategory )
+                                        @foreach ($listCategories as $itemCategory)
                                             <tr role="row" class="odd">
                                                 <td class="sorting_1">{{ $itemCategory->id }}</td>
                                                 <td>{{ $itemCategory->name }}</td>
                                                 <td>{{ $itemCategory->describe }}</td>
                                                 <td>
+                                                    <img height="100" src="{{ $itemCategory->img }}" alt="">
+                                                </td>
+                                                <td>
+                                                    <img height="100" src="{{ $itemCategory->icon }}" alt="">
+                                                </td>
+                                                <td>{{ $itemCategory->is_show }}</td>
+                                                <td>
                                                     <div class="d-flex">
-                                                        <a href="{{ route('admin.category.edit', ["id"=> $itemCategory->id]) }}" class="btn btn-warning">Sửa</a>
-                                                        <a href="{{ route('admin.category.delete', ["id"=> $itemCategory->id]) }}" class="btn btn-danger mx-2">Xoá</a>
+                                                        <a href="{{ route('admin.category.edit', ['id' => $itemCategory->id]) }}"
+                                                            class="btn btn-warning">Sửa</a>
+                                                        <a href="{{ route('admin.category.delete', ['id' => $itemCategory->id]) }}"
+                                                            class="btn btn-danger mx-2">Xoá</a>
                                                     </div>
                                                 </td>
                                             </tr>
