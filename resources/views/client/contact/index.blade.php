@@ -43,52 +43,9 @@
                             <p class="help-block text-danger"></p>
                         </div>
                         <div>
-                            <button class="btn btn-primary py-2 px-4" type="submit" id="sendMessageButton">Gửi</button>
+                            <button class="btn btn-sm px-4 py-2 rounded-pill border text-success" type="submit"
+                                style="background-color: transparent; border-color: #28a745;">Gửi</button>
                         </div>
-                        <style>
-                            /* Cải tiến nút Gửi */
-                            #sendMessageButton {
-                                background-color: #065fc4;
-                                /* Màu nền sáng */
-                                color: #fff;
-                                /* Màu chữ trắng */
-                                font-size: 16px;
-                                font-weight: 600;
-                                padding: 12px 30px;
-                                /* Giãn cách nội dung của nút */
-                                border: none;
-                                border-radius: 50px;
-                                /* Viền bo tròn */
-                                transition: all 0.3s ease;
-                                /* Hiệu ứng chuyển động mượt mà */
-                                cursor: pointer;
-                            }
-
-                            /* Hiệu ứng hover cho nút Gửi */
-                            #sendMessageButton:hover {
-                                background-color: #0056b3;
-                                /* Màu nền khi hover */
-                                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-                                /* Bóng mờ khi hover */
-                                transform: translateY(-4px);
-                                /* Nâng nút lên khi hover */
-                            }
-
-                            /* Hiệu ứng khi nhấn nút */
-                            #sendMessageButton:active {
-                                transform: scale(0.98);
-                                /* Giảm kích thước một chút khi nhấn */
-                                transition: transform 0.1s ease-in-out;
-                            }
-
-                            /* Thêm hiệu ứng focus (khi nút được chọn) */
-                            #sendMessageButton:focus {
-                                outline: none;
-                                /* Loại bỏ viền khi focus */
-                                box-shadow: 0 0 0 3px rgba(0, 84, 255, 0.4);
-                                /* Thêm hiệu ứng sáng khi focus */
-                            }
-                        </style>
                     </form>
                 </div>
             </div>
