@@ -12,7 +12,7 @@
                     <div class="card-body">
                         <div class="table-responsive">
                             <div id="datatable_wrapper" class="dataTables_wrapper">
-                                <table id="datatable" class="table table-bordered table-hover table-striped" role="grid"
+                                <table id="datatable" class="table data-table table-striped dataTable" role="grid"
                                     aria-describedby="datatable_info">
                                     <thead>
                                         <tr class="ligth" role="row">
