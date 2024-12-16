@@ -31,6 +31,11 @@
                                         name="name">
                                 </div>
                                 <div class="col-md-12 mb-3">
+                                    <label for="validationDefault01">Số lượng</label>
+                                    <input type="text" class="form-control" required id="validationDefault01"
+                                        name="quantity">
+                                </div>
+                                <div class="col-md-12 mb-3">
                                     <label for="validationDefault01">Hình ảnh</label>
                                     <div class="custom-file ">
                                         <input type="file" class="custom-file-input" id="customFile" name="image">

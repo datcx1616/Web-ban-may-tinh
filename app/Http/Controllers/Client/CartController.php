@@ -15,7 +15,8 @@ class CartController extends Controller
      *
      * @return \Illuminate\Contracts\View\View
      */
-    public function index() {
+    public function index()
+    {
         $cart = Cart::select('products.*', 'carts.quantity')
             ->join('products', 'products.id', 'carts.productID')
             ->where('carts.userID', Auth::id())
@@ -32,11 +33,27 @@ class CartController extends Controller
      * @param Request $request
      * @return \Illuminate\Routing\Redirector|\Illuminate\Http\RedirectResponse
      */
-    public function add(Request $request) {
+    public function add(Request $request)
+    {
         $productID = $request->productID;
         $quantity = $request->quantity;
         $user = Auth::user();
         $checkExist = Cart::where('userID', $user->id)->where('productID', $productID)->first();
+
+        $product = Product::find($productID);
+        if (!$product) {
+            return redirect()->route('cart.index')->with('error', 'Sản phẩm không tồn tại.');
+        }
+
+        $slug = $product->slug ?? 'san-pham';
+
+        if ($quantity > $product->quantity) {
+            return redirect()->route('shop.detail', [
+                'slug' => $slug,
+                'id' => $productID
+            ])->with('error', 'Số lượng sản phẩm bạn đặt vượt quá số lượng hiện có.');
+        }
+
         if ($checkExist) {
             $checkExist->quantity += $quantity;
             $checkExist->save();
@@ -50,13 +67,15 @@ class CartController extends Controller
         return redirect()->route('cart.index');
     }
 
+
     /**
      * Handle remove product in cart
      *
      * @param Request $request
      * @return \Illuminate\Routing\Redirector|\Illuminate\Http\RedirectResponse
      */
-    public function remove($productID) {
+    public function remove($productID)
+    {
         Cart::where('userID', Auth::id())->where('productID', $productID)->delete();
         return redirect()->route('cart.index');
     }

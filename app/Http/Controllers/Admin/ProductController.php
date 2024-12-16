@@ -59,6 +59,8 @@ class ProductController extends Controller
             "mass" => $request->mass,
             "ram" => $request->ram,
             "memory" => $request->memory,
+            "so_luong" => $request->so_luong,
+            "quantity" => $request->quantity,
         ];
         if ($request->isSale == '1') {
             $data['sale'] = $request->sale;
@@ -106,6 +108,8 @@ class ProductController extends Controller
         $product->card = $request->card;
         $product->battery = $request->battery;
         $product->mass = $request->mass;
+        $product->so_luong = $request->so_luong;
+        $product->quantity = $request->quantity;
         if ($request->isSale == '1') {
             $product->sale = $request->sale;
             $product->sale_start = Carbon::parse($request->saleStart);

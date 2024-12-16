@@ -27,7 +27,9 @@ class Product extends Model
         'memory',
         'sale',
         'sale_start',
-        'sale_end'
+        'sale_end',
+        'so_luong',
+        'quantity'
     ];
 
     public function getSlug() {

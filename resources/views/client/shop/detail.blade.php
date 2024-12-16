@@ -1,5 +1,17 @@
 @extends('layouts.app')
 @section('content')
+    @if (session('error'))
+        <div class="alert alert-danger">
+            {{ session('error') }}
+        </div>
+    @endif
+
+    @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
+
     @php
         $isSale = isDiscount($product->sale_start, $product->sale_end);
         $priceShow = $product->price;
@@ -188,6 +200,14 @@
     <x-product-related :currID="$product->id" />
 
     <script>
-        function addToCart() {}
+        // function addToCart() {}
+        document.addEventListener("DOMContentLoaded", function() {
+            @if (session('error'))
+                $('#alertModal').modal('show');
+                setTimeout(function() {
+                    $('#alertModal').modal('hide');
+                }, 3000);
+            @endif
+        });
     </script>
 @endsection

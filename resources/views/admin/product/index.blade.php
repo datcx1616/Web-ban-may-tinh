@@ -26,6 +26,8 @@
                                             <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1"
                                                 colspan="1" style="width: 247.594px;">Tên sản phẩm</th>
                                             <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1"
+                                                colspan="1" style="width: 247.594px;">Số lượng</th>
+                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1"
                                                 colspan="1" style="width: 118.938px;">Hình ảnh</th>
                                             <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1"
                                                 colspan="1" style="width: 39.7031px;">Giá</th>
@@ -39,6 +41,7 @@
                                                 <td class="sorting_1">{{ $itemProduct->id }}</td>
                                                 <td>{{ $itemProduct->category_name }}</td>
                                                 <td>{{ $itemProduct->name }}</td>
+                                                <td>{{ $itemProduct->quantity }}</td>
                                                 <td>
                                                     <img height="100" src="{{ $itemProduct->image }}" alt="">
                                                 </td>
