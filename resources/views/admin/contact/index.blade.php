@@ -5,7 +5,7 @@
             <div class="col-sm-12">
                 <div class="card">
                     <div class="card-header d-flex justify-content-between">
-                        <div class="header-title">
+                        <div class="header-title text-center w-100">
                             <h4 class="card-title">Danh sách liên hệ</h4>
                         </div>
                     </div>

@@ -46,34 +46,39 @@
                 @endif
             </div>
             <div class="col-12">
-                <table class="table table-light table-borderless table-hover text-center mb-0">
-                    <thead class="thead-dark">
+                <table class="table table-bordered table-hover text-center mb-0 shadow-sm rounded">
+                    <thead>
                         <tr>
-                            <th>Sản phẩm</th>
-                            <th>Giá</th>
-                            <th>Số lượng</th>
-                            <th>Tổng</th>
+                            <th class="py-3">Sản phẩm</th>
+                            <th class="py-3">Giá</th>
+                            <th class="py-3">Số lượng</th>
+                            <th class="py-3">Tổng</th>
                         </tr>
                     </thead>
                     <tbody class="align-middle">
                         @foreach ($orderDetail as $product)
                             <tr>
-                                <td class="align-middle"><img src="{{ $product->image }}" alt=""
-                                        style="width: 50px;"> {{ $product->name }}</td>
-                                <td class="align-middle">{{ number_format($product->price) }} VND</td>
                                 <td class="align-middle">
-                                    <div class="input-group quantity mx-auto" style="width: 100px;">
+                                    <img src="{{ $product->image }}" alt="{{ $product->name }}" class="img-fluid rounded"
+                                        style="width: 50px; height: 50px; object-fit: cover;">
+                                    <span class="d-block mt-2">{{ $product->name }}</span>
+                                </td>
+                                <td class="align-middle text-nowrap">{{ number_format($product->price) }} VND</td>
+                                <td class="align-middle">
+                                    <div class="input-group quantity mx-auto" style="width: 120px;">
                                         <input type="text"
-                                            class="form-control form-control-sm bg-secondary border-0 text-center" readonly
+                                            class="form-control form-control-sm bg-light border-0 text-center" readonly
                                             value="{{ $product->quantity }}">
                                     </div>
                                 </td>
-                                <td class="align-middle">{{ number_format($product->price * $product->quantity) }} VND</td>
+                                <td class="align-middle text-nowrap">
+                                    {{ number_format($product->price * $product->quantity) }} VND</td>
                             </tr>
                         @endforeach
                     </tbody>
                 </table>
             </div>
+
         </div>
     </div>
 @endsection

@@ -61,9 +61,12 @@
             </div>
 
             <!-- Số lượt mua -->
-            <div class="mb-3">
-                <small class="text-muted">Số lượt mua: {{ $product->total_quantity ?? 0 }}</small>
+            <div class="mb-3 d-flex justify-content-between gap-3">
+                <small class="text-muted mr-3">Số lượng: {{ $product->quantity ?? 0 }}</small>
+                <small class="text-muted ml-3">Số lượt mua: {{ $product->total_quantity ?? 0 }}</small>
             </div>
+
+
 
             <!-- Nút Liên hệ và Thêm vào giỏ hàng -->
             <div class="d-flex justify-content-center">

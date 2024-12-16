@@ -86,7 +86,7 @@ class OrderController extends Controller
         $order = Order::where('status', OrderStatus::ORDER)->where('id', $id)->firstOrFail();
         $order->status = OrderStatus::CANCEL_ORDER;
         // $order->message = $request->reason;
-        $order->message = Auth::user()->name . ' đã hủy đơn hàng.';
+        $order->message = Auth::user()->name . 'đã hủy đơn hàng.';
         $order->save();
         return redirect()->route('admin.order.detail', [
             'id' => $id

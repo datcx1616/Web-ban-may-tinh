@@ -5,34 +5,38 @@
             <div class="col-sm-12">
                 <div class="card">
                     <div class="card-header d-flex justify-content-between">
-                        <div class="header-title">
+                        <div class="header-title text-center w-100">
                             <h4 class="card-title">Danh sách sản phẩm</h4>
                         </div>
                     </div>
+
                     <div class="card-body">
                         <div class="table-responsive">
                             <div id="datatable_wrapper" class="dataTables_wrapper">
-                                <a class="btn btn-primary mb-3" href="{{ route('admin.product.create') }}">Thêm sản phẩm</a>
-                                <a class="btn btn-primary mb-3 float-right" href="{{ route('admin.category.index') }}">Quản
-                                    lý danh mục</a>
+                                <div class="d-flex mb-3">
+                                    <a class="btn btn-primary" href="{{ route('admin.product.create') }}">Thêm sản phẩm</a>
+                                    <a class="btn btn-primary ml-3 " href="{{ route('admin.category.index') }}">Quản lý
+                                        danh mục</a>
+                                </div>
+
                                 <table id="datatable" class="table data-table table-striped dataTable" role="grid"
                                     aria-describedby="datatable_info">
                                     <thead>
-                                        <tr class="ligth" role="row">
+                                        <tr role="row">
                                             <th class="sorting_asc" tabindex="0" aria-controls="datatable" rowspan="1"
-                                                colspan="1" aria-sort="ascending" style="width: 158.094px;">Id</th>
+                                                colspan="1" aria-sort="ascending">Id</th>
                                             <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1"
-                                                colspan="1" style="width: 247.594px;">Danh mục</th>
+                                                colspan="1">Danh mục</th>
                                             <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1"
-                                                colspan="1" style="width: 247.594px;">Tên sản phẩm</th>
+                                                colspan="1">Tên sản phẩm</th>
                                             <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1"
-                                                colspan="1" style="width: 247.594px;">Số lượng</th>
+                                                colspan="1">Số lượng</th>
                                             <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1"
-                                                colspan="1" style="width: 118.938px;">Hình ảnh</th>
+                                                colspan="1">Hình ảnh</th>
                                             <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1"
-                                                colspan="1" style="width: 39.7031px;">Giá</th>
+                                                colspan="1">Giá</th>
                                             <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1"
-                                                colspan="1" style="width: 39.7031px;">Chức năng</th>
+                                                colspan="1">Chức năng</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -43,21 +47,84 @@
                                                 <td>{{ $itemProduct->name }}</td>
                                                 <td>{{ $itemProduct->quantity }}</td>
                                                 <td>
-                                                    <img height="100" src="{{ $itemProduct->image }}" alt="">
+                                                    <img class="img-fluid rounded" height="100"
+                                                        src="{{ $itemProduct->image }}" alt="Image">
                                                 </td>
-                                                <td>{{ number_format($itemProduct->price) }}</td>
+                                                <td>{{ number_format($itemProduct->price) }} VND</td>
                                                 <td>
-                                                    <div class="d-flex">
+                                                    <div class="d-flex justify-content-center">
                                                         <a href="{{ route('admin.product.edit', ['id' => $itemProduct->id]) }}"
-                                                            class="btn btn-warning">Sửa</a>
+                                                            class="btn btn-warning mx-1">Sửa</a>
                                                         <a href="{{ route('admin.product.delete', ['id' => $itemProduct->id]) }}"
-                                                            class="btn btn-danger mx-2">Xoá</a>
+                                                            class="btn btn-danger mx-1">Xoá</a>
                                                     </div>
                                                 </td>
                                             </tr>
                                         @endforeach
                                     </tbody>
                                 </table>
+
+                                <!-- Custom CSS for improved table -->
+                                <!-- Custom CSS for improved table and button colors -->
+                                <style>
+                                    table.dataTable {
+                                        border-radius: 8px;
+                                        overflow: hidden;
+                                    }
+
+                                    table th,
+                                    table td {
+                                        text-align: center;
+                                        padding: 12px;
+                                    }
+
+                                    table th {
+                                        background-color: #f8f9fa;
+                                        font-weight: bold;
+                                    }
+
+                                    table tbody tr:hover {
+                                        background-color: #f1f1f1;
+                                    }
+
+                                    .btn {
+                                        font-size: 14px;
+                                        padding: 6px 12px;
+                                    }
+
+                                    .img-fluid {
+                                        width: auto;
+                                        max-height: 100px;
+                                    }
+
+                                    /* Custom colors for the Edit button */
+                                    .btn-warning {
+                                        background-color: #ffc107;
+                                        /* Change to desired color */
+                                        color: #fff;
+                                        /* Text color */
+                                    }
+
+                                    .btn-warning:hover {
+                                        background-color: #e0a800;
+                                        /* Hover effect */
+                                    }
+
+                                    /* Custom colors for the Delete button */
+                                    .btn-danger {
+                                        background-color: #dc3545;
+                                        /* Change to desired color */
+                                        color: #fff;
+                                        /* Text color */
+                                    }
+
+                                    .btn-danger:hover {
+                                        background-color: #c82333;
+                                        /* Hover effect */
+                                    }
+                                </style>
+
+
                             </div>
                         </div>
                     </div>
