@@ -1,4 +1,4 @@
-<div class="iq-top-navbar">
+<div class="iq-top-navbar" style="background-color: #dde2ec;">
     <div class="iq-navbar-custom">
         <ul class="navbar-nav ml-auto navbar-list align-items-center">
             <li class="nav-item nav-icon dropdown caption-content">

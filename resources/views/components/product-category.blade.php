@@ -7,7 +7,7 @@
     <div class="row px-xl-5 slide-container">
         @if (isset($listCategory) && $listCategory->count())
             @foreach ($listCategory as $itemCategory)
-                <div class="col-lg-2 col-md-4 col-sm-12 pb-1 slide-item"> <!-- Giảm chiều rộng của cột -->
+                <div class="col-lg-2 col-md-4 col-sm-12 pb-1 "> <!-- Giảm chiều rộng của cột slide-item -->
                     <div class="d-flex align-items-center bg-light mb-4 bode"
                         style="padding: 10px; border-radius: 10px; height: 80px; justify-content: space-between;">
 

@@ -52,7 +52,7 @@
         </marquee>
     </div> --}}
     <div class="container-fluid">
-        <div class="container-fluid position-relative mt-3 mb-4 px-xl-5" style="height: auto; text-align: center;">
+        <div class="container-fluid position-relative mt-4 mb-4 px-xl-5" style="height: auto; text-align: center;">
             <!-- Ảnh H2 -->
             <img src="{{ asset('client/img/H2.png') }}" alt="background" class="w-100"
                 style="position: relative; z-index: 1; border-radius: 10px;">
