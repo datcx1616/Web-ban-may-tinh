@@ -19,7 +19,7 @@
                                         danh mục</a>
                                 </div>
 
-                                <table id="datatable" class="table data-table table-striped dataTable" role="grid"
+                                <table id="datatable" class="table table-bordered table-hover table-striped" role="grid"
                                     aria-describedby="datatable_info">
                                     <thead>
                                         <tr role="row">

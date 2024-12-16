@@ -82,6 +82,7 @@ Route::prefix('admin')->middleware('auth.admin')->group(function () {
     });
     Route::prefix('/contact')->group(function () {
         Route::get('/index', [AdminContactController::class, 'index'])->name('admin.contact.index');
+        Route::get('/delete/{id}', [AdminContactController::class, 'delete'])->name('admin.contact.delete');
     });
     Route::prefix('/order')->group(function() {
         Route::get('/', [AdminOrderController::class, 'index'])->name('admin.order.index');

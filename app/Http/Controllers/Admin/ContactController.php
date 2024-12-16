@@ -20,5 +20,11 @@ class ContactController extends Controller
             "listContact" => $contacts
         ]);
     }
+    public function delete($id)
+    {
+        $contacts = Contact::findOrFail($id);
+        $contacts->delete();
+        return redirect()->route('admin.contact.index');
+    }
 
 }

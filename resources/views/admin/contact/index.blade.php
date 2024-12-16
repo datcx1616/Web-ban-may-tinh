@@ -12,7 +12,7 @@
                     <div class="card-body">
                         <div class="table-responsive">
                             <div id="datatable_wrapper" class="dataTables_wrapper">
-                                <table id="datatable" class="table data-table table-striped dataTable" role="grid"
+                                <table id="datatable" class="table table-bordered table-hover table-striped" role="grid"
                                     aria-describedby="datatable_info">
                                     <thead>
                                         <tr class="ligth" role="row">
@@ -24,6 +24,8 @@
                                                 colspan="1" style="width: 158.094px;">Email</th>
                                             <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1"
                                                 colspan="1" style="width: 247.594px;">Lời nhắn</th>
+                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1"
+                                                colspan="1" style="width: 247.594px;">Chức năng</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -33,6 +35,10 @@
                                                 <td>{{ $itemContact->name }}</td>
                                                 <td>{{ $itemContact->email }}</td>
                                                 <td>{{ $itemContact->message }}</td>
+                                                <td>
+                                                    <a href="{{ route('admin.contact.delete', ['id' => $itemContact->id]) }}"
+                                                        class="btn btn-danger mx-2">Xoá</a>
+                                                </td>
                                             </tr>
                                         @endforeach
                                     </tbody>
