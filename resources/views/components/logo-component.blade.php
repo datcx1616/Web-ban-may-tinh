@@ -25,7 +25,7 @@
             <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
                 <path d="M11 1.5v13H9v-13h2zM5 2v13H3V2h2z" />
             </svg>
-            <br>Máy Cũ <br>Giá Tốt
+            <br>Sản phẩm<br>Giá Tốt
         </div>
     </div>
 
@@ -36,7 +36,7 @@
             <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
                 <path d="M8 3.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zM2 8a6 6 0 1 1 12 0A6 6 0 0 1 2 8z" />
             </svg>
-            <br>Thu Cũ <br>Giá Cao
+            <br>Thương hiệu<br>Mới
         </div>
     </div>
 

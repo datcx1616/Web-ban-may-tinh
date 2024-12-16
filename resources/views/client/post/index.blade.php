@@ -18,6 +18,9 @@
     <!-- Breadcrumb End -->
 
     <div class="container-fluid pb-3">
+        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4">
+            <span class="bg-secondary pr-3">Nổi bật</span>
+        </h2>
         <div class="row px-xl-5">
             @foreach ($postsFirst as $post)
                 <div class="col-md-6">
@@ -60,6 +63,9 @@
     </div>
 
     <div class="container-fluid pb-3">
+        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4">
+            <span class="bg-secondary pr-3">Tin mới</span>
+        </h2>
         <div class="row px-xl-5">
             @foreach ($postsThird as $post)
                 <div class="col-md-3">

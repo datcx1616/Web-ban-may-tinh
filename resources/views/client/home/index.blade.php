@@ -16,39 +16,47 @@
         <div class="row px-xl-5 pb-3">
             <!-- Block 1 -->
             <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="d-flex align-items-center bg-light shadow-sm mb-4 p-4 rounded boder">
-                    <div class="icon-container text-primary mr-3">
-                        <i class="fas fa-shield-alt fa-2x"></i>
+                <a href="{{ route('shop.index') }}">
+                    <div class="d-flex align-items-center bg-light shadow-sm mb-4 p-4 rounded boder">
+                        <div class="icon-container text-primary mr-3">
+                            <i class="fas fa-shield-alt fa-2x"></i>
+                        </div>
+                        <h5 class="font-weight-semi-bold m-0">Thương hiệu mới</h5>
                     </div>
-                    <h5 class="font-weight-semi-bold m-0">Thương hiệu mới</h5>
-                </div>
+                </a>
             </div>
             <!-- Block 2 -->
             <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="d-flex align-items-center bg-light shadow-sm mb-4 p-4 rounded boder">
-                    <div class="icon-container text-success mr-3">
-                        <i class="fas fa-undo fa-2x"></i>
+                <a href="{{ route('shop.index') }}">
+                    <div class="d-flex align-items-center bg-light shadow-sm mb-4 p-4 rounded boder">
+                        <div class="icon-container text-success mr-3">
+                            <i class="fas fa-undo fa-2x"></i>
+                        </div>
+                        <h5 class="font-weight-semi-bold m-0">Đổi trả dễ dàng</h5>
                     </div>
-                    <h5 class="font-weight-semi-bold m-0">Đổi trả dễ dàng</h5>
-                </div>
+                </a>
             </div>
             <!-- Block 3 -->
             <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="d-flex align-items-center bg-light shadow-sm mb-4 p-4 rounded boder">
-                    <div class="icon-container text-warning mr-3">
-                        <i class="fas fa-star fa-2x"></i>
+                <a href="{{ route('shop.index') }}">
+                    <div class="d-flex align-items-center bg-light shadow-sm mb-4 p-4 rounded boder">
+                        <div class="icon-container text-warning mr-3">
+                            <i class="fas fa-star fa-2x"></i>
+                        </div>
+                        <h5 class="font-weight-semi-bold m-0">Sản phẩm chất lượng</h5>
                     </div>
-                    <h5 class="font-weight-semi-bold m-0">Sản phẩm chất lượng</h5>
-                </div>
+                </a>
             </div>
             <!-- Block 4 -->
             <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="d-flex align-items-center bg-light shadow-sm mb-4 p-4 rounded boder">
-                    <div class="icon-container text-danger mr-3">
-                        <i class="fas fa-truck fa-2x"></i>
+                <a href="{{ route('shop.index') }}">
+                    <div class="d-flex align-items-center bg-light shadow-sm mb-4 p-4 rounded boder">
+                        <div class="icon-container text-danger mr-3">
+                            <i class="fas fa-truck fa-2x"></i>
+                        </div>
+                        <h5 class="font-weight-semi-bold m-0">Giao hàng tận nơi</h5>
                     </div>
-                    <h5 class="font-weight-semi-bold m-0">Giao hàng tận nơi</h5>
-                </div>
+                </a>
             </div>
         </div>
     </div>
