@@ -62,7 +62,7 @@
                 style="position: absolute; top: -7px; left: 50%; transform: translateX(-50%); max-width: 25%; z-index: 2;">
 
             <img src="{{ asset('client/img/icon-big.png') }}" alt="overlay"
-                style="position: absolute; top: -90px; left: 82%; transform: translateX(-50%); max-width: 25%; z-index: 2;">
+                style="position: absolute; top: -85px; left: 82%; transform: translateX(-50%); max-width: 25%; z-index: 2;">
         </div>
     </div>
 
