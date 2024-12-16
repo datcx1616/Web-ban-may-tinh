@@ -13,7 +13,7 @@
     text-decoration: none !important;
 }
 
-#loader {
+/* #loader {
     position: fixed;
     z-index: 999999;
     top: 0;
@@ -45,7 +45,49 @@
     background-size: 16px 16px;
     background-position: left top, left bottom, right top, right bottom;
     animation: rotate 1.2s linear infinite;
+} */
+
+#loader {
+    position: fixed;
+    z-index: 999999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.9); /* Nền mờ nhẹ */
+    transition: opacity 0.75s, visibility 0.75s;
 }
+
+.loader--hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#loader::after {
+    content: "";
+    width: 60px;
+    height: 60px;
+    border: 6px solid #050403; /* Màu vàng cổ điển */
+    border-top: 6px solid #188ae7; /* Màu đen cho phần trên */
+    border-radius: 50%; /* Tạo hình tròn */
+    animation: spin 1.5s linear infinite; /* Hiệu ứng xoay liên tục */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
 
 @keyframes rotate {
     0% {

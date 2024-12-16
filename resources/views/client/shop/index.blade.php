@@ -46,18 +46,27 @@
     </div>
 
     <!-- Breadcrumb End -->
-    <div class="pt-2">
+    {{-- <div class="pt-2">
         <marquee behavior="" direction="left" style="color:black;font-size: 16px;">
             "Hành trình nâng cấp công nghệ bắt đầu từ đây – nơi bạn tìm thấy giải pháp hoàn hảo cho mọi nhu cầu máy tính."
         </marquee>
-    </div>
+    </div> --}}
+    <div class="container-fluid">
+        <div class="container-fluid position-relative mt-3 mb-4 px-xl-5" style="height: auto; text-align: center;">
+            <!-- Ảnh H2 -->
+            <img src="{{ asset('client/img/H2.png') }}" alt="background" class="w-100"
+                style="position: relative; z-index: 1; border-radius: 10px;">
 
-    <div class="container-fluid mt-2 mb-3">
-        <div class="px-xl-5">
-            <img src="{{ asset('client/img/H2.png') }}" alt="logo"
-                class="first-slide w-100"style=" border-radius: 10px;">
+            <!-- Ảnh tt1 -->
+            <img src="{{ asset('client/img/tt1.png') }}" alt="overlay"
+                style="position: absolute; top: -7px; left: 50%; transform: translateX(-50%); max-width: 25%; z-index: 2;">
+
+            <img src="{{ asset('client/img/icon-big.png') }}" alt="overlay"
+                style="position: absolute; top: -90px; left: 82%; transform: translateX(-50%); max-width: 25%; z-index: 2;">
         </div>
     </div>
+
+
 
     <div class="container-fluid">
         <div class="row px-xl-5 ">
@@ -77,12 +86,40 @@
                 </div>
             </div>
 
-            <div class="container-fluid mt-2 mb-3">
-                <div class="px-xl-2">
-                    <img src="{{ asset('client/img/tt.png') }}" alt="logo"
-                        class="first-slide w-100"style=" border-radius: 10px;">
-                </div>
+
+            <div class="container-fluid position-relative mb-3" style="height: auto;">
+                <img src="{{ asset('client/img/tt.png') }}" alt="background" class="w-100"
+                    style="position: relative; z-index: 1;">
+                <img src="{{ asset('client/img/icon-big.png') }}" alt="overlay"
+                    style="position: absolute; top: -85px; left: 20%; transform: translateX(-50%); max-width: 25%; z-index: 2;">
             </div>
+
+
+            <style>
+                .overlay-container {
+                    position: relative;
+                    width: 100%;
+                    height: auto;
+                    /* Để chiều cao tự động theo ảnh nền */
+                    text-align: center;
+                }
+
+                .overlay-container img:first-child {
+                    position: relative;
+                    z-index: 1;
+                }
+
+                .overlay-container img:last-child {
+                    position: absolute;
+                    top: 0;
+                    /* Có thể điều chỉnh để thay đổi độ cao */
+                    left: 45%;
+                    transform: translateX(-50%);
+                    max-width: 30%;
+                    z-index: 2;
+                }
+            </style>
+
 
             <x-category-product />
 

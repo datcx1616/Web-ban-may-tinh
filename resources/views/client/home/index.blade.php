@@ -54,28 +54,29 @@
     </div>
 
 
-    <div class=" pt-2">
+    {{-- <div class=" pt-2">
         <marquee behavior="" direction="left" style="color:black;font-size: 16px;">
             "Hành trình nâng cấp công nghệ bắt đầu từ đây – nơi bạn tìm thấy giải pháp hoàn hảo cho mọi nhu cầu máy
             tính."
         </marquee>
-    </div>
+    </div> --}}
 
 
 
     <x-feature-product />
 
 
-    <div class="container-fluid mt-2 mb-3">
+    <div class="container-fluid position-relative mb-3 px-xl-5" style="height: auto;">
         <a href="{{ route('shop.index') }}">
-            <div class="px-xl-5">
-                <img src="{{ asset('client/img/tt.png') }}" alt="logo"
-                    class="first-slide w-100"style=" border-radius: 10px;">
-            </div>
+            <img src="{{ asset('client/img/tt.png') }}" alt="background" class="w-100"
+                style="position: relative; z-index: 1;">
+            <img src="{{ asset('client/img/icon-big.png') }}" alt="overlay"
+                style="position: absolute; top: -85px; left: 20%; transform: translateX(-50%); max-width: 25%; z-index: 2;">
         </a>
     </div>
 
-    <div class="container-fluid pt-5 pb-3">
+
+    <div class="container-fluid pt-3 pb-3">
         <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4">
             <img src="{{ asset('client/img/Icon_Doc_quyen.png') }}" alt="logo" style="width: 50px; height: 40px;">
             <span class="bg-secondary pr-3">Ưu đãi thanh toán</span>
