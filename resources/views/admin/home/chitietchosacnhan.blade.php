@@ -6,7 +6,7 @@
                 <div class="card">
                     <div class="card-header d-flex justify-content-between">
                         <div class="header-title text-center w-100">
-                            <h4 class="card-title">Danh sách đơn hàng</h4>
+                            <h4 class="card-title">Danh sách đơn hàng chờ sác nhận</h4>
                         </div>
                     </div>
                     <div class="card-body">

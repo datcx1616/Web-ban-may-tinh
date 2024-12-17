@@ -4,9 +4,7 @@
             <li class="nav-item nav-icon dropdown caption-content">
                 <a href="#" class="search-toggle dropdown-toggle  d-flex align-items-center" id="dropdownMenuButton4"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    {{-- <img src="{{ asset('') }}admin/assets/images/user/1.jpg" class="img-fluid rounded-circle"
-                                    alt="user"> --}}
-                    <div class="caption ml-3 mt-4">
+                    <div class="caption mt-4">
                         <h6 class="mb-0 line-height" id="userName" style="cursor: pointer;">
                             {{ Auth::user() ? Auth::user()->name : '' }}
                         </h6>

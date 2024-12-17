@@ -81,11 +81,11 @@
     <div class="container-fluid py-4">
         <div class="row g-4">
             @foreach ($cards as $card)
-                <div class="col-md-6 col-lg-4 mt-3">
+                <div class="col-md-6 col-lg-4 mt-2">
                     <div class="card shadow-lg border-0 rounded-4 h-100 hover-shadow-lg transition-all duration-300">
                         <div class="card-body d-flex flex-column justify-content-between">
                             <div class="d-flex align-items-center justify-content-between">
-                                <h5 class="{{ $card['badge_class'] }} text-uppercase font-weight-bold">{{ $card['title'] }}
+                                <h5 class="{{ $card['badge_class'] }}">{{ $card['title'] }}
                                 </h5>
                                 <span class="badge {{ $card['badge_class'] }}">{{ $card['percentage'] }}%</span>
                             </div>

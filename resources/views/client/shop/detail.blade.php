@@ -175,7 +175,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="policy-container mt-3">
+                    <div class="policy-container mt-2">
                         <h6 class="mt-1 mb-2 ml-4">Khuyến mãi liên quan</h6>
                         <div class="row ml-3">
                             <div class="col-12">
@@ -208,7 +208,7 @@
                                     200.000đ, áp dụng cho sản phẩm Máy in (thời hạn sử dụng 15 ngày) Xem chi tiết</a>
                                 <a class="policy-item"><i class="fas fa-check-circle"></i> Tặng mã ưu đãi giảm ngay 3% khi
                                     mua
-                                    Máy tính bảng, Đồng hồ thông minh,Điện máy </a>
+                                    Máy tính bảng</a>
 
                             </div>
                         </div>
