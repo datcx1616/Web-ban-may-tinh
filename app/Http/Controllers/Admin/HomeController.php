@@ -43,8 +43,8 @@ class HomeController extends Controller
             'totalRevenue' => $totalRevenue,
         ]);
     }
-    public function index2(Request $request)
-{
+    public function chitietdoanhthu(Request $request)
+    {
     // Thống kê doanh thu theo ngày
     $todayRevenue = Order::where('status', OrderStatus::ORDER_SUCCESS)
         ->whereDate('created_at', Carbon::today())
@@ -94,7 +94,7 @@ class HomeController extends Controller
 
 
     // Doanh thu theo từng tháng
-    $dataRevenueByMonth = Order::selectRaw('MONTH(created_at) as month, YEAR(created_at) as year, SUM(total) as total')
+         $dataRevenueByMonth = Order::selectRaw('MONTH(created_at) as month, YEAR(created_at) as year, SUM(total) as total')
         ->where('status', OrderStatus::ORDER_SUCCESS)
         ->groupBy(DB::raw('MONTH(created_at)'), DB::raw('YEAR(created_at)'))
         ->orderBy(DB::raw('YEAR(created_at)'), 'desc')
@@ -102,7 +102,7 @@ class HomeController extends Controller
         ->limit(6) // Fetch last 6 months, adjust as needed
         ->get();
 
-    return view('admin.home.index2', [
+         return view('admin.home.chitietdoanhthu', [
         'todayRevenue' => $todayRevenue,
         'yesterdayRevenue' => $yesterdayRevenue,
         'thisWeekRevenue' => $thisWeekRevenue,
@@ -112,5 +112,68 @@ class HomeController extends Controller
         'selectedMonth' => $selectedMonth,
         'selectedYear' => $selectedYear,
     ]);
-}
+    }
+    public function chitietnguoidung()
+    {
+    $user = User::get();
+    return view("admin.home.chitietnguoidung", [
+        "user" => $user
+    ]);
+    }
+
+    public function chitietbaiviet()
+    {
+    $Post = Post::get();
+    return view("admin.home.chitietbaiviet", [
+        "Post" => $Post
+    ]);
+    }
+
+    public function chitietsanpham()
+    {
+        $Product = Product::select('products.*', 'categories.name as category_name')
+        ->join('categories', 'products.id_category', 'categories.id')
+        ->get();
+         return view('admin.home.chitietsanpham',
+    [ "Product" => $Product]);
+    }
+
+    public function chitietdonhang()
+    {
+    $Order = Order::get();
+    return view("admin.home.chitietdonhang", [
+        "Order" => $Order
+    ]);
+    }
+
+    public function chitietdahuy()
+    {
+    $OrderDH = Order::where('status', OrderStatus::CANCEL_ORDER)->get();
+    return view("admin.home.chitietdahuy", [
+        "OrderDH" => $OrderDH
+    ]);
+    }
+
+    public function chitietdanggiao()
+    {
+    $OrderDG = Order::where('status', OrderStatus::CONFIRM_ORDER)->get();
+    return view("admin.home.chitietdanggiao", [
+        "OrderDG" => $OrderDG
+    ]);
+    }
+    public function chitietchosacnhan()
+    {
+    $OrderXN = Order::where('status', OrderStatus::ORDER)->get();
+    return view("admin.home.chitietchosacnhan", [
+        "OrderXN" => $OrderXN
+    ]);
+    }
+
+    public function chitietdonhangdaban()
+    {
+    $OrderDB = Order::where('status', OrderStatus::ORDER_SUCCESS)->get();
+    return view("admin.home.chitietdonhangdaban", [
+        "OrderDB" => $OrderDB
+    ]);
+    }
 }

@@ -2,6 +2,7 @@
 
 @section('content')
     <div class="container">
+
         <h1 class="mb-4 text-center text-primary">Thống Kê Doanh Thu</h1>
 
         <!-- Tổng Quan Doanh Thu -->
@@ -121,6 +122,6 @@
                 </div>
             </div>
         </div>
-
+        <a href="{{ route('admin.home.index') }}" class="btn bg-danger mb-3">Quay lại</a>
     </div>
 @endsection

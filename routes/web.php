@@ -39,7 +39,16 @@ Route::get('/logout', function () {
 
 Route::prefix('admin')->middleware('auth.admin')->group(function () {
     Route::get('/index', [AdminHomeController::class, 'index'])->name('admin.home.index');
-    Route::get('/index2', [AdminHomeController::class, 'index2'])->name('admin.home.index2');
+    Route::get('/chitietdoanhthu', [AdminHomeController::class, 'chitietdoanhthu'])->name('admin.home.chitietdoanhthu');
+    Route::get('/chitietnguoidung', [AdminHomeController::class, 'chitietnguoidung'])->name('admin.home.chitietnguoidung');
+    Route::get('/chitietbaiviet', [AdminHomeController::class, 'chitietbaiviet'])->name('admin.home.chitietbaiviet');
+    Route::get('/chitietsanpham', [AdminHomeController::class, 'chitietsanpham'])->name('admin.home.chitietsanpham');
+    Route::get('/chitietdonhang', [AdminHomeController::class, 'chitietdonhang'])->name('admin.home.chitietdonhang');
+    Route::get('/chitietdahuy', [AdminHomeController::class, 'chitietdahuy'])->name('admin.home.chitietdahuy');
+    Route::get('/chitietdanggiao', [AdminHomeController::class, 'chitietdanggiao'])->name('admin.home.chitietdanggiao');
+    Route::get('/chitietchosacnhan', [AdminHomeController::class, 'chitietchosacnhan'])->name('admin.home.chitietchosacnhan');
+    Route::get('/chitietdonhangdaban', [AdminHomeController::class, 'chitietdonhangdaban'])->name('admin.home.chitietdonhangdaban');
+
     Route::prefix('/menu')->group(function () {
         Route::get('/index', [MenuController::class, 'index'])->name('admin.menu.index');
         Route::get('/create', [MenuController::class, 'create'])->name('admin.menu.create');
