@@ -23,35 +23,24 @@ class HomeController extends Controller
         $totalUser = User::count();
         $totalPost = Post::count();
         $totalProduct = Product::count();
-        $totalOrder = Order::where('status', OrderStatus::ORDER_SUCCESS)->count();
-        $totalCancel = Order::where('status', OrderStatus::CANCEL_ORDER)->count();
+        $totalOrder = Order::count();
+        $totalOrderDB = Order::where('status', OrderStatus::ORDER_SUCCESS)->count();
+        $totalOrderDG = Order::where('status', OrderStatus::CONFIRM_ORDER )->count();
+        $totalCancelDH = Order::where('status', OrderStatus::CANCEL_ORDER)->count();
+        $totalCancelXN = Order::where('status', OrderStatus::ORDER)->count();
         $totalRevenue = Order::where('status', OrderStatus::ORDER_SUCCESS)->sum('total');
-
-        $datetime = Carbon::now()->subMonth();
-        $dataChart = Order::selectRaw('DAY(created_at) as day, SUM(total) as total')
-            ->whereDate('created_at', '>', $datetime)
-            ->where('status', OrderStatus::ORDER_SUCCESS)
-            ->groupBy(DB::raw('DAY(created_at)'))
-            ->get()
-            ->keyBy('day');
-        $dataRevenueMonth = [];
-        $now = Carbon::now();
-        while ($datetime->addDay()->lessThan($now)) {
-            $temp = (object)[
-                'day' => $datetime->day,
-                'total' => isset($dataChart[$datetime->day]) ? $dataChart[$datetime->day]->total : 0,
-            ];
-            array_push($dataRevenueMonth, $temp);
-        }
 
         return view('admin.home.index', [
             'totalUser' => $totalUser,
-            'totalOrder' => $totalOrder,
-            'totalCancel' => $totalCancel,
             'totalPost' => $totalPost,
             'totalProduct' => $totalProduct,
+            'totalOrder' => $totalOrder,
+
+            'totalOrderDB' => $totalOrderDB,
+            'totalCancelDH' => $totalCancelDH,
+            'totalOrderDG' => $totalOrderDG,
+            'totalCancelXN' => $totalCancelXN,
             'totalRevenue' => $totalRevenue,
-            'dataRevenueMonth' => $dataRevenueMonth,
         ]);
     }
     public function index2(Request $request)
