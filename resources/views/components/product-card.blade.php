@@ -1,10 +1,3 @@
-@php
-    $priceShow = $product->price;
-    if ($isSale) {
-        $priceShow = $salePrice;
-    }
-@endphp
-
 <style>
     .product-card {
         border-radius: 10px;
@@ -35,9 +28,6 @@
                 </a>
             </div>
         </div>
-        @if ($isSale)
-            <div class="sale sale-value">{{ $product->sale }}%</div>
-        @endif
         <div class="text-center py-4 d-flex flex-column align-items-center">
             <!-- Tên sản phẩm -->
             <a class="h6 text-decoration-none text-truncate text-dark font-weight-bold"
@@ -49,14 +39,9 @@
 
             <!-- Giá sản phẩm -->
             <div class="d-flex flex-column align-items-center mt-2">
-                @if ($isSale)
-                    <h6 class="mb-1 sale-origin text-muted">
-                        <span class="text-line-through">{{ number_format($product->price) }}</span> VND
-                    </h6>
-                @endif
                 <h5 class="text-gradient font-weight-bold"
                     style="background: linear-gradient(to right, #ff7e5f, #feb47b); -webkit-background-clip: text; color: transparent;">
-                    {{ number_format($priceShow) }} VND
+                    {{ number_format($product->price) }} VND
                 </h5>
             </div>
 
@@ -65,9 +50,6 @@
                 <small class="text-muted mr-3">Số lượng: {{ $product->quantity ?? 0 }}</small>
                 <small class="text-muted ml-3">Số lượt mua: {{ $product->total_quantity ?? 0 }}</small>
             </div>
-
-
-
             <!-- Nút Liên hệ và Thêm vào giỏ hàng -->
             <div class="d-flex justify-content-center">
                 <a href="tel:0123456789" class="btn btn-sm px-4 py-2 rounded-pill border text-warning mr-2"
@@ -82,13 +64,7 @@
                     style="background-color: transparent; border-color: #28a745;">
                     Xem chi tiết
                 </a>
-                {{-- <i class="fa fa-eye">xem chi tiết</i> --}}
-                {{-- <i class="fa fa-phone"> liên hệ</i>  --}}
             </div>
         </div>
-
-
-
-
     </div>
 </div>

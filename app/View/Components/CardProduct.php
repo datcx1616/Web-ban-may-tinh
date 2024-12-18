@@ -2,12 +2,12 @@
 
 namespace App\View\Components;
 
-use App\Models\Post;
 use Closure;
+use App\Models\Product;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class PostNewComponent extends Component
+class CardProduct extends Component
 {
     /**
      * Create a new component instance.
@@ -22,13 +22,9 @@ class PostNewComponent extends Component
      */
     public function render(): View|Closure|string
     {
-        $post = Post::take(2)->orderBy('created_at', 'DESC')->get();
-
-        $posts = Post::skip(2)->take(3)->orderBy('created_at', 'DESC')->get();
-
-        return view('components.post-new-component', [
-            'post' => $post,
-            'posts' => $posts,
+        $products = Product::take(8)->orderBy('created_at', 'desc')->get();
+        return view('components.card-product',[
+            'products'=>$products
         ]);
     }
 }

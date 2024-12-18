@@ -19,7 +19,7 @@
 
     <x-product-category />
 
-    <div class="container-fluid">
+    {{-- <div class="container-fluid">
         <div class="row justify-content-center px-xl-5 pb-3">
             <ul class="nav nav-tabs">
                 <li class="nav-item">
@@ -43,7 +43,7 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> --}}
 
     <!-- Breadcrumb End -->
     {{-- <div class="pt-2">
@@ -72,17 +72,7 @@
         <div class="row px-xl-5 ">
             <div class="col-lg-12">
                 <div class="row pb-3">
-                    @forelse ($products as $product)
-                        <x-product-card :product="$product" :lg="3" />
-                    @empty
-                        <div class="col-12">
-                            <h4 class="text-center">Không có sản phẩm</h4>
-                        </div>
-                    @endforelse
-
-                    {{-- <div class="col-12 d-flex justify-content-center align-items-center">
-                        {{ $products->links('pagination::bootstrap-4') }}
-                    </div> --}}
+                    <x-card-product />
                 </div>
             </div>
 

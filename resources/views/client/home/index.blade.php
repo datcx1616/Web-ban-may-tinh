@@ -79,7 +79,7 @@
             <img src="{{ asset('client/img/tt.png') }}" alt="background" class="w-100"
                 style="position: relative; z-index: 1;">
             <img src="{{ asset('client/img/icon-big.png') }}" alt="overlay"
-                style="position: absolute; top: -85px; left: 20%; transform: translateX(-50%); max-width: 25%; z-index: 2;">
+                style="position: absolute; top: -50px; left: 20%; transform: translateX(-50%); max-width: 15%; z-index: 2;">
         </a>
     </div>
 

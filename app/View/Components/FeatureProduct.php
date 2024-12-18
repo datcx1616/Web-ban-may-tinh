@@ -33,7 +33,7 @@ class FeatureProduct extends Component
                 'products.id', 'total.productID'
             )
             ->orderBy('total.total_quantity', 'DESC')
-            ->take(4)
+            ->take(8)
             ->get();
         return view('components.feature-product', [
             'products' => $products
