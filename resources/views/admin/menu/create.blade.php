@@ -35,6 +35,7 @@
                         </form>
                     </div>
                 </div>
+                <a href="{{ route('admin.menu.index') }}" class="btn bg-danger">Quay lại</a>
             </div>
         </div>
     </div>

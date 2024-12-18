@@ -54,6 +54,7 @@
                             </div>
                             <div class="form-group">
                                 <button class="btn btn-primary" type="submit">Thêm</button>
+                                <a href="{{ route('admin.category.index') }}"class="btn bg-danger ml-2">Quay lại</a>
                             </div>
                         </form>
                     </div>

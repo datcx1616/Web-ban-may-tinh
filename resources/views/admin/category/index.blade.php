@@ -64,6 +64,7 @@
                         </div>
                     </div>
                 </div>
+                <a href="{{ route('admin.product.index') }}"class="btn bg-danger mb-3">Quay lại</a>
             </div>
         </div>
     </div>

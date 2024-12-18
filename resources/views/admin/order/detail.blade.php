@@ -98,6 +98,7 @@
                     </div>
 
                 </div>
+                <a href="{{ route('admin.order.index') }}"class="btn bg-danger mb-3">Quay lại</a>
             </div>
         </div>
     </div>

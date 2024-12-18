@@ -37,10 +37,12 @@
                             </div>
                             <div class="form-group">
                                 <button class="btn btn-primary" type="submit">Thêm</button>
+                                <a href="{{ route('admin.post.index') }}"class="btn bg-danger  ml-3">Quay lại</a>
                             </div>
                         </form>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
