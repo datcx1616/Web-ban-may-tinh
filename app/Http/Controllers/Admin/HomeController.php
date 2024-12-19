@@ -11,6 +11,7 @@ use App\Models\Product;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class HomeController extends Controller
 {
@@ -176,4 +177,19 @@ class HomeController extends Controller
         "OrderDB" => $OrderDB
     ]);
     }
+
+
+    public function exportOrderToPDF($id)
+    {
+        $orderCT = Order::with(['orderDetails.product:id,name'])->findOrFail($id);
+
+        $data = [
+            'orderCT' => $orderCT,
+        ];
+
+        $pdf = PDF::loadView('admin.home.orders_pdf', $data)->setPaper('A5', 'landscape');
+
+        return $pdf->stream("Don_hang_{$id}.pdf");
+    }
+
 }

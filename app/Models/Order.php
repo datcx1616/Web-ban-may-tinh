@@ -35,4 +35,10 @@ class Order extends Model
                 return 'Trạng thái không xác định';
         }
     }
+
+    public function orderDetails()
+    {
+        return $this->hasMany(OrderDetail::class, 'orderID', 'id');
+    }
+
 }

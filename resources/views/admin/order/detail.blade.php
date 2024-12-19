@@ -98,7 +98,11 @@
                     </div>
 
                 </div>
-                <a href="{{ route('admin.order.index') }}"class="btn bg-danger mb-3">Quay lại</a>
+                <a href="{{ route('admin.order.index') }}" class="btn bg-danger mb-3">Quay lại</a>
+                @if ($order->status === OrderStatus::ORDER_SUCCESS)
+                    <a href="{{ route('admin.home.orders_pdf', ['id' => $order->id]) }}"
+                        class="btn btn-outline-primary mb-3 ml-3">Xuất PDF</a>
+                @endif
             </div>
         </div>
     </div>

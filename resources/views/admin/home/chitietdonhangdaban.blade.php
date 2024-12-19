@@ -26,6 +26,8 @@
                                                 colspan="1">Trạng thái</th>
                                             <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1"
                                                 colspan="1">Tin nhắn</th>
+                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1"
+                                                colspan="1">Chức năng</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -36,6 +38,12 @@
                                                 <td>{{ $order->created_at }}</td>
                                                 <td>{!! $order->getStatusStr() !!}</td>
                                                 <td>{{ $order->message }}</td>
+                                                <td>
+                                                    <a href="{{ route('admin.order.detail', ['id' => $order->id]) }}"
+                                                        class="btn btn-info btn-sm">
+                                                        <i class="fa fa-info-circle"></i> Chi tiết
+                                                    </a>
+                                                </td>
                                             </tr>
                                         @endforeach
                                     </tbody>

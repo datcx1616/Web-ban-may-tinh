@@ -48,6 +48,9 @@ Route::prefix('admin')->middleware('auth.admin')->group(function () {
     Route::get('/chitietdanggiao', [AdminHomeController::class, 'chitietdanggiao'])->name('admin.home.chitietdanggiao');
     Route::get('/chitietchosacnhan', [AdminHomeController::class, 'chitietchosacnhan'])->name('admin.home.chitietchosacnhan');
     Route::get('/chitietdonhangdaban', [AdminHomeController::class, 'chitietdonhangdaban'])->name('admin.home.chitietdonhangdaban');
+    // Route::get('/admin/orders/export-pdf', [AdminHomeController::class, 'exportOrdersToPDF'])->name('admin.home.orders_pdf');
+    Route::get('/admin/orders/{id}/export-pdf', [AdminHomeController::class, 'exportOrderToPDF'])->name('admin.home.orders_pdf');
+
 
     Route::prefix('/menu')->group(function () {
         Route::get('/index', [MenuController::class, 'index'])->name('admin.menu.index');
