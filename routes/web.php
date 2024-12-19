@@ -14,11 +14,14 @@ use App\Http\Controllers\Client\CheckoutController;
 use App\Http\Controllers\Client\HomeController;
 use App\Http\Controllers\Client\OrderController;
 use App\Http\Controllers\Client\ShopController;
+use App\Http\Controllers\Admin\exportRevenueController;
 use App\Http\Controllers\Client\PostController as ClientPostController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Client\ContactController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Exports\RevenueExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +39,10 @@ Route::get('/logout', function () {
     Auth::logout();
     return redirect('/login');
 });
+
+Route::get('/export-revenue', function () {
+    return Excel::download(new RevenueExport, 'doanh_thu.xlsx');
+})->name('export.revenue');
 
 Route::prefix('admin')->middleware('auth.admin')->group(function () {
     Route::get('/index', [AdminHomeController::class, 'index'])->name('admin.home.index');
@@ -60,6 +67,9 @@ Route::prefix('admin')->middleware('auth.admin')->group(function () {
         Route::post('/update', [MenuController::class, 'update'])->name('admin.menu.update');
         Route::get('/delete/{id}', [MenuController::class, 'delete'])->name('admin.menu.delete');
     });
+
+    Route::get('/export-revenue', [exportRevenueController::class, 'exportRevenue'])->name('export.revenue');
+
     Route::prefix('/product')->group(function () {
         Route::get('/index', [ProductController::class,'index'])->name('admin.product.index');
         Route::get('/create', [ProductController::class,'create'])->name('admin.product.create');

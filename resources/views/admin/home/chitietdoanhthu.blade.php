@@ -1,5 +1,4 @@
 @extends('layouts.admin')
-
 @section('content')
     <div class="container">
 
@@ -123,5 +122,7 @@
             </div>
         </div>
         <a href="{{ route('admin.home.index') }}" class="btn bg-danger mb-3">Quay lại</a>
+        <a href="{{ route('export.revenue') }}" class="btn btn-success mb-3">Xuất Excel</a>
+
     </div>
 @endsection
