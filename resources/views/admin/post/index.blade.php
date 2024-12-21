@@ -1,9 +1,9 @@
 @extends('layouts.admin')
 @section('content')
-    <div class="container-fluid">
+    <div class="container-fluid py-4">
         <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
+            <div class="col-sm-10 offset-md-1">
+                <div class="card shadow-sm">
                     <div class="card-header d-flex justify-content-between">
                         <div class="header-title text-center w-100">
                             <h4 class="card-title">Danh sách bài viết</h4>
@@ -12,7 +12,11 @@
                     <div class="card-body">
                         <div class="table-responsive">
                             <div id="datatable_wrapper" class="dataTables_wrapper">
-                                <a class="btn btn-primary mb-3" href="{{ route('admin.post.create') }}">Thêm bài viết</a>
+                                <div class="text-center">
+                                    <a class="btn btn-primary mb-3" href="{{ route('admin.post.create') }}">Thêm bài
+                                        viết</a>
+                                </div>
+
                                 <table id="datatable" class="table data-table table-striped dataTable" role="grid"
                                     aria-describedby="datatable_info">
                                     <thead>
@@ -39,7 +43,7 @@
                                                 </td>
                                                 <td>{{ $itemPost->author }}</td>
                                                 <td>
-                                                    <div class="d-flex">
+                                                    <div class="d-flex text-center">
                                                         <a href="{{ route('admin.post.edit', ['id' => $itemPost->id]) }}"
                                                             class="btn btn-warning">Sửa</a>
                                                         <a href="{{ route('admin.post.delete', ['id' => $itemPost->id]) }}"

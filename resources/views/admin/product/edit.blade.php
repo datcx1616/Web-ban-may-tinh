@@ -3,8 +3,8 @@
 @section('content')
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
+            <div class="col-sm-10 offset-md-1">
+                <div class="card shadow-sm">
                     <div class="card-header d-flex justify-content-between">
                         <div class="header-title text-center w-100">
                             <h4 class="card-title">Chỉnh sửa thông tin sản phẩm</h4>
@@ -38,30 +38,29 @@
                                     <input type="text" class="form-control" required value="{{ $itemProduct->quantity }}"
                                         name="quantity">
                                 </div>
-                                <div class="form-group col-md-6">
-                                    <div class="col-md-12 mb-3">
-                                        <label for="validationDefault01">Hình ảnh</label>
-                                        <div class="custom-file mb-2">
-                                            <input type="file" class="custom-file-input" id="customFile1" name="image[]">
-                                            <label class="custom-file-label" for="customFile1">Chọn ảnh 1</label>
-                                        </div>
-                                        <div class="custom-file mb-2">
-                                            <input type="file" class="custom-file-input" id="customFile2" name="image[]">
-                                            <label class="custom-file-label" for="customFile2">Chọn ảnh 2</label>
-                                        </div>
-                                        <div class="custom-file mb-2">
-                                            <input type="file" class="custom-file-input" id="customFile3" name="image[]">
-                                            <label class="custom-file-label" for="customFile3">Chọn ảnh 3</label>
-                                        </div>
+                                <div class="col-md-12 mb-3">
+                                    <label for="validationDefault01">Hình ảnh</label>
+                                    <div class="custom-file mb-2">
+                                        <input type="file" class="custom-file-input" id="customFile1" name="image[]">
+                                        <label class="custom-file-label" for="customFile1">Chọn ảnh 1</label>
                                     </div>
-                                    <div class="custom-control custom-checkbox custom-control-inline">
-                                        <input type="checkbox" class="custom-control-input" name="changeImage"
-                                            id="change-image">
-                                        <label class="custom-control-label" for="change-image">Thay đổi hình ảnh</label>
+                                    <div class="custom-file mb-2">
+                                        <input type="file" class="custom-file-input" id="customFile2" name="image[]">
+                                        <label class="custom-file-label" for="customFile2">Chọn ảnh 2</label>
+                                    </div>
+                                    <div class="custom-file mb-2">
+                                        <input type="file" class="custom-file-input" id="customFile3" name="image[]">
+                                        <label class="custom-file-label" for="customFile3">Chọn ảnh 3</label>
                                     </div>
                                 </div>
+                                <div class="custom-control custom-checkbox custom-control-inline ml-2 mb-3">
+                                    <input type="checkbox" class="custom-control-input" name="changeImage"
+                                        id="change-image">
+                                    <label class="custom-control-label" for="change-image">Thay đổi hình ảnh</label>
+                                </div>
 
-                                <div class="form-group col-md-6">
+
+                                <div class="form-group col-md-12">
                                     <label for="pwd">Giá</label>
                                     <input type="text" class="form-control" required
                                         value="{{ $itemProduct->price }}"name="price">
@@ -138,8 +137,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary">Sửa</button>
-                            <a href="{{ route('admin.product.index') }}" class="btn bg-danger">Quay lại</a>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary">Sửa</button>
+                                <a href="{{ route('admin.product.index') }}" class="btn bg-danger">Quay lại</a>
+                            </div>
+
                         </form>
                     </div>
                 </div>

@@ -1,9 +1,9 @@
 @extends('layouts.admin')
 @section('content')
-    <div class="container-fluid">
+    <div class="container-fluid py-4">
         <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
+            <div class="col-sm-10 offset-md-1">
+                <div class="card shadow-sm">
                     <div class="card-header d-flex justify-content-between">
                         <div class="header-title text-center w-100">
                             <h4 class="card-title">Chỉnh sửa menu</h4>
@@ -28,8 +28,11 @@
                                 <input type="text" class="form-control" required
                                     value="{{ $itemMenu->order }}"name="order">
                             </div>
-                            <button type="submit" class="btn btn-primary">Sửa</button>
-                            <a href="{{ route('admin.menu.index') }}" class="btn bg-danger">Quay lại</a>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary">Sửa</button>
+                                <a href="{{ route('admin.menu.index') }}" class="btn bg-danger">Quay lại</a>
+                            </div>
+
                         </form>
                     </div>
                 </div>

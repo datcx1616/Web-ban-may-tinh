@@ -1,9 +1,9 @@
 @extends('layouts.admin')
 @section('content')
-    <div class="container-fluid">
+    <div class="container-fluid py-4">
         <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
+            <div class="col-sm-10 offset-md-1">
+                <div class="card shadow-sm">
                     <div class="card-header d-flex justify-content-between">
                         <div class="header-title text-center w-100">
                             <h4 class="card-title">Thêm bài viết</h4>
@@ -35,7 +35,7 @@
                                         name="author">
                                 </div>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group text-center">
                                 <button class="btn btn-primary" type="submit">Thêm</button>
                                 <a href="{{ route('admin.post.index') }}"class="btn bg-danger  ml-3">Quay lại</a>
                             </div>

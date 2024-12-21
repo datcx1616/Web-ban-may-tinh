@@ -59,8 +59,17 @@
                         @foreach ($orderDetail as $product)
                             <tr>
                                 <td class="align-middle">
-                                    <img src="{{ $product->image }}" alt="{{ $product->name }}" class="img-fluid rounded"
-                                        style="width: 50px; height: 50px; object-fit: cover;">
+                                    @php
+                                        $images = json_decode($product->image);
+                                    @endphp
+                                    @if (is_array($images) && count($images) > 0)
+                                        <img class="img-fluid w-100"
+                                            src="{{ asset(str_replace('http://127.0.0.1:8000', '', $images[0])) }}"
+                                            alt="" style="width: 50px; height: 50px; object-fit: cover;">
+                                    @else
+                                        <img class="img-fluid w-100" src="{{ asset('path/to/default/image.jpg') }}"
+                                            alt="No image available" style="width: 50px; height: 50px; object-fit: cover;">
+                                    @endif
                                     <span class="d-block mt-2">{{ $product->name }}</span>
                                 </td>
                                 <td class="align-middle text-nowrap">{{ number_format($product->price) }} VND</td>
