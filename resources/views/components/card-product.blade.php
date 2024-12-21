@@ -12,7 +12,15 @@
     <div class="col-lg-3 col-md-4 col-sm-6 pb-1 ">
         <div class="product-item bg-light mb-4 product-card">
             <div class="product-img position-relative overflow-hidden">
-                <img class="img-fluid w-100" src="{{ $product->image }}" alt="">
+                @php
+                    $images = json_decode($product->image);
+                @endphp
+                @if (is_array($images) && count($images) > 0)
+                    <img class="img-fluid w-100" src="{{ asset(str_replace('http://127.0.0.1:8000', '', $images[0])) }}"
+                        alt="">
+                @else
+                    <img class="img-fluid w-100" src="{{ asset('path/to/default/image.jpg') }}" alt="No image available">
+                @endif
                 <div class="product-action">
                     <a class="w-100 h-100 p-3 d-block"
                         href="{{ route('shop.detail', [
