@@ -1,9 +1,9 @@
 @extends('layouts.admin')
 @section('content')
-    <div class="container-fluid">
+    <div class="container-fluid py-4">
         <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
+            <div class="col-sm-10 offset-md-1">
+                <div class="card shadow-sm">
                     <div class="card-header d-flex justify-content-between">
                         <div class="header-title text-center w-100">
                             <h4 class="card-title">Danh mục sản phẩm</h4>
@@ -12,8 +12,11 @@
                     <div class="card-body">
                         <div class="table-responsive">
                             <div id="datatable_wrapper" class="dataTables_wrapper">
-                                <a class="btn btn-primary mb-3" href="{{ route('admin.category.create') }}">Thêm danh
-                                    mục</a>
+                                <div class="text-center">
+                                    <a class="btn btn-primary mb-3" href="{{ route('admin.category.create') }}">Thêm danh
+                                        mục</a>
+                                </div>
+
                                 <table id="datatable" class="table data-table table-striped dataTable" role="grid"
                                     aria-describedby="datatable_info">
                                     <thead>
@@ -64,7 +67,10 @@
                         </div>
                     </div>
                 </div>
-                <a href="{{ route('admin.product.index') }}"class="btn bg-danger mb-3">Quay lại</a>
+                <div class="text-center">
+                    <a href="{{ route('admin.product.index') }}"class="btn bg-danger mb-3 text-center">Quay lại</a>
+                </div>
+
             </div>
         </div>
     </div>

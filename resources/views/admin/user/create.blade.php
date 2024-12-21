@@ -3,10 +3,10 @@
     use App\Enums\UserRole;
 @endphp
 @section('content')
-    <div class="container-fluid">
+    <div class="container-fluid py-4">
         <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
+            <div class="col-sm-10 offset-md-1">
+                <div class="card shadow-sm">
                     <div class="card-header d-flex justify-content-between">
                         <div class="header-title text-center w-100">
                             <h4 class="card-title">Thêm người dùng</h4>
@@ -38,8 +38,11 @@
                                     @endforeach
                                 </select>
                             </div>
-                            <button type="submit" class="btn btn-primary">Thêm</button>
-                            <a href="{{ route('admin.menu.index') }}" class="btn bg-danger">Quay lại</a>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary">Thêm</button>
+                                <a href="{{ route('admin.user.index') }}" class="btn bg-danger">Quay lại</a>
+                            </div>
+
                         </form>
                     </div>
                 </div>

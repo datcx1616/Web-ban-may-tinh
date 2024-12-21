@@ -3,10 +3,10 @@
     use App\Enums\OrderStatus;
 @endphp
 @section('content')
-    <div class="container-fluid">
+    <div class="container-fluid py-4">
         <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
+            <div class="col-sm-10 offset-md-1">
+                <div class="card shadow-sm">
                     <div class="card-header d-flex justify-content-between">
                         <div class="header-title text-center w-100">
                             <h4 class="card-title">Đơn hàng {{ $order->id }}</h4>
@@ -78,13 +78,29 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+
+
+
                                         @foreach ($orderDetail as $product)
                                             <tr class="text-center">
                                                 <td>
-                                                    <a href=""><img src="{{ $product->image }}"
-                                                            alt="{{ $product->name }}"
-                                                            style="width: 50px; height: 50px; object-fit: cover;">
-                                                        {{ $product->name }}</a>
+                                                    <a href="">
+                                                        @php
+                                                            $images = json_decode($product->image);
+                                                        @endphp
+                                                        @if (is_array($images) && count($images) > 0)
+                                                            <img class="img-fluid w-100"
+                                                                src="{{ asset(str_replace('http://127.0.0.1:8000', '', $images[0])) }}"
+                                                                alt=""
+                                                                style="width: 50px; height: 50px; object-fit: cover;">
+                                                        @else
+                                                            <img class="img-fluid w-100"
+                                                                src="{{ asset('path/to/default/image.jpg') }}"
+                                                                alt="No image available"
+                                                                style="width: 50px; height: 50px; object-fit: cover;">
+                                                        @endif
+                                                        {{ $product->name }}
+                                                    </a>
                                                 </td>
                                                 <td>{{ number_format($product->price) }} VND</td>
                                                 <td>{{ $product->quantity }}</td>
@@ -96,13 +112,14 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-                <a href="{{ route('admin.order.index') }}" class="btn bg-danger mb-3">Quay lại</a>
-                @if ($order->status === OrderStatus::ORDER_SUCCESS)
-                    <a href="{{ route('admin.home.orders_pdf', ['id' => $order->id]) }}"
-                        class="btn btn-outline-primary mb-3 ml-3">Xuất PDF</a>
-                @endif
+                <div class="text-center">
+                    <a href="{{ route('admin.order.index') }}" class="btn bg-danger mb-3">Quay lại</a>
+                    @if ($order->status === OrderStatus::ORDER_SUCCESS)
+                        <a href="{{ route('admin.home.orders_pdf', ['id' => $order->id]) }}"
+                            class="btn btn-outline-primary mb-3 ml-3">Xuất PDF</a>
+                    @endif
+                </div>
             </div>
         </div>
     </div>

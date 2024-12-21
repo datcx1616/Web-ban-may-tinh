@@ -1,9 +1,9 @@
 @extends('layouts.admin')
 @section('content')
-    <div class="container-fluid">
+    <div class="container-fluid py-4">
         <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
+            <div class="col-sm-10 offset-md-1">
+                <div class="card shadow-sm">
                     <div class="card-header d-flex justify-content-between">
                         <div class="header-title text-center w-100">
                             <h4 class="card-title">Chỉnh sửa danh mục</h4>
@@ -29,7 +29,7 @@
                                     <input type="file" class="custom-file-input" id="customFileImg" name="img">
                                     <label class="custom-file-label" for="customFileImg"></label>
                                 </div>
-                                <div class="custom-control custom-checkbox custom-control-inline">
+                                <div class="custom-control custom-checkbox custom-control-inline mt-4">
                                     <input type="checkbox" class="custom-control-input" name="changeImage"
                                         id="change-image">
                                     <label class="custom-control-label" for="change-image">Thay đổi hình ảnh</label>
@@ -52,9 +52,11 @@
                                     <option value="3">3</option>
                                 </select>
                             </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary">Sửa</button>
+                                <a href="{{ route('admin.category.index') }}" class="btn bg-danger">Quay lại</a>
+                            </div>
 
-                            <button type="submit" class="btn btn-primary">Sửa</button>
-                            <a href="{{ route('admin.category.index') }}" class="btn bg-danger">Quay lại</a>
                         </form>
                     </div>
                 </div>

@@ -1,17 +1,17 @@
 @extends('layouts.admin')
 @section('content')
-    <div class="container-fluid">
+    <div class="container-fluid py-4">
         <div class="row">
-            <div class="col-12 text-center">
+            <div class="col-10 text-center offset-md-1">
                 <a href="{{ route('admin.menu.index') }}" class="btn btn-primary mb-3 px-4 py-2 fw-bold shadow-sm">
                     <i class="fas fa-list"></i> Quản lý menu
                 </a>
             </div>
 
-            <div class="col-sm-12">
+            <div class="col-sm-10 offset-md-1">
                 <div class="card-transparent card-block card-stretch card-height">
                     <div class="card-body p-0">
-                        <div class="card">
+                        <div class="card shadow-sm">
                             <div class="card-header d-flex justify-content-between">
                                 <div class="header-title">
                                     <h4 class="card-title">Banner</h4>
