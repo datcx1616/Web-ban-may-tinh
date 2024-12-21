@@ -53,7 +53,7 @@
                                                 <td>
                                                     @if ($images && count($images) > 0)
                                                         @foreach ($images as $image)
-                                                            <img class="img-fluid rounded mb-2" style="width: 30%"
+                                                            <img class="img-fluid rounded mb-2" style="width: 150%"
                                                                 src="{{ $image }}" alt="Image">
                                                         @endforeach
                                                     @else
