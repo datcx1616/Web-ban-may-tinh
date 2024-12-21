@@ -40,10 +40,28 @@
             <div class="row px-xl-5">
                 <div class="col-lg-5 mb-30">
                     <div id="product-carousel" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img class="w-100 h-100" src="{{ $product->image }}" alt="Image">
+                        <div id="product-carousel" class="carousel slide" data-ride="carousel">
+                            @php
+                                $images = json_decode($product->image, true); // Giải mã JSON thành mảng
+                            @endphp
+                            <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    @foreach ($images as $index => $image)
+                                        <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
+                                            <img class="d-block w-100 h-100" src="{{ $image }}" alt="Image">
+                                        </div>
+                                    @endforeach
+                                </div>
                             </div>
+
+                            <a class="carousel-control-prev" href="#product-carousel" data-slide="prev"
+                                data-bs-target="#productCarousel">
+                                <i class="fa fa-2x fa-angle-left text-dark"></i>
+                            </a>
+                            <a class="carousel-control-next" href="#product-carousel" data-slide="next"
+                                data-bs-target="#productCarousel">
+                                <i class="fa fa-2x fa-angle-right text-dark"></i>
+                            </a>
                         </div>
                     </div>
                 </div>

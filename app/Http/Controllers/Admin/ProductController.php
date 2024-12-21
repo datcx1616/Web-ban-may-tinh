@@ -43,13 +43,22 @@ class ProductController extends Controller
      * @param Request $request
      * @return \Illuminate\Routing\Redirector|\Illuminate\Http\RedirectResponse
      */
-    public function store (Request $request)
+    public function store(Request $request)
     {
-        $imgPath = $this->uploadFile($request->file('image'), 'product');
+        $uploadedImages = [];
+
+        // Kiểm tra và upload các ảnh
+        if ($request->hasFile('image')) {
+            foreach ($request->file('image') as $file) {
+                $uploadedImages[] = $this->uploadFile($file, 'product'); // Upload từng file và lưu đường dẫn
+            }
+        }
+
+        // Chuẩn bị dữ liệu lưu vào cơ sở dữ liệu
         $data = [
             "id_category" => $request->id_category,
             "name" => $request->name,
-            "image" => $imgPath,
+            "image" => json_encode($uploadedImages), // Chuyển mảng ảnh thành JSON
             "price" => $request->price,
             "describe" => $request->describe,
             "screen" => $request->screen,
@@ -62,6 +71,7 @@ class ProductController extends Controller
             "so_luong" => $request->so_luong,
             "quantity" => $request->quantity,
         ];
+
         if ($request->isSale == '1') {
             $data['sale'] = $request->sale;
             $data['sale_start'] = Carbon::parse($request->saleStart);
@@ -96,11 +106,27 @@ class ProductController extends Controller
     public function update(Request $request)
     {
         $product = Product::findOrFail($request->id);
+
         $product->name = $request->name;
-        if ($request->changeImage) {
-            $imgPath = $this->uploadFile($request->file('image'), 'product');
-            $product->image = $imgPath;
+
+        $existingImages = json_decode($product->image, true);
+        if (!is_array($existingImages)) {
+            $existingImages = []; // Đảm bảo rằng luôn là mảng
         }
+
+        if ($request->has('changeImage')) {
+            $uploadedImages = [];
+            if ($request->hasFile('image')) {
+                foreach ($request->file('image') as $file) {
+                    $uploadedImages[] = $this->uploadFile($file, 'product'); // Tải lên và lấy đường dẫn ảnh
+                }
+            }
+            $allImages = $uploadedImages; // Chỉ sử dụng ảnh mới
+        } else {
+            $allImages = $existingImages;
+        }
+
+        $product->image = json_encode($allImages);
         $product->price = $request->price;
         $product->describe = $request->describe;
         $product->screen = $request->screen;

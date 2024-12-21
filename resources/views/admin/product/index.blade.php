@@ -41,14 +41,23 @@
                                     </thead>
                                     <tbody>
                                         @foreach ($listProduct as $itemProduct)
+                                            @php
+                                                $images = json_decode($itemProduct->image, true); // Giải mã JSON thành mảng trong vòng lặp
+                                            @endphp
                                             <tr role="row" class="odd">
                                                 <td class="sorting_1">{{ $itemProduct->id }}</td>
                                                 <td>{{ $itemProduct->category_name }}</td>
                                                 <td>{{ $itemProduct->name }}</td>
                                                 <td>{{ $itemProduct->quantity }}</td>
                                                 <td>
-                                                    <img class="img-fluid rounded" height="100"
-                                                        src="{{ $itemProduct->image }}" alt="Image">
+                                                    @if ($images && count($images) > 0)
+                                                        @foreach ($images as $image)
+                                                            <img class="img-fluid rounded mb-2" style="width: 30%"
+                                                                src="{{ $image }}" alt="Image">
+                                                        @endforeach
+                                                    @else
+                                                        <span>No Image</span>
+                                                    @endif
                                                 </td>
                                                 <td>{{ number_format($itemProduct->price) }} VND</td>
                                                 <td>
@@ -62,6 +71,7 @@
                                             </tr>
                                         @endforeach
                                     </tbody>
+
                                 </table>
 
                                 <!-- Custom CSS for improved table -->

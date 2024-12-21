@@ -37,11 +37,20 @@
                                 </div>
                                 <div class="col-md-12 mb-3">
                                     <label for="validationDefault01">Hình ảnh</label>
-                                    <div class="custom-file ">
-                                        <input type="file" class="custom-file-input" id="customFile" name="image">
-                                        <label class="custom-file-label" for="customFile"></label>
+                                    <div class="custom-file mb-2">
+                                        <input type="file" class="custom-file-input" id="customFile1" name="image[]">
+                                        <label class="custom-file-label" for="customFile1">Chọn ảnh 1</label>
+                                    </div>
+                                    <div class="custom-file mb-2">
+                                        <input type="file" class="custom-file-input" id="customFile2" name="image[]">
+                                        <label class="custom-file-label" for="customFile2">Chọn ảnh 2</label>
+                                    </div>
+                                    <div class="custom-file mb-2">
+                                        <input type="file" class="custom-file-input" id="customFile3" name="image[]">
+                                        <label class="custom-file-label" for="customFile3">Chọn ảnh 3</label>
                                     </div>
                                 </div>
+
                                 <div class="col-md-12 mb-3">
                                     <label for="validationDefault01">Giá</label>
                                     <input type="text" class="form-control" required id="validationDefault01"

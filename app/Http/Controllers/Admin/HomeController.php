@@ -44,6 +44,8 @@ class HomeController extends Controller
             'totalRevenue' => $totalRevenue,
         ]);
     }
+
+
     public function chitietdoanhthu(Request $request)
     {
     // Thống kê doanh thu theo ngày
@@ -114,6 +116,8 @@ class HomeController extends Controller
         'selectedYear' => $selectedYear,
     ]);
     }
+
+
     public function chitietnguoidung()
     {
     $user = User::get();
