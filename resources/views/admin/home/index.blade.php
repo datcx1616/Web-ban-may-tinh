@@ -120,6 +120,27 @@
             @endforeach
         </div>
     </div>
+    <style>
+        .card:hover {
+            transform: translateY(-10px);
+            /* Đẩy card lên một chút */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            /* Thêm bóng */
+            transition: all 0.3s ease;
+            /* Hiệu ứng mượt */
+        }
+
+        .card .card-body:hover h5,
+        .card .card-body:hover a {
+            color: #0056b3;
+            /* Đổi màu tiêu đề hoặc liên kết khi hover */
+        }
+
+        .progress-bar:hover {
+            filter: brightness(1.2);
+            /* Tăng độ sáng của progress bar khi hover */
+        }
+    </style>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -152,6 +173,21 @@
                 };
 
                 setTimeout(updateValue, 300); // Đồng bộ với hiệu ứng thanh tiến trình
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.card');
+
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.transform = 'scale(1.03)';
+                    card.style.transition = 'transform 0.3s ease';
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'scale(1)';
+                });
             });
         });
     </script>

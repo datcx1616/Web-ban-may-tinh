@@ -37,7 +37,7 @@ class ProductRelated extends Component
                 ->where('id', '!=', $this->currID);
         }
         return view('components.product-related', [
-            'products' => $products->take(4)->get()
+            'products' => $products->take(8)->get()
         ]);
     }
 }
