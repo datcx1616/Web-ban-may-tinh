@@ -45,11 +45,8 @@
                         'id' => $product->id,
                     ]) }}"
                     style="width: 90%; display: block;">{{ $product->name }}</a>
-
                 <!-- Giá sản phẩm -->
                 <div class="d-flex flex-column align-items-center mt-2">
-
-
                     <h5 class="text-gradient font-weight-bold"
                         style="background: linear-gradient(to right, #ff7e5f, #feb47b); -webkit-background-clip: text; color: transparent;">
                         {{ number_format($product->price) }} VND
