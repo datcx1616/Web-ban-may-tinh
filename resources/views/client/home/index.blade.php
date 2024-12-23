@@ -76,8 +76,11 @@
 
     <div class="container-fluid position-relative mb-3 px-xl-5" style="height: auto;">
         <a href="{{ route('shop.index') }}">
-            <img src="{{ asset('client/img/ttt.png') }}" alt="background" class="w-100"
-                style="position: relative; z-index: 1;">
+            <div style="text-align: center;">
+                <img src="{{ asset('client/img/ttt.png') }}" alt="background" style="width: 65%; height: auto;">
+            </div>
+
+
             <img src="{{ asset('client/img/icon-big.png') }}" alt="overlay"
                 style="position: absolute; top: -50px; left: 20%; transform: translateX(-50%); max-width: 15%; z-index: 2;">
         </a>
