@@ -1,5 +1,5 @@
 <style>
-    .product-card {
+    .product-card-1 {
         border-radius: 10px;
         /* Điều chỉnh độ bo tròn (10px là ví dụ) */
         overflow: hidden;
@@ -9,7 +9,7 @@
     }
 </style>
 <div class="col-lg-{{ $lg }} col-md-4 col-sm-6 pb-1 ">
-    <div class="product-item bg-light mb-4 product-card">
+    <div class="product-item bg-light mb-4 product-card-1">
         <div class="product-img position-relative overflow-hidden">
             @php
                 $images = json_decode($product->image);
