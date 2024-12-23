@@ -342,12 +342,16 @@
 
             </div>
 
+            <div class="container-fluid position-relative mb-3" style="height: auto; border-radius: 10px;">
+                <img src="{{ asset('client/img/tttt.png') }}" alt="background" class="w-100"
+                    style="position: relative; z-index: 1; border-radius: 10px;">
 
+            </div>
             <!-- Shop Product End -->
         </div>
     </div>
 
-    <x-post-new-component />
+    {{-- <x-post-new-component /> --}}
     <!-- Shop End -->
     <script>
         $(document).ready(function() {
