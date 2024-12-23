@@ -45,7 +45,6 @@
                                         <span class="input-error">{{ $message }}</span>
                                     @enderror
                                 </div>
-
                                 <input type="submit" value="Đăng ký"
                                     class="btn btn-pill text-white btn-block btn-primary-login">
 
@@ -56,9 +55,7 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
-
     <script src="{{ asset('login-public/js/main.js') }}"></script>
 @endsection

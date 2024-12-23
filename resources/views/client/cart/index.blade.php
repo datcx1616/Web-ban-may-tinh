@@ -46,8 +46,18 @@
                                     @endphp
                                     <tr>
                                         <td class="text-start d-flex align-items-center">
-                                            <img src="{{ $product->image }}" alt="" class="rounded-circle me-3"
-                                                style="height: 50px; width: 50px; object-fit: cover;">
+                                            @php
+                                                $images = json_decode($product->image);
+                                            @endphp
+                                            @if (is_array($images) && count($images) > 0)
+                                                <img class="img-fluid"
+                                                    src="{{ asset(str_replace('http://127.0.0.1:8000', '', $images[0])) }}"
+                                                    alt="" style="width: 70px; height: 70px; object-fit: cover;">
+                                            @else
+                                                <img class="img-fluid" src="{{ asset('path/to/default/image.jpg') }}"
+                                                    alt="No image available"
+                                                    style="width: 70px; height: 70px; object-fit: cover;">
+                                            @endif
                                             <span class="fw-bold">{{ $product->name }}</span>
                                         </td>
                                         <td>

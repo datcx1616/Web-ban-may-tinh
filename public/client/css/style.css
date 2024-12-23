@@ -10710,7 +10710,7 @@ input[type="tel"],
 
 .product-card {
     border-radius: 10px;
-    padding: 30px;
+    /* padding: 30px; */
     background-color: #f8f9fa;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -10737,7 +10737,7 @@ input[type="tel"],
     font-size: 16px;
 }
 
-.btn-primary:hover {
+.btn-primary-login:hover {
     background-color: #0056b3;
     border-color: #0056b3;
 }
@@ -10748,4 +10748,19 @@ input[type="tel"],
 
 .text-muted a:hover {
     text-decoration: underline;
+}
+.btn-facebook-login {
+    background-color: #3b5998;
+    color: white;
+}
+.btn-facebook-login:hover {
+    background-color: #2d4373;
+}
+
+.btn-google-login {
+    background-color: #db4437;
+    color: white;
+}
+.btn-google-login:hover {
+    background-color: #c23321;
 }

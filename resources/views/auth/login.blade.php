@@ -6,54 +6,10 @@
             <div class="col-md-6 contents">
                 <div class="row justify-content-center">
                     <div class="col-md-12">
-                        <style>
-                            .form-control {
-                                border-radius: 5px;
-                                padding: 10px 15px;
-                                font-size: 16px;
-                                border: 1px solid #ced4da;
-                            }
-
-                            .form-control:focus {
-                                border-color: #007bff;
-                                box-shadow: 0 0 6px rgba(0, 123, 255, 0.5);
-                            }
-
-                            .input-error {
-                                color: #dc3545;
-                                font-size: 14px;
-                                margin-top: 5px;
-                                display: block;
-                            }
-
-                            .btn-primary {
-                                background-color: #007bff;
-                                border-color: #007bff;
-                                padding: 10px 15px;
-                                font-size: 18px;
-                                border-radius: 5px;
-                            }
-
-                            .btn-primary:hover {
-                                background-color: #0056b3;
-                                border-color: #004080;
-                            }
-
-                            .text-muted a {
-                                color: #007bff;
-                                text-decoration: none;
-                            }
-
-                            .text-muted a:hover {
-                                text-decoration: underline;
-                            }
-                        </style>
-
                         <div class="form-block py-5 product-card">
                             <div class="mb-4">
                                 <h3>Đăng nhập</h3>
                             </div>
-
                             <form action="{{ route('login') }}" method="post">
                                 @csrf
                                 <!-- Input Email -->
@@ -77,18 +33,28 @@
                                 </div>
 
                                 <!-- Submit Button -->
-                                <button type="submit" class="btn btn-primary btn-block">Đăng nhập</button>
+                                <button type="submit" class="btn btn-pill text-white btn-block btn-primary-login">Đăng
+                                    nhập</button>
+
+                                <!-- Social Login Buttons -->
+                                <div class="social-login mt-2 " style=" border-radius: 10px;">
+                                    <button type="button" class="btn btn-pill btn-block btn-facebook-login"
+                                        style=" border-radius: 10px;">
+                                        <i class="fab fa-facebook-f"></i> Đăng nhập bằng Facebook
+                                    </button>
+                                    <button type="button" class="btn btn-pill btn-block btn-google-login"
+                                        style=" border-radius: 10px;">
+                                        <i class="fab fa-google"></i> Đăng nhập bằng Gmail
+                                    </button>
+                                </div>
 
                                 <span class="d-block text-center my-4 text-muted">
                                     Chưa có tài khoản? <a href="{{ route('register') }}">Đăng ký</a>
                                 </span>
                             </form>
                         </div>
-
-
                     </div>
                 </div>
-
             </div>
 
         </div>
