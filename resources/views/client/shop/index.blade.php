@@ -18,39 +18,6 @@
     <x-logo-component />
 
     <x-product-category />
-
-    {{-- <div class="container-fluid">
-        <div class="row justify-content-center px-xl-5 pb-3">
-            <ul class="nav nav-tabs">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Sắp xếp theo</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Khuyến mãi tốt nhất</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Giá tăng dần</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Giá giảm dần</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Sản phẩm mới nhất</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Sản phẩm bán chạy
-                        nhất</a>
-                </li>
-            </ul>
-        </div>
-    </div> --}}
-
-    <!-- Breadcrumb End -->
-    {{-- <div class="pt-2">
-        <marquee behavior="" direction="left" style="color:black;font-size: 16px;">
-            "Hành trình nâng cấp công nghệ bắt đầu từ đây – nơi bạn tìm thấy giải pháp hoàn hảo cho mọi nhu cầu máy tính."
-        </marquee>
-    </div> --}}
     <div class="container-fluid">
         <div class="container-fluid position-relative mt-4 mb-4 px-xl-5" style="height: auto; text-align: center;">
             <!-- Ảnh H2 -->

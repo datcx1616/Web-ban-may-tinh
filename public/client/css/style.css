@@ -10707,3 +10707,45 @@ input[type="tel"],
     transition: transform 0.3s ease;
     /* Hiệu ứng mượt */
 }
+
+.product-card {
+    border-radius: 10px;
+    padding: 30px;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group input.form-control {
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ced4da;
+    font-size: 16px;
+}
+
+.input-error {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.btn-primary-login {
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: 5px;
+    padding: 12px;
+    font-size: 16px;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.text-muted a {
+    color: #007bff;
+}
+
+.text-muted a:hover {
+    text-decoration: underline;
+}
