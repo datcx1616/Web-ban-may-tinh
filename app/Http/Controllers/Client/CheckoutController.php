@@ -6,6 +6,7 @@ use App\Enums\OrderStatus;
 use App\Http\Controllers\Controller;
 use App\Models\Cart;
 use App\Models\Order;
+use App\Models\Product;
 use App\Models\OrderDetail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -17,9 +18,10 @@ class CheckoutController extends Controller
      *
      * @return \Illuminate\Contracts\View\View
      */
-    public function index() {
+    public function index()
+    {
         $user = Auth::user();
-        $cart = Cart::select('carts.*', 'products.price', 'products.name')
+        $cart = Cart::select('carts.*', 'products.price', 'products.name',)
             ->join('products', 'products.id', 'carts.productID')
             ->where('userID', $user->id)
             ->get();
@@ -34,7 +36,8 @@ class CheckoutController extends Controller
      * @param Request $request
      * @return \Illuminate\Routing\Redirector|\Illuminate\Http\RedirectResponse
      */
-    public function order(Request $request) {
+    public function order(Request $request)
+    {
         $user = Auth::user();
 
         $order = Order::create([
@@ -49,7 +52,7 @@ class CheckoutController extends Controller
 
         $dataOrderInsert = [];
         $total = 0;
-        $cart = Cart::select('carts.*', 'products.price')
+        $cart = Cart::select('carts.*', 'products.price',)
             ->join('products', 'products.id', 'carts.productID')
             ->where('userID', $user->id)
             ->get();
@@ -59,6 +62,16 @@ class CheckoutController extends Controller
             if ($isSale) {
                 $priceShow = calcSalePrice($item->price, $item->sale);
             }
+
+            $product = Product::findOrFail($item->productID);
+
+            if ($product->quantity < $item->quantity) {
+                return redirect()->back()->with('error', 'Không đủ hàng trong kho');
+            }
+
+            // Trừ số lượng kho
+            $product->quantity -= $item->quantity;
+            $product->save();
             array_push($dataOrderInsert, [
                 'orderID' => $order->id,
                 'productID' => $item->productID,
@@ -77,5 +90,3 @@ class CheckoutController extends Controller
         return redirect()->route('order.index');
     }
 }
-
-//, 'products.sale', 'products.sale_start', 'products.sale_end' 'products.sale', 'products.sale_start', 'products.sale_end'
