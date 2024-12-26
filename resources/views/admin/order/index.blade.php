@@ -27,6 +27,8 @@
                                             <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1"
                                                 colspan="1">Tin nhắn</th>
                                             <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1"
+                                                colspan="1">Hình thức</th>
+                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1"
                                                 colspan="1">Chức năng</th>
                                         </tr>
                                     </thead>
@@ -38,6 +40,13 @@
                                                 <td>{{ $order->created_at }}</td>
                                                 <td>{!! $order->getStatusStr() !!}</td>
                                                 <td>{{ $order->message }}</td>
+                                                <td>
+                                                    @if ($order->paymentstatus == 1)
+                                                        Thanh toán khi nhận hàng
+                                                    @else
+                                                        chuyển khoản
+                                                    @endif
+                                                </td>
                                                 <td>
                                                     <a href="{{ route('admin.order.detail', ['id' => $order->id]) }}"
                                                         class="btn btn-info btn-sm">

@@ -13,7 +13,6 @@ class RevenueExport implements FromCollection, WithHeadings, WithTitle
 {
     public function collection()
     {
-        // Lấy dữ liệu doanh thu (bạn có thể thay đổi theo cấu trúc dữ liệu của mình)
         return Order::selectRaw('DAY(created_at) as day, MONTH(created_at) as month, YEAR(created_at) as year, SUM(total) as total')
             ->whereBetween('created_at', [Carbon::now()->startOfMonth(), Carbon::now()->endOfMonth()])
             ->where('status', OrderStatus::ORDER_SUCCESS)

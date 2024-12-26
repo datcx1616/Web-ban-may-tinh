@@ -6,6 +6,7 @@ use App\Enums\OrderStatus;
 use App\Http\Controllers\Controller;
 use App\Models\Order;
 use App\Models\OrderDetail;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
@@ -15,7 +16,13 @@ class OrderController extends Controller
      *
      * @return \Illuminate\Contracts\View\View
      */
-    public function index() {
+    public function index(Request $request) {
+        $trangThaiTT = $request->vnp_ResponseCode;
+        if ($trangThaiTT == '00') {
+            $order_id = $request->vnp_TxnRef;
+            Order::where('id', $order_id)
+                ->update(['paymentstatus' => 2,]);
+        }
         $user = Auth::user();
         $orders = Order::where('userID', $user->id)->orderBy('id', 'DESC')->get();
         return view('client.order.index', ['orders' => $orders]);

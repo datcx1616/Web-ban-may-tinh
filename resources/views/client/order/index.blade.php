@@ -1,7 +1,8 @@
 @extends('layouts.app')
 @section('content')
     <style>
-        td, th {
+        td,
+        th {
             vertical-align: middle !important;
         }
     </style>
@@ -30,15 +31,26 @@
                             <th scope="col">Ngày đặt</th>
                             <th scope="col">Trạng thái</th>
                             <th scope="col">Thông báo</th>
+                            <th scope="col">Hình thức thanh toán</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($orders as $item)
                             <tr>
-                                <th scope="row"><a href="{{ route('order.detail', ['id' => $item->id]) }}">Đơn hàng {{ $item->id }}</a></th>
+                                <th scope="row"><a href="{{ route('order.detail', ['id' => $item->id]) }}">Đơn hàng
+                                        {{ $item->id }}</a></th>
                                 <td>{{ $item->created_at }}</td>
-                                <td><div class="text-center" style="width: max-content;">{!! $item->getStatusStr() !!}</div></td>
+                                <td>
+                                    <div class="text-center" style="width: max-content;">{!! $item->getStatusStr() !!}</div>
+                                </td>
                                 <td>{{ $item->message }}</td>
+                                <td>
+                                    @if ($item->paymentstatus == 1)
+                                        Thanh toán khi nhận hàng
+                                    @else
+                                        Chuyển khoản
+                                    @endif
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>

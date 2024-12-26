@@ -104,8 +104,14 @@
                     <td>{{ number_format($orderCT->total) }} VND</td>
                 </tr>
                 <tr>
-                    <td><strong>Ghi chú</strong></td>
-                    <td>{{ $orderCT->note }}</td>
+                    <td><strong>Hình thức thanh toán</strong></td>
+                    <td>
+                        @if ($orderCT->paymentstatus == 1)
+                            Thanh toán khi nhận hàng
+                        @else
+                            chuyển khoản
+                        @endif
+                    </td>
                 </tr>
             @endforeach
         </tbody>

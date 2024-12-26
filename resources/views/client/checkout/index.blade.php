@@ -77,14 +77,24 @@
                                 <h5 class="text-danger font-weight-bold">{{ number_format($total) }} VND</h5>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-sm px-4 py-2 rounded-pill border text-success"
-                            style="background-color: transparent; border-color: #28a745;">
-                            Đặt hàng
-                        </button>
-                        <a href="{{ route('shop.index') }}" class="btn btn-sm px-4 py-2 rounded-pill border text-success"
-                            style="background-color: transparent; border-color: #28a745;">
-                            Tiếp tục mua sắm
-                        </a>
+                        <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+                            <button type="submit" name="action" value="bank"
+                                class="btn btn-sm px-4 py-2 rounded-pill border text-success"
+                                style="background-color: transparent; border-color: #28a745;">
+                                Thanh toán qua ngân hàng
+                            </button>
+                            <button type="submit" name="action" value="home"
+                                class="btn btn-sm px-4 py-2 rounded-pill border text-success"
+                                style="background-color: transparent; border-color: #28a745;">
+                                Thanh toán khi nhận hàng
+                            </button>
+                            <a href="{{ route('shop.index') }}"
+                                class="btn btn-sm px-4 py-2 rounded-pill border text-success"
+                                style="background-color: transparent; border-color: #28a745;">
+                                Tiếp tục mua sắm
+                            </a>
+                        </div>
+
                     </div>
                 </div>
             </div>

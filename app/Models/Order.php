@@ -19,6 +19,7 @@ class Order extends Model
         "total",
         "status",
         "note",
+        "paymentstatus"
     ];
 
     public function getStatusStr() {

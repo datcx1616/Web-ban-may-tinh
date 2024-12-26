@@ -145,42 +145,66 @@ class HomeController extends Controller
 
     public function chitietdonhang()
     {
-    $Order = Order::get();
-    return view("admin.home.chitietdonhang", [
-        "Order" => $Order
-    ]);
+        $Order = Order::select('orders.*', 'users.name')
+            ->join('users', 'users.id', '=', 'orders.userID')
+            ->get();
+
+        return view("admin.home.chitietdonhang", [
+            "Order" => $Order
+        ]);
     }
+
 
     public function chitietdahuy()
     {
-    $OrderDH = Order::where('status', OrderStatus::CANCEL_ORDER)->get();
-    return view("admin.home.chitietdahuy", [
-        "OrderDH" => $OrderDH
-    ]);
+        $OrderDH = Order::select('orders.*', 'users.name')
+            ->join('users', 'users.id', '=', 'orders.userID')
+            ->where('orders.status', OrderStatus::CANCEL_ORDER)
+            ->get();
+
+        return view("admin.home.chitietdahuy", [
+            "OrderDH" => $OrderDH
+        ]);
     }
 
     public function chitietdanggiao()
     {
-    $OrderDG = Order::where('status', OrderStatus::CONFIRM_ORDER)->get();
-    return view("admin.home.chitietdanggiao", [
-        "OrderDG" => $OrderDG
-    ]);
+        $OrderDG = Order::select('orders.*', 'users.name')
+        ->join('users', 'users.id', '=', 'orders.userID')
+        ->where('orders.status', OrderStatus::CONFIRM_ORDER)
+            ->get();
+
+        return view("admin.home.chitietdanggiao", [
+            "OrderDG" => $OrderDG
+        ]);
     }
+
+
     public function chitietchosacnhan()
     {
-    $OrderXN = Order::where('status', OrderStatus::ORDER)->get();
+    $OrderXN = Order::select('orders.*', 'users.name')
+        ->join('users', 'users.id', '=', 'orders.userID')
+        ->where('orders.status', OrderStatus::ORDER)
+        ->get();
+
     return view("admin.home.chitietchosacnhan", [
         "OrderXN" => $OrderXN
     ]);
     }
 
+
     public function chitietdonhangdaban()
     {
-    $OrderDB = Order::where('status', OrderStatus::ORDER_SUCCESS)->get();
-    return view("admin.home.chitietdonhangdaban", [
-        "OrderDB" => $OrderDB
-    ]);
+        $OrderDB = Order::select('orders.*', 'users.name')
+            ->join('users', 'users.id', '=', 'orders.userID')
+            ->where('orders.status', OrderStatus::ORDER_SUCCESS)
+            ->get();
+
+        return view("admin.home.chitietdonhangdaban", [
+            "OrderDB" => $OrderDB
+        ]);
     }
+
 
 
     public function exportOrderToPDF($id)
