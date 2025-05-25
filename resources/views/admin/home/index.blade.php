@@ -143,38 +143,38 @@
     </style>
 
     <script>
-        // document.addEventListener('DOMContentLoaded', function() {
-        //     const progressBars = document.querySelectorAll('.progress-animation');
-        //     const animatedValues = document.querySelectorAll('.animated-value');
+        document.addEventListener('DOMContentLoaded', function() {
+            const progressBars = document.querySelectorAll('.progress-animation');
+            const animatedValues = document.querySelectorAll('.animated-value');
 
-        //     // Hiệu ứng chạy thanh tiến trình
-        //     progressBars.forEach(bar => {
-        //         const percentage = bar.getAttribute('data-percentage');
-        //         setTimeout(() => {
-        //             bar.style.width = percentage + '%';
-        //         }, 300); // Delay để hiệu ứng mượt hơn
-        //     });
+            // Hiệu ứng chạy thanh tiến trình
+            progressBars.forEach(bar => {
+                const percentage = bar.getAttribute('data-percentage');
+                setTimeout(() => {
+                    bar.style.width = percentage + '%';
+                }, 300); // Delay để hiệu ứng mượt hơn
+            });
 
-        //     // Hiệu ứng chạy giá trị
-        //     animatedValues.forEach(valueElement => {
-        //         const targetValue = parseInt(valueElement.getAttribute('data-value'), 10);
-        //         let currentValue = 0;
-        //         const increment = Math.ceil(targetValue / 100); // Giá trị tăng mỗi lần
+            // Hiệu ứng chạy giá trị
+            animatedValues.forEach(valueElement => {
+                const targetValue = parseInt(valueElement.getAttribute('data-value'), 10);
+                let currentValue = 0;
+                const increment = Math.ceil(targetValue / 100); // Giá trị tăng mỗi lần
 
-        //         const updateValue = () => {
-        //             currentValue += increment;
-        //             if (currentValue > targetValue) {
-        //                 currentValue = targetValue;
-        //             }
-        //             valueElement.textContent = currentValue.toLocaleString(); // Format số
-        //             if (currentValue < targetValue) {
-        //                 requestAnimationFrame(updateValue); // Tiếp tục tăng giá trị
-        //             }
-        //         };
+                const updateValue = () => {
+                    currentValue += increment;
+                    if (currentValue > targetValue) {
+                        currentValue = targetValue;
+                    }
+                    valueElement.textContent = currentValue.toLocaleString(); // Format số
+                    if (currentValue < targetValue) {
+                        requestAnimationFrame(updateValue); // Tiếp tục tăng giá trị
+                    }
+                };
 
-        //         setTimeout(updateValue, 300); // Đồng bộ với hiệu ứng thanh tiến trình
-        //     });
-        // });
+                setTimeout(updateValue, 300); // Đồng bộ với hiệu ứng thanh tiến trình
+            });
+        });
 
         document.addEventListener('DOMContentLoaded', function() {
             const cards = document.querySelectorAll('.card');
